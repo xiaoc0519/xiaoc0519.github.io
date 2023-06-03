@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FUNCTION#Lambda#lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a &#43; b sum(a) 1 if a &gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
+不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能
+# 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数 add = lambda x, y: x&#43;y add(1, 2) # 3 # 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换 time.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Function" />
+<meta property="og:description" content="FUNCTION#Lambda#lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a &#43; b sum(a) 1 if a &gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
+不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能
+# 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数 add = lambda x, y: x&#43;y add(1, 2) # 3 # 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换 time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/basic/function/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-05-23T15:35:56+08:00" />
+<meta property="article:modified_time" content="2023-05-23T15:35:56+08:00" />
+<title>Function | Xiaoc0519</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Xiaoc0519</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Program Language</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9972658730bc28f79c2e04796c313ce" class="toggle" checked />
+    <label for="section-e9972658730bc28f79c2e04796c313ce" class="flex justify-between">
+      <a href="/docs/program-language/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/features/" class="">Features</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="toggle" checked />
+    <label for="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="flex justify-between">
+      <a href="/docs/program-language/python/basic/" class="">Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/multiprocessing/" class="">Multiprocessing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/threading/" class="">Threading</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/function/" class="active">Function</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/datetime/" class="">DateTime</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36400f26551d6894809d693cbff20fb4" class="toggle"  />
+    <label for="section-36400f26551d6894809d693cbff20fb4" class="flex justify-between">
+      <a href="/docs/program-language/python/data/" class="">Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/math/" class="">Math</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/pandas/" class="">Pandas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/json/" class="">Json</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/hashlib/" class="">Hashlib</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/random/" class="">Random</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df747a85e967807ecebf24238a89e9cf" class="toggle"  />
+    <label for="section-df747a85e967807ecebf24238a89e9cf" class="flex justify-between">
+      <a href="/docs/program-language/python/database/" class="">Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/mongodb/" class="">MongoDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/redis/" class="">Redis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/sql/" class="">Sql</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-23a0b9f76474084ac11d053d9dd160ba" class="toggle"  />
+    <label for="section-23a0b9f76474084ac11d053d9dd160ba" class="flex justify-between">
+      <a href="/docs/program-language/python/ui/" class="">Ui</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/pyside6/" class="">Pyside6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/tkinter/" class="">Tkinter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/wxpython/" class="">Wxpython</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9efea77816258092630ed04ff462dba2" class="toggle"  />
+    <label for="section-9efea77816258092630ed04ff462dba2" class="flex justify-between">
+      <a href="/docs/program-language/python/system/" class="">System</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/pywin32/" class="">Pywin32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/sys/" class="">System</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
+    <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
+      <a href="/docs/program-language/python/image/" class="">Image</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pytorch/" class="">Pytorch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/opencv/" class="">Opencv</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b75cb7b048c78a06bcee3988830e6da" class="toggle"  />
+    <label for="section-2b75cb7b048c78a06bcee3988830e6da" class="flex justify-between">
+      <a href="/docs/program-language/python/web/" class="">Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/web/flask/" class="">Flask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="toggle"  />
+    <label for="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="flex justify-between">
+      <a href="/docs/program-language/python/automatic/" class="">Automatic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/automatic/pyautogui/" class="">Pyautogui</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
+    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
+      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43f0b111fdb766de7ecfb12f6cfecf03" class="toggle"  />
+    <label for="section-43f0b111fdb766de7ecfb12f6cfecf03" class="flex justify-between">
+      <a href="/docs/program-language/lua/" class="">Lua</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/lua/standard/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
+    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
+      <a href="/docs/program-language/c#/" class="">C#</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Game Engine</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
+    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
+      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
+    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
+      <a href="/docs/game-engine/unity/" class="">Unity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Function</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lambda">Lambda</a>
+      <ul>
+        <li><a href="#map">map()</a></li>
+        <li><a href="#reduce">reduce()</a></li>
+        <li><a href="#sorted">sorted()</a></li>
+        <li><a href="#filter">filter()</a></li>
+      </ul>
+    </li>
+    <li><a href="#装饰器decorator">装饰器Decorator</a>
+      <ul>
+        <li><a href="#闭包">闭包</a></li>
+        <li><a href="#装饰器">装饰器</a></li>
+        <li><a href="#带参数装饰器">带参数装饰器</a></li>
+        <li><a href="#类装饰器">类装饰器</a></li>
+        <li><a href="#带参数类装饰器">带参数类装饰器</a></li>
+        <li><a href="#装饰器顺序">装饰器顺序</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="function">
+  <strong>FUNCTION</strong>
+  <a class="anchor" href="#function">#</a>
+</h1>
+<h2 id="lambda">
+  Lambda
+  <a class="anchor" href="#lambda">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span> [arg1 [,arg2,<span style="color:#f92672">..</span>]]:expression
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## [arg…] 可以有非常多的形式。</span>
+</span></span><span style="display:flex;"><span>a, b  a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>  <span style="color:#f92672">*</span>args   <span style="color:#f92672">**</span>kwargs  a, b<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  <span style="color:#f92672">*</span>args  <span style="color:#66d9ef">None</span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># expression 是一个参数表达式</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>  <span style="color:#66d9ef">None</span>  a <span style="color:#f92672">+</span> b  sum(a)  <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span> x, y: x<span style="color:#f92672">*</span>y <span style="color:#75715e"># 函数输入是x和y，输出是它们的积x*y</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span>:<span style="color:#66d9ef">None</span> <span style="color:#75715e"># 函数没有输入参数，输出是None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span> <span style="color:#f92672">*</span>args: sum(args) <span style="color:#75715e"># 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span> <span style="color:#f92672">**</span>kwargs: <span style="color:#ae81ff">1</span> <span style="color:#75715e"># 输入是任意键值对参数，输出是1</span>
+</span></span></code></pre></div><p><code>lambda</code> 函数是匿名的, 有输入和输出, 拥有自己的命名空间</p>
+<blockquote>
+<p>不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数</span>
+</span></span><span style="display:flex;"><span>add <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x, y: x<span style="color:#f92672">+</span>y
+</span></span><span style="display:flex;"><span>add(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3</span>) <span style="color:#75715e"># None</span>
+</span></span></code></pre></div><h3 id="map">
+  map()
+  <a class="anchor" href="#map">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>map(function, iterable, <span style="color:#f92672">...</span>) <span style="color:#75715e"># 返回 迭代器  </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 会根据提供的函数对指定序列做映射</span>
+</span></span><span style="display:flex;"><span>function <span style="color:#f92672">----&gt;</span> 函数
+</span></span><span style="display:flex;"><span>iterable <span style="color:#f92672">----&gt;</span> 一个或多个序列
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">square</span>(x):<span style="color:#66d9ef">return</span> x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>map(square, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]) <span style="color:#75715e"># [1, 4, 9, 16, 25]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>map(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]) <span style="color:#75715e"># [1, 4, 9, 16, 25]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>map(<span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>], [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">10</span>]) <span style="color:#75715e"># [3, 7, 11, 15, 19]</span>
+</span></span></code></pre></div><h3 id="reduce">
+  reduce()
+  <a class="anchor" href="#reduce">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>reduce(function, iterable[, initializer])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 函数会对参数序列中元素进行累积</span>
+</span></span><span style="display:flex;"><span>function  <span style="color:#f92672">----&gt;</span> 函数有两个参数
+</span></span><span style="display:flex;"><span>iterable   <span style="color:#f92672">----&gt;</span> 可迭代对象
+</span></span><span style="display:flex;"><span>initializer <span style="color:#f92672">----&gt;</span> 可选
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 用传给 reduce 中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(x, y):   <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>reduce(add, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>])    <span style="color:#75715e"># 列表和   25</span>
+</span></span><span style="display:flex;"><span>reduce(<span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>])
+</span></span></code></pre></div><h3 id="sorted">
+  sorted()
+  <a class="anchor" href="#sorted">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sorted(iterable[, cmp[, key[, reverse]]])  <span style="color:#75715e"># 返回重新排序的列表</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 函数对所有可迭代的对象进行排序操作</span>
+</span></span><span style="display:flex;"><span>iterable  <span style="color:#f92672">----&gt;</span> 可迭代对象
+</span></span><span style="display:flex;"><span>cmp       <span style="color:#f92672">----&gt;</span> 比较的函数, 这个具有两个参数, 参数的值都是从可迭代对象中取出, 此函数必须遵守的规则为<span style="color:#960050;background-color:#1e0010">，</span>大于则返回1<span style="color:#960050;background-color:#1e0010">，</span>小于则返回<span style="color:#f92672">-</span><span style="color:#ae81ff">1.</span> 等于则返回0
+</span></span><span style="display:flex;"><span>key       <span style="color:#f92672">----&gt;</span> 主要是用来进行比较的元素, 只有一个参数, 具体的函数的参数就是取自于可迭代对象中, 指定可迭代对象中的一个元素来进行排序
+</span></span><span style="display:flex;"><span>reverse   <span style="color:#f92672">----&gt;</span> 排序规则, reverse <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> 降序 , reverse <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span> 升序(默认)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> sorted(a)  <span style="color:#75715e">#  [1, 2, 3, 4, 5, 6, 7]  使用sorted，保留原列表，不改变列表a的值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>L<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#ae81ff">2</span>),(<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#e6db74">&#39;c&#39;</span>,<span style="color:#ae81ff">3</span>),(<span style="color:#e6db74">&#39;d&#39;</span>,<span style="color:#ae81ff">4</span>)]
+</span></span><span style="display:flex;"><span>sorted(L, cmp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x,y:cmp(x[<span style="color:#ae81ff">1</span>],y[<span style="color:#ae81ff">1</span>]))   <span style="color:#75715e"># 利用参数 cmp 排序  [(&#39;a&#39;, 1), (&#39;b&#39;, 2), (&#39;c&#39;, 3), (&#39;d&#39;, 4)]</span>
+</span></span><span style="display:flex;"><span>sorted(L, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x:x[<span style="color:#ae81ff">1</span>]) <span style="color:#75715e"># 利用参数 key 排序 [(&#39;a&#39;, 1), (&#39;b&#39;, 2), (&#39;c&#39;, 3), (&#39;d&#39;, 4)]</span>
+</span></span></code></pre></div><h3 id="filter">
+  filter()
+  <a class="anchor" href="#filter">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>filter(function, iterable)  <span style="color:#75715e"># 返回 迭代器对象</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表</span>
+</span></span><span style="display:flex;"><span>function <span style="color:#f92672">----&gt;</span> 判断函数
+</span></span><span style="display:flex;"><span>iterable <span style="color:#f92672">----&gt;</span> 可迭代对象
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_odd</span>(n): <span style="color:#66d9ef">return</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>newlist <span style="color:#f92672">=</span> filter(is_odd, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]) <span style="color:#75715e"># [1, 3, 5, 7, 9]</span>
+</span></span><span style="display:flex;"><span>newlist <span style="color:#f92672">=</span> filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>list(newlist) <span style="color:#75715e"># 3</span>
+</span></span></code></pre></div><h2 id="装饰器decorator">
+  装饰器Decorator
+  <a class="anchor" href="#%e8%a3%85%e9%a5%b0%e5%99%a8decorator">#</a>
+</h2>
+<h3 id="闭包">
+  闭包
+  <a class="anchor" href="#%e9%97%ad%e5%8c%85">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">outer</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inner</span>(y):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> inner
+</span></span><span style="display:flex;"><span>outer(<span style="color:#ae81ff">6</span>)(<span style="color:#ae81ff">5</span>) <span style="color:#75715e"># 11</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># outer(6)(5) 第一个参数传给自身函数 outer， 得到返回值 inner</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 在把  第二个参数传给 inner(y)</span>
+</span></span></code></pre></div><h3 id="装饰器">
+  装饰器
+  <a class="anchor" href="#%e8%a3%85%e9%a5%b0%e5%99%a8">#</a>
+</h3>
+<blockquote>
+<p>拓展原来函数功能的函数，返回值也是一个函数</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">who</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;who is running&#39;</span>)
+</span></span><span style="display:flex;"><span>        func() <span style="color:#75715e"># running()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@who</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">running</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;out  func running&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>func()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># who is running</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># out  func running</span>
+</span></span></code></pre></div><blockquote>
+<p>把函数当作参数传入装饰器里面， 在装饰器里面特定位置进行调用函数</p>
+</blockquote>
+<h3 id="带参数装饰器">
+  带参数装饰器
+  <a class="anchor" href="#%e5%b8%a6%e5%8f%82%e6%95%b0%e8%a3%85%e9%a5%b0%e5%99%a8">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">who</span>(msg<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count</span>(func)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(<span style="color:#f92672">*</span>args,<span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;who is running&#39;</span>)
+</span></span><span style="display:flex;"><span>            func(<span style="color:#f92672">*</span>args,<span style="color:#f92672">**</span>kwargs) <span style="color:#75715e"># running()</span>
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;xiao&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> run
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">@who</span>(msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xiao&#39;</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">where</span>(func):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;where&#39;</span>)
+</span></span><span style="display:flex;"><span>    func()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;you?&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">running</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;out  func running&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>where(running)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># who is running</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># where</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># out  func running  </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># you?</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># xiao</span>
+</span></span></code></pre></div><h3 id="类装饰器">
+  类装饰器
+  <a class="anchor" href="#%e7%b1%bb%e8%a3%85%e9%a5%b0%e5%99%a8">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">deco</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self,func):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>func <span style="color:#f92672">=</span> func
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;class init function&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __call__(self,<span style="color:#f92672">*</span>args,<span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;class call function&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>func(<span style="color:#f92672">*</span>args,<span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;class end&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@deco</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">chocolate</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;eat chocolate&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@deco</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">market</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;run and buy fruit&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chcoclate()
+</span></span><span style="display:flex;"><span>market()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># class init function</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># class call function</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># eat chocolate</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># class end</span>
+</span></span></code></pre></div><h3 id="带参数类装饰器">
+  带参数类装饰器
+  <a class="anchor" href="#%e5%b8%a6%e5%8f%82%e6%95%b0%e7%b1%bb%e8%a3%85%e9%a5%b0%e5%99%a8">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Decorator</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, arg1, arg2):  <span style="color:#75715e"># init()方法里面的参数都是装饰器的参数</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;执行类Decorator的__init__()方法&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>arg1 <span style="color:#f92672">=</span> arg1
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>ag2 <span style="color:#f92672">=</span> arg2
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __call__(self, func):  <span style="color:#75715e"># 因为装饰器带了参数，所以接收传入函数变量的位置是这里</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;执行类Decorator的__call__()方法&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">b_warp</span>(<span style="color:#f92672">*</span>args):  <span style="color:#75715e"># 这里装饰器的函数名字可以随便命名，只要跟return的函数名相同即可</span>
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;执行wrap()&#39;</span>)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;装饰器参数：&#39;</span>, self<span style="color:#f92672">.</span>arg1, self<span style="color:#f92672">.</span>arg2)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;执行&#39;</span> <span style="color:#f92672">+</span> func<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;()&#39;</span>)
+</span></span><span style="display:flex;"><span>            func(<span style="color:#f92672">*</span>args)
+</span></span><span style="display:flex;"><span>            print(func<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;()执行完毕&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> b_warp
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Decorator</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>, <span style="color:#e6db74">&#39;Xiao&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">example</span>(a1, a2, a3):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;传入example()的参数：&#39;</span>, a1, a2, a3)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;准备调用example()&#39;</span>)
+</span></span><span style="display:flex;"><span>    example(<span style="color:#e6db74">&#39;Baiyu&#39;</span>, <span style="color:#e6db74">&#39;Happy&#39;</span>, <span style="color:#e6db74">&#39;Coder&#39;</span>)
+</span></span></code></pre></div><h3 id="装饰器顺序">
+  装饰器顺序
+  <a class="anchor" href="#%e8%a3%85%e9%a5%b0%e5%99%a8%e9%a1%ba%e5%ba%8f">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Decorator_1</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;我是装饰器1&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Decorator_2</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;我是装饰器2&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Decorator_3</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;我是装饰器3&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@BaiyuDecorator_1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@BaiyuDecorator_2</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@BaiyuDecorator_3</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">xiaoc</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;xiaoc&#34;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    xiaoc()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># xiaoc</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 我是装饰器3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 我是装饰器2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 我是装饰器1</span>
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lambda">Lambda</a>
+      <ul>
+        <li><a href="#map">map()</a></li>
+        <li><a href="#reduce">reduce()</a></li>
+        <li><a href="#sorted">sorted()</a></li>
+        <li><a href="#filter">filter()</a></li>
+      </ul>
+    </li>
+    <li><a href="#装饰器decorator">装饰器Decorator</a>
+      <ul>
+        <li><a href="#闭包">闭包</a></li>
+        <li><a href="#装饰器">装饰器</a></li>
+        <li><a href="#带参数装饰器">带参数装饰器</a></li>
+        <li><a href="#类装饰器">类装饰器</a></li>
+        <li><a href="#带参数类装饰器">带参数类装饰器</a></li>
+        <li><a href="#装饰器顺序">装饰器顺序</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

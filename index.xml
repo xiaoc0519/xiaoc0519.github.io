@@ -13,9 +13,9 @@
       <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/features/</guid>
-      <description>FEATURES F-string f&#39;{expr=}&#39; 的 f-字符串将扩展表示为表达式文本，加一个等于号，再加表达式的求值结果
+      <description>FEATURES#F-string#f&#39;{expr=}&#39; 的 f-字符串将扩展表示为表达式文本，加一个等于号，再加表达式的求值结果
 指定了转换符，表达式的求值结果会先转换再格式化
-des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a string f&amp;#39;{des = }&amp;#39; # des = string # &amp;#39;!r&amp;#39; 为调用 repr() name = &amp;#34;Fred&amp;#34; f&amp;#34;He said his name is {name!r}.&amp;#34; # &amp;#34;He said his name is &amp;#39;Fred&amp;#39;.&amp;#34; # &amp;#39;!s&amp;#39; 即对结果调用 str() # &amp;#39;!a&amp;#39; 为调用 ascii() width = 10 precision = 4 value = decimal.Decimal(&amp;#34;12.34567&amp;#34;) f&amp;#34;result: {value:{width}.{precision}}&amp;#34; # nested fields &amp;#39;result: 12.35&amp;#39; today = datetime(year=2017, month=1, day=27) f&amp;#34;{today:%B %d, %Y}&amp;#34; # using date format specifier &amp;#39;January 27, 2017&amp;#39; f&amp;#34;{today=:%B %d, %Y}&amp;#34; # using date format specifier and debugging &amp;#39;today=January 27, 2017&amp;#39; number = 1024 f&amp;#34;{number:#0x}&amp;#34; # using integer format specifier &amp;#39;0x400&amp;#39; foo = &amp;#34;bar&amp;#34; f&amp;#34;{ foo = }&amp;#34; # preserves whitespace &amp;#34; foo = &amp;#39;bar&amp;#39;&amp;#34; line = &amp;#34;The mill&amp;#39;s closed&amp;#34; f&amp;#34;{line = :20}&amp;#34; # &amp;#34;line = The mill&amp;#39;s closed &amp;#34; f&amp;#34;{line = !</description>
+des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a string f&amp;#39;{des = }&amp;#39; # des = string # &amp;#39;!r&amp;#39; 为调用 repr() name = &amp;#34;Fred&amp;#34; f&amp;#34;He said his name is {name!r}.&amp;#34; # &amp;#34;He said his name is &amp;#39;Fred&amp;#39;.&amp;#34; # &amp;#39;!s&amp;#39; 即对结果调用 str() # &amp;#39;!a&amp;#39; 为调用 ascii() width = 10 precision = 4 value = decimal.Decimal(&amp;#34;12.34567&amp;#34;) f&amp;#34;result: {value:{width}.{precision}}&amp;#34; # nested fields &amp;#39;result: 12.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a st
       
       <guid>https://xiaoc0519.github.io/posts/taobao/</guid>
       <description>website taobao spider
-scrapy startproject projectname cd projectname scrapy genspider spidername spiderwebsite pip install -r requirements.txt 创建浏览器 from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService def creat_chrome_driver(*,headless=False): option = webdriver.Options() if headless: options.add_argument(&amp;#39;--headless&amp;#39;) options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;,[&amp;#39;enable-automation&amp;#39;]) options.add_experimental_option(&amp;#39;useAutomationExtension&amp;#39;,False) browser = webdriver.Chrome(options=options) browser.execute_cdp_cmd( &amp;#39;Page.addScriptToEvaluateOnNewDocument&amp;#39;, {&amp;#39;source&amp;#39;:&amp;#39;Object.defineProperty(navigator,&amp;#34;webdriver&amp;#34;,{get: () =&amp;gt; undefined})&amp;#39;} ) return browser def add_cookies(browser,cookie_file): with open(cookie_file,&amp;#39;r&amp;#39;) as f: cookie_list = json.load(f) for cookie_dict in cookies_list: if cookie_dict[&amp;#39;secure&amp;#39;]: browser.add_cookie(cookie_dict) 从浏览器获取cookie browser = creat_chrome_driver() browser.get(&amp;#39;https://login.taobao.com&amp;#39;) # 隐式等待 browser.</description>
+scrapy startproject projectname cd projectname scrapy genspider spidername spiderwebsite pip install -r requirements.txt 创建浏览器#from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService def creat_chrome_driver(*,headless=False): option = webdriver.Options() if headless: options.add_argument(&amp;#39;--headless&amp;#39;) options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;,[&amp;#39;enable-automation&amp;#39;]) options.add_experimental_option(&amp;#39;useAutomationExtension&amp;#39;,False) browser = webdriver.Chrome(options=options) browser.execute_cdp_cmd( &amp;#39;Page.addScriptToEvaluateOnNewDocument&amp;#39;, {&amp;#39;source&amp;#39;:&amp;#39;Object.defineProperty(navigator,&amp;#34;webdriver&amp;#34;,{get: () =&amp;gt; undefined})&amp;#39;} ) return browser def add_cookies(browser,cookie_file): with open(cookie_file,&amp;#39;r&amp;#39;) as f: cookie_list = json.load(f) for cookie_dict in cookies_list: if cookie_dict[&amp;#39;secure&amp;#39;]: browser.add_cookie(cookie_dict) 从浏览器获取cookie#browser = creat_chrome_driver() browser.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ scrapy startproject projectname cd projectname scrapy genspider spidername spide
       <pubDate>Tue, 30 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/multiprocessing/</guid>
-      <description>MULTIPROCESSING 多进程 适合 利用计算机的多核优势 ，让cpu同时处理一些任务， 适合多进程开发(资源开销大)
+      <description>MULTIPROCESSING#多进程 适合 利用计算机的多核优势 ，让cpu同时处理一些任务， 适合多进程开发(资源开销大)
 计算密集型 大量的数据计算
 import multiprocessing def task(start,end,queue): result =0 for i in range(start,end): result += i queue.put(result) if __name__ == &amp;#39;__main__&amp;#39;: queue = multiprocessing.Queue() start_time = time.time() # 创建两个进程分别处理数据 p1 = multiprocessing.Process(target=task,args=(0,50000,queue)) p1.start() p2 = multiprocessing.Process(target=task,args=(50000,100000,queue)) p2.start() v1 = queue.get(block=True) v2 = queue.get(block=True) print(v1+v2) end_time = time.time() print(f&amp;#39;cost time : {end_time - start_time}&amp;#39;) win 下 多进程 需要写入 main 语句下 为 spawn 模式</description>
     </item>
@@ -45,7 +45,7 @@ import multiprocessing def task(start,end,queue): result =0 for i in range(start
       <pubDate>Tue, 30 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/threading/</guid>
-      <description>THREADING 多线程 不利用计算机的多核优势， 适合多线程 IO密集型 文件读写 网络数据传输
+      <description>THREADING#多线程 不利用计算机的多核优势， 适合多线程 IO密集型 文件读写 网络数据传输
 list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name3&amp;#39;,&amp;#39;url&amp;#39;)] def task(name,url): res = requests.get(url) with open(name,&amp;#39;wb&amp;#39;) as f: f.write(res.content) for name,url in list: # 创建线程，让每个线程都去执行函数 (参数不同) t = threading.Thread(target=task,args=(name,url)) t.start() # 创建新的线程 并把任务加入线程池进行任务(后台任务)， 不影响当前循环 </description>
     </item>
     
@@ -55,7 +55,7 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
       <pubDate>Tue, 30 May 2023 10:14:59 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/data/math/</guid>
-      <description>MATH import math 常量 math.e # 返回欧拉数 (2.7182...) math.inf # 返回正无穷大浮点数 math.nan # 返回一个浮点值 NaN (not a number) math.pi # π 一般指圆周率。 圆周率 PI (3.1415...) math.tau # 数学常数 τ = 6.283185...，精确到可用精度。Tau 是一个圆周常数，等于 2π，圆的周长与半径之比。 FUNCTION math.acos(x) # 返回 x 的反余弦，结果范围在 0 到 pi 之间。 math.acosh(x) # 返回 x 的反双曲余弦值。 math.asin(x) # 返回 x 的反正弦值，结果范围在 -pi/2 到 pi/2 之间。 math.asinh(x) # 返回 x 的反双曲正弦值。 math.atan(x) # 返回 x 的反正切值，结果范围在 -pi/2 到 pi/2 之间。 math.</description>
+      <description>MATH#import math 常量#math.e # 返回欧拉数 (2.7182...) math.inf # 返回正无穷大浮点数 math.nan # 返回一个浮点值 NaN (not a number) math.pi # π 一般指圆周率。 圆周率 PI (3.1415...) math.tau # 数学常数 τ = 6.283185...，精确到可用精度。Tau 是一个圆周常数，等于 2π，圆的周长与半径之比。 FUNCTION#math.acos(x) # 返回 x 的反余弦，结果范围在 0 到 pi 之间。 math.acosh(x) # 返回 x 的反双曲余弦值。 math.asin(x) # 返回 x 的反正弦值，结果范围在 -pi/2 到 pi/2 之间。 math.asinh(x) # 返回 x 的反双曲正弦值。 math.atan(x) # 返回 x 的反正切值，结果范围在 -pi/2 到 pi/2 之间。 math.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
       <pubDate>Mon, 29 May 2023 17:14:59 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/data/pandas/</guid>
-      <description>PANDAS import pandas as pd mydataset = { &amp;#39;sites&amp;#39;: [&amp;#34;Google&amp;#34;, &amp;#34;Runoob&amp;#34;, &amp;#34;Wiki&amp;#34;], &amp;#39;number&amp;#39;: [1, 2, 3] } myvar = pd.DataFrame(mydataset) SERIES Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。
+      <description>PANDAS#import pandas as pd mydataset = { &amp;#39;sites&amp;#39;: [&amp;#34;Google&amp;#34;, &amp;#34;Runoob&amp;#34;, &amp;#34;Wiki&amp;#34;], &amp;#39;number&amp;#39;: [1, 2, 3] } myvar = pd.DataFrame(mydataset) SERIES#Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。
 Series 由索引（index）和列组成
 pandas.Series( data, index, dtype, name, copy) # data：一组数据(ndarray 类型)。 # index：数据索引标签，如果不指定，默认从 0 开始。 # dtype：数据类型，默认会自己判断。 # name：设置名称。 # copy：拷贝数据，默认为 False。 a = [1, 2, 3] mva = pd.Series(a) # ********** # 索引 数据 # 0 1 # 1 2 # 2 3 # dtype: int64 数据类型 # ********** mva[1] # 2 # 可以指定索引值 a = [&amp;#34;Google&amp;#34;, &amp;#34;Edge&amp;#34;, &amp;#34;Firefox&amp;#34;] mva = pd.</description>
     </item>
@@ -75,8 +75,8 @@ pandas.Series( data, index, dtype, name, copy) # data：一组数据(ndarray 类
       <pubDate>Mon, 29 May 2023 17:05:52 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/database/mongodb/</guid>
-      <description>MongoDB import pymango MongoDB ✈
-WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;#39;) db = mongo_client.admin db.authenticate(&amp;#39;用户名&amp;#39;, &amp;#39;密码&amp;#39;) # 创建集合 db.createCollection(name, options) # 删除集合 db.collectionName.drop() # 指定数据库和集合 db = client.test # 获取数据库 db = client[&amp;#39;test&amp;#39;] collection = db.stu # 指定集合 collection = db[&amp;#39;stu&amp;#39;] 插入 db.collection_name.insert(document) # mongodb中文档的格式是json格式 #增加一条 stu1={&amp;#39;id&amp;#39;:&amp;#39;001&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;zhangsan&amp;#39;,&amp;#39;age&amp;#39;:10} result = collection.insert_one(stu1) #增加多条 stu2={&amp;#39;id&amp;#39;:&amp;#39;002&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;lisi&amp;#39;,&amp;#39;age&amp;#39;:15} stu3={&amp;#39;id&amp;#39;:&amp;#39;003&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;wangwu&amp;#39;,&amp;#39;age&amp;#39;:20} result = collection.insert_many([stu2,stu3]) 删除 #可以直接使用remove方法删除指定的数据 result = collection.remove({&amp;#39;name&amp;#39;: &amp;#39;zhangsan&amp;#39;}) #使用delete_one()删除一条数据 result = collection.delete_one({&amp;#34;name&amp;#34;:&amp;#34;zhangsan&amp;#34;}) #delete_many()删除多条数据 result = collection.delete_many({&amp;#34;age&amp;#34;:{&amp;#39;$lt&amp;#39;:20}}) 修改 #update_one,第 2 个参数需要使用$类型操作符作为字典的键名 #姓名为zhangsan的记录，age修改为22 condition = {&amp;#39;name&amp;#39;: &amp;#39;zhangsan&amp;#39;} res = collection.</description>
+      <description>MongoDB#import pymango MongoDB ✈
+WORKFLOW#myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;#39;) db = mongo_client.admin db.authenticate(&amp;#39;用户名&amp;#39;, &amp;#39;密码&amp;#39;) # 创建集合 db.createCollection(name, options) # 删除集合 db.collectionName.drop() # 指定数据库和集合 db = client.test # 获取数据库 db = client[&amp;#39;test&amp;#39;] collection = db.stu # 指定集合 collection = db[&amp;#39;stu&amp;#39;] 插入#db.collection_name.insert(document) # mongodb中文档的格式是json格式 #增加一条 stu1={&amp;#39;id&amp;#39;:&amp;#39;001&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;zhangsan&amp;#39;,&amp;#39;age&amp;#39;:10} result = collection.insert_one(stu1) #增加多条 stu2={&amp;#39;id&amp;#39;:&amp;#39;002&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;lisi&amp;#39;,&amp;#39;age&amp;#39;:15} stu3={&amp;#39;id&amp;#39;:&amp;#39;003&amp;#39;,&amp;#39;name&amp;#39;:&amp;#39;wangwu&amp;#39;,&amp;#39;age&amp;#39;:20} result = collection.insert_many([stu2,stu3]) 删除##可以直接使用remove方法删除指定的数据 result = collection.remove({&amp;#39;name&amp;#39;: &amp;#39;zhangsan&amp;#39;}) #使用delete_one()删除一条数据 result = collection.delete_one({&amp;#34;name&amp;#34;:&amp;#34;zhangsan&amp;#34;}) #delete_many()删除多条数据 result = collection.</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Mon, 29 May 2023 17:05:52 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/database/redis/</guid>
-      <description>REDIS import redis WORKFLOW redis_conn = redis.Redis(host=&amp;#34;192.168.31.196&amp;#34;, port=6379,password=&amp;#34;123456&amp;#34;) # 连接池 redis_pool = redis.ConnectionPool(host=&amp;#39;127.0.0.1&amp;#39;, port= 6379, password= &amp;#39;your pw&amp;#39;, db= 0) redis_conn = redis.Redis(connection_pool= redis_pool) redis_conn.set(&amp;#39;name1&amp;#39;, &amp;#39;value1) #添加 redis_conn.get(&amp;#39;name1&amp;#39;) #获取 STRING 字符串 一个键对应一个值
+      <description>REDIS#import redis WORKFLOW#redis_conn = redis.Redis(host=&amp;#34;192.168.31.196&amp;#34;, port=6379,password=&amp;#34;123456&amp;#34;) # 连接池 redis_pool = redis.ConnectionPool(host=&amp;#39;127.0.0.1&amp;#39;, port= 6379, password= &amp;#39;your pw&amp;#39;, db= 0) redis_conn = redis.Redis(connection_pool= redis_pool) redis_conn.set(&amp;#39;name1&amp;#39;, &amp;#39;value1) #添加 redis_conn.get(&amp;#39;name1&amp;#39;) #获取 STRING 字符串#一个键对应一个值
 # 设置单个键值 set(name, value[, ex=None, px=None, nx=False, xx=False]) # ex：过期时间（秒），时间到了后redis会自动删除 # px：过期时间（毫秒），时间到了后redis会自动删除。ex、px二选一即可 # nx：如果设置为True，则只有name不存在时，当前set操作才执行 # xx：如果设置为True，则只有name存在时，当前set操作才执行 redis_conn.set(&amp;#39;name_2&amp;#39;, &amp;#39;ZZZ_2&amp;#39;) # 获取单个值 redis_conn.get(&amp;#39;name_1&amp;#39;) # 设置多个键值 mset(*args, **kwargs) redis_conn.mset(name_1= &amp;#39;ZZZ1&amp;#39;, name_2= &amp;#39;ZZZ2&amp;#39;) name_dict = { &amp;#39;name_4&amp;#39; : &amp;#39;ZZZ4&amp;#39;, &amp;#39;name_5&amp;#39; : &amp;#39;ZZZ5&amp;#39; } redis_conn.</description>
     </item>
     
@@ -95,7 +95,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Mon, 29 May 2023 17:05:52 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/database/sql/</guid>
-      <description>SQL import pymysql WORKFLOW # 连接数据库 db = pymysql.connect(host=&amp;#39;localhost&amp;#39;, port = 3366, user=&amp;#39;root&amp;#39;, password=&amp;#39;123456&amp;#39;, database=&amp;#39;DB&amp;#39;, charset=&amp;#39;utf8mb4) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&amp;#34;DROP TABLE IF EXISTS EMPLOYEE&amp;#34;) # 执行sql语句 sql = &amp;#34;DELETE FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 插入 sql = &amp;#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&amp;#39;ZZZ&amp;#39;, 22, 女,1)&amp;#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&amp;#34;数据插入成功&amp;#34;) except: # 如果发生错误则回滚 db.rollback() 查询 sql = &amp;#34;SELECT * FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; try: cursor.</description>
+      <description>SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&amp;#39;localhost&amp;#39;, port = 3366, user=&amp;#39;root&amp;#39;, password=&amp;#39;123456&amp;#39;, database=&amp;#39;DB&amp;#39;, charset=&amp;#39;utf8mb4) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&amp;#34;DROP TABLE IF EXISTS EMPLOYEE&amp;#34;) # 执行sql语句 sql = &amp;#34;DELETE FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 插入#sql = &amp;#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&amp;#39;ZZZ&amp;#39;, 22, 女,1)&amp;#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&amp;#34;数据插入成功&amp;#34;) except: # 如果发生错误则回滚 db.rollback() 查询#sql = &amp;#34;SELECT * FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; try: cursor.</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Wed, 24 May 2023 12:02:40 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/typescript/basic/</guid>
-      <description>BASIC Variable let lname :type [= value]; // 变量 const cname = value; // 常量 let a = &amp;#39;a&amp;#39;; const b = &amp;#39;b&amp;#39;; // const 常量 赋值后不允许修改 // 指定类型变量 , 指定后只能存指定的类型数据 let c:string = &amp;#39;c&amp;#39;; // 字符串 :number = 4; // 数字 :number; // undefined 可以不赋值 :number = null; // null 空值 :boolean = false; // true / false 布尔值 :any = 1; // 可以储存任何类型 :number | string; // 联合类型， 同时支持多个类型 typeof e; // 查看 变量e 的类型 type tname = type; // 为 type 类型添加一个 tname 的别名 e + &amp;#34;&amp;#34; // 数字转字符串 隐式转换 `this is ${e}` // `${}` 格式化字符串 Array let numarr :type[]= [a, b, v]; // 数组 let numarr :number[] = [1, 2, 3]; let strarr :string[] = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]; strarr[index] // 取值 strarr[0] 枚举 ENUM enum Ename{ v1, v2, v3}; enum Color{ red, blue, green}; let color : Color = Color.</description>
+      <description>BASIC#Variable#let lname :type [= value]; // 变量 const cname = value; // 常量 let a = &amp;#39;a&amp;#39;; const b = &amp;#39;b&amp;#39;; // const 常量 赋值后不允许修改 // 指定类型变量 , 指定后只能存指定的类型数据 let c:string = &amp;#39;c&amp;#39;; // 字符串 :number = 4; // 数字 :number; // undefined 可以不赋值 :number = null; // null 空值 :boolean = false; // true / false 布尔值 :any = 1; // 可以储存任何类型 :number | string; // 联合类型， 同时支持多个类型 typeof e; // 查看 变量e 的类型 type tname = type; // 为 type 类型添加一个 tname 的别名 e + &amp;#34;&amp;#34; // 数字转字符串 隐式转换 `this is ${e}` // `${}` 格式化字符串 Array#let numarr :type[]= [a, b, v]; // 数组 let numarr :number[] = [1, 2, 3]; let strarr :string[] = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]; strarr[index] // 取值 strarr[0] 枚举 ENUM#enum Ename{ v1, v2, v3}; enum Color{ red, blue, green}; let color : Color = Color.</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Tue, 23 May 2023 21:48:45 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/pyside6/</guid>
-      <description>PYSIDE6 </description>
+      <description>PYSIDE6#</description>
     </item>
     
     <item>
@@ -122,7 +122,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Tue, 23 May 2023 21:40:50 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/system/pywin32/</guid>
-      <description>PYWIN32 import win32api, win32api win32api.MessageBox(None,&amp;#34;Hello,pywin32!&amp;#34;,&amp;#34;pywin32&amp;#34;,win32con.MB_OK) </description>
+      <description>PYWIN32#import win32api, win32api win32api.MessageBox(None,&amp;#34;Hello,pywin32!&amp;#34;,&amp;#34;pywin32&amp;#34;,win32con.MB_OK) </description>
     </item>
     
     <item>
@@ -131,7 +131,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Tue, 23 May 2023 20:45:45 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/basic/</guid>
-      <description>BASIC REQUIREMENTS.txt pip freeze &amp;gt; requirements.txt pip install -r requirements.txt STRING s = &amp;#39;abcde&amp;#39; 切片 s[start:stop] # 裁剪 字符串 起止位置， 不包括止 # 负数从后往前数 s[1,3] # bc s[::-1] #edcba 反转字符串 Method s.strip() # 删除开头和结尾的空白字符 s.lstrip() # 删除开头空白字符 s.rstrip() # 删除结尾空白字符 s.split(&amp;#34;,&amp;#34;) # 找到分隔符的实例时将字符串拆分为子字符串 s.replace(repl,s [,count]) # 替换原字符串的特定字符 count 替换次数 默认全部 &amp;#39;a&amp;#39; in s # true e not in s # true l = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;] &amp;#39; &amp;#39;.join(l) # a b c d # 组合多列表 for x,y in zip(list1,list2): print(x,y) List l = [a, b, c, d, e] l.</description>
+      <description>BASIC#REQUIREMENTS.txt#pip freeze &amp;gt; requirements.txt pip install -r requirements.txt STRING#s = &amp;#39;abcde&amp;#39; 切片#s[start:stop] # 裁剪 字符串 起止位置， 不包括止 # 负数从后往前数 s[1,3] # bc s[::-1] #edcba 反转字符串 Method#s.strip() # 删除开头和结尾的空白字符 s.lstrip() # 删除开头空白字符 s.rstrip() # 删除结尾空白字符 s.split(&amp;#34;,&amp;#34;) # 找到分隔符的实例时将字符串拆分为子字符串 s.replace(repl,s [,count]) # 替换原字符串的特定字符 count 替换次数 默认全部 &amp;#39;a&amp;#39; in s # true e not in s # true l = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;] &amp;#39; &amp;#39;.</description>
     </item>
     
     <item>
@@ -140,7 +140,7 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Tue, 23 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/function/</guid>
-      <description>FUNCTION Lambda lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a + b sum(a) 1 if a &amp;gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
+      <description>FUNCTION#Lambda#lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a + b sum(a) 1 if a &amp;gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
 不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能
 # 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数 add = lambda x, y: x+y add(1, 2) # 3 # 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换 time.</description>
     </item>
@@ -151,10 +151,10 @@ WORKFLOW myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&amp;
       <pubDate>Tue, 23 May 2023 15:01:01 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/bs4/</guid>
-      <description>BeautifulSoup LXML # pip install bs4 # pip install lxml from bs4 import BeautifulSoup req=requests.get(url,headers=headers) html=req.text soup = BeautifulSoup(html, &amp;#39;lxml&amp;#39;) # 创建beautifulsoup解析对象 soup.prettify() # 格式化输出 html / xml 文档 Beautiful Soup 是一个HTML/XML 的解析器，主要用于解析和提取 HTML/XML 数据。
+      <description>BeautifulSoup LXML## pip install bs4 # pip install lxml from bs4 import BeautifulSoup req=requests.get(url,headers=headers) html=req.text soup = BeautifulSoup(html, &amp;#39;lxml&amp;#39;) # 创建beautifulsoup解析对象 soup.prettify() # 格式化输出 html / xml 文档 Beautiful Soup 是一个HTML/XML 的解析器，主要用于解析和提取 HTML/XML 数据。
 Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,
 所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment .
-取值 # Tag有很多方法和属性，tag中最重要的属性: `name` 和 `attributes`。 soup=BeautifulSoup(html,&amp;#39;lxml&amp;#39;) soup.h1 # 网页匹配的第一个标签 soup.div.attrs # 获取标签div所有属性,返回字典 soup.ol[&amp;#39;class&amp;#39;] # 获取标签ol属性为class的值 # NavigableString ## ** 标签内非属性字符串,格式：soup.&amp;lt;tag&amp;gt;.string ## ** NavigableString 可以跨越多个层次 soup.</description>
+取值## Tag有很多方法和属性，tag中最重要的属性: `name` 和 `attributes`。 soup=BeautifulSoup(html,&amp;#39;lxml&amp;#39;) soup.h1 # 网页匹配的第一个标签 soup.div.attrs # 获取标签div所有属性,返回字典 soup.ol[&amp;#39;class&amp;#39;] # 获取标签ol属性为class的值 # NavigableString ## ** 标签内非属性字符串,格式：soup.&amp;lt;tag&amp;gt;.string ## ** NavigableString 可以跨越多个层次 soup.</description>
     </item>
     
     <item>
@@ -163,7 +163,7 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
       <pubDate>Tue, 23 May 2023 13:58:44 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/tkinter/</guid>
-      <description>TKINTER tkinter 在线可视化 ✈</description>
+      <description>TKINTER#tkinter 在线可视化 ✈</description>
     </item>
     
     <item>
@@ -172,8 +172,8 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
       <pubDate>Tue, 23 May 2023 13:58:44 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/wxpython/</guid>
-      <description>WXPYTHON pip install wxpyhton
-import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#34;Hello, World!&amp;#34;) # 创建应用框架并显示 frame.Show(True) app.MainLoop() # 启动程序主循环 基本框架 import win32api APP_TITLE = u&amp;#39;基本框架&amp;#39; APP_ICON = &amp;#39;res/python.ico&amp;#39; # 请更换成你的icon class mainFrame(wx.Frame): &amp;#39;&amp;#39;&amp;#39;程序主窗口类，继承自wx.Frame&amp;#39;&amp;#39;&amp;#39; def __init__(self): &amp;#39;&amp;#39;&amp;#39;构造函数&amp;#39;&amp;#39;&amp;#39; wx.Frame.__init__(self, None, -1, APP_TITLE, style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER) # 默认style是下列项的组合：wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN self.SetBackgroundColour(wx.Colour(224, 224, 224)) self.SetSize((800, 600)) self.Center() # 以下代码处理图标 if hasattr(sys, &amp;#34;frozen&amp;#34;) and getattr(sys, &amp;#34;frozen&amp;#34;) == &amp;#34;windows_exe&amp;#34;: exeName = win32api.</description>
+      <description>WXPYTHON#pip install wxpyhton
+import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#34;Hello, World!&amp;#34;) # 创建应用框架并显示 frame.Show(True) app.MainLoop() # 启动程序主循环 基本框架#import win32api APP_TITLE = u&amp;#39;基本框架&amp;#39; APP_ICON = &amp;#39;res/python.ico&amp;#39; # 请更换成你的icon class mainFrame(wx.Frame): &amp;#39;&amp;#39;&amp;#39;程序主窗口类，继承自wx.Frame&amp;#39;&amp;#39;&amp;#39; def __init__(self): &amp;#39;&amp;#39;&amp;#39;构造函数&amp;#39;&amp;#39;&amp;#39; wx.Frame.__init__(self, None, -1, APP_TITLE, style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER) # 默认style是下列项的组合：wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN self.SetBackgroundColour(wx.Colour(224, 224, 224)) self.SetSize((800, 600)) self.Center() # 以下代码处理图标 if hasattr(sys, &amp;#34;frozen&amp;#34;) and getattr(sys, &amp;#34;frozen&amp;#34;) == &amp;#34;windows_exe&amp;#34;: exeName = win32api.</description>
     </item>
     
     <item>
@@ -182,7 +182,7 @@ import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#3
       <pubDate>Tue, 23 May 2023 11:50:58 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/data/json/</guid>
-      <description>Json import json # 数据类型（obj）转化为 JSON 字符串 json.dumps(obj) # 把数据写入文件中 with open(file,&amp;#34;w&amp;#34;) as f: date = json.dump(dic,f) # 将已编码的 JSON 字符串解码为 Python 对象 json.loads(jsondata) # 把数据文件读出 with open(file, &amp;#39;r&amp;#39;)as f: data = json.load(f) data = { &amp;#34;name&amp;#34;:&amp;#34;name1&amp;#34; , &amp;#34;url&amp;#34;:&amp;#34;url1&amp;#34; ,&amp;#39;data&amp;#39;:{&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;}} data[&amp;#39;name&amp;#39;] # name1 data.get(&amp;#39;data&amp;#39;) # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;] # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;][&amp;#39;pic&amp;#39;] # pic1 </description>
+      <description>Json#import json # 数据类型（obj）转化为 JSON 字符串 json.dumps(obj) # 把数据写入文件中 with open(file,&amp;#34;w&amp;#34;) as f: date = json.dump(dic,f) # 将已编码的 JSON 字符串解码为 Python 对象 json.loads(jsondata) # 把数据文件读出 with open(file, &amp;#39;r&amp;#39;)as f: data = json.load(f) data = { &amp;#34;name&amp;#34;:&amp;#34;name1&amp;#34; , &amp;#34;url&amp;#34;:&amp;#34;url1&amp;#34; ,&amp;#39;data&amp;#39;:{&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;}} data[&amp;#39;name&amp;#39;] # name1 data.get(&amp;#39;data&amp;#39;) # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;] # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;][&amp;#39;pic&amp;#39;] # pic1 </description>
     </item>
     
     <item>
@@ -191,7 +191,7 @@ import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#3
       <pubDate>Tue, 23 May 2023 11:50:23 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/datetime/</guid>
-      <description>DateTime Time import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&amp;#39;Sun Jun 20 23:21:05 1993&amp;#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&amp;#34;%Y-%m-%d %X&amp;#34;, time.localtime()) Datetime import datetime datetime.date.today() # 今日日期 y-m-d datetime.date() import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.month # 5 today.day # 19 today.</description>
+      <description>DateTime#Time#import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&amp;#39;Sun Jun 20 23:21:05 1993&amp;#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&amp;#34;%Y-%m-%d %X&amp;#34;, time.localtime()) Datetime#import datetime datetime.date.today() # 今日日期 y-m-d datetime.date()#import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.</description>
     </item>
     
     <item>
@@ -200,8 +200,8 @@ import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#3
       <pubDate>Tue, 23 May 2023 11:49:19 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/data/hashlib/</guid>
-      <description>Hashlib import hashlib 支持 blake2b, sha1, sha3_224, sha256, md4, sha3_384, sm3, shake_128, sha384, sha512_224, shake_256, sha3_512, whirlpool, blake2s, ripemd160, sha3_256, sha512, md5, md5-sha1, mdc2, sha224, sha512_256
-MD5 MD5是最常见的摘要算法，速度很快
+      <description>Hashlib#import hashlib 支持 blake2b, sha1, sha3_224, sha256, md4, sha3_384, sm3, shake_128, sha384, sha512_224, shake_256, sha3_512, whirlpool, blake2s, ripemd160, sha3_256, sha512, md5, md5-sha1, mdc2, sha224, sha512_256
+MD5#MD5是最常见的摘要算法，速度很快
 生成结果是固定的128 bit字节，通常用一个32位的16进制字符串表示。
 m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到MD5对象中 m.update(password.encode(encoding=&amp;#39;utf-8&amp;#39;)) # hexdigest()将加密字符串 生成十六进制数据字符串值 password_md5 = m.hexdigest() # &amp;#39;4dec5d6a773de446285d2ac3b540dade&amp;#39; # 在构建对象直接插入加密字符串 md = hashlib.md5(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 通过update方法 往MD5对象中增加字符串参数 md = hashlib.md5() md.update(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 当数据量过大时，可以分块摘要 md = hashlib.</description>
     </item>
@@ -212,7 +212,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Tue, 23 May 2023 11:48:35 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/data/random/</guid>
-      <description>RANDOM import random # 0-1的随机浮点数 0&amp;lt;=n&amp;lt;1.0 random.random() # 指定范围内的随机浮点数 if a&amp;lt;b,则生成的随机数n：a&amp;lt;=n&amp;lt;b；else 同理 random.uniform(a,b) # 指定范围内的整数 n：a&amp;lt;=n&amp;lt;=b。 random.randint(a,b) # 从序列中获取一个随机元素 list,tuple,字符串 random.choice(sequence) # 参数必须为整数 random.randrange([start],stop,[step]) # 将一个列表中的元素打乱，即将列表中的元素随机排列 random.shuffle(x,[random]) # 指定序列中随机获取指定长度k的片段。sample函数不会修改原有的序列。 random.sample(sequence,k) </description>
+      <description>RANDOM#import random # 0-1的随机浮点数 0&amp;lt;=n&amp;lt;1.0 random.random() # 指定范围内的随机浮点数 if a&amp;lt;b,则生成的随机数n：a&amp;lt;=n&amp;lt;b；else 同理 random.uniform(a,b) # 指定范围内的整数 n：a&amp;lt;=n&amp;lt;=b。 random.randint(a,b) # 从序列中获取一个随机元素 list,tuple,字符串 random.choice(sequence) # 参数必须为整数 random.randrange([start],stop,[step]) # 将一个列表中的元素打乱，即将列表中的元素随机排列 random.shuffle(x,[random]) # 指定序列中随机获取指定长度k的片段。sample函数不会修改原有的序列。 random.sample(sequence,k) </description>
     </item>
     
     <item>
@@ -221,7 +221,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Tue, 23 May 2023 08:56:23 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/re/</guid>
-      <description>RE import re result = re.match(pattern, string, re.I) result.group() # ab 返回整体结果 result.group(1) # b 返回第一个()匹配部分 Flags re.I # 忽略大小写 re.L # 表示特殊字符集 \w, \W, \b, \B, \s, \S 依赖于当前环境 re.M # 多行模式 re.S # 即为 . 并且包括换行符在内的任意字符（. 不包括换行符） re.U # 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库 re.X # 为了增加可读性，忽略空格和 # 后面的注释 Pattern 单字符 . # 匹配任意1个字符（除了\n） [ ] # 匹配[ ]中列举的字符 \d # 数字，即0-9 可以写在字符集[.</description>
+      <description>RE#import re result = re.match(pattern, string, re.I) result.group() # ab 返回整体结果 result.group(1) # b 返回第一个()匹配部分 Flags#re.I # 忽略大小写 re.L # 表示特殊字符集 \w, \W, \b, \B, \s, \S 依赖于当前环境 re.M # 多行模式 re.S # 即为 . 并且包括换行符在内的任意字符（. 不包括换行符） re.U # 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库 re.X # 为了增加可读性，忽略空格和 # 后面的注释 Pattern#单字符#. # 匹配任意1个字符（除了\n） [ ] # 匹配[ ]中列举的字符 \d # 数字，即0-9 可以写在字符集[.</description>
     </item>
     
     <item>
@@ -230,7 +230,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Tue, 23 May 2023 08:55:23 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/system/sys/</guid>
-      <description>SYSTEM SYS import sys # python name.py [arg1,[arg2]] # 命令行调用 Python 脚本时提供的“命令行参数” sys.argv # [&amp;#39;name.py&amp;#39;[,&amp;#39;arg1&amp;#39;[,&amp;#39;arg2&amp;#39;]]] sys.platform # linux / win32 # 当前运行的 Python 解释器的可执行程序的绝对路径 sys.executable sys.path # 调用 Python 解释器的脚本所在的绝对路径 sys.path.append(path) # 添加 path模块 到解释器路径 OS import os os.name # posix(Linux/Mac) nt(Win) java(Java) os.listdir() # 列出（当前）目录下的全部路径（及文件）默认为 ./ def get_filelists(file_dir=&amp;#39;.&amp;#39;): list_directory = os.listdir(file_dir) filelists = [] for directory in list_directory: if(os.path.isfile(directory)): filelists.append(directory) return filelists os.mkdir(dir) # 新建一级路径 多级创建报错 FileNotFoundError 已有创建报错 FileExistsError os.</description>
+      <description>SYSTEM#SYS#import sys # python name.py [arg1,[arg2]] # 命令行调用 Python 脚本时提供的“命令行参数” sys.argv # [&amp;#39;name.py&amp;#39;[,&amp;#39;arg1&amp;#39;[,&amp;#39;arg2&amp;#39;]]] sys.platform # linux / win32 # 当前运行的 Python 解释器的可执行程序的绝对路径 sys.executable sys.path # 调用 Python 解释器的脚本所在的绝对路径 sys.path.append(path) # 添加 path模块 到解释器路径 OS#import os os.name # posix(Linux/Mac) nt(Win) java(Java) os.listdir() # 列出（当前）目录下的全部路径（及文件）默认为 ./ def get_filelists(file_dir=&amp;#39;.&amp;#39;): list_directory = os.listdir(file_dir) filelists = [] for directory in list_directory: if(os.path.isfile(directory)): filelists.append(directory) return filelists os.mkdir(dir) # 新建一级路径 多级创建报错 FileNotFoundError 已有创建报错 FileExistsError os.</description>
     </item>
     
     <item>
@@ -239,7 +239,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 22:44:44 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/image/pytorch/</guid>
-      <description>PYTORCH </description>
+      <description>PYTORCH#</description>
     </item>
     
     <item>
@@ -248,7 +248,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 22:44:37 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/image/pillow/</guid>
-      <description>PILLOW </description>
+      <description>PILLOW#</description>
     </item>
     
     <item>
@@ -257,7 +257,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 22:44:32 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/image/opencv/</guid>
-      <description>OPENCV 二级目录 四级 print(&amp;#39;&amp;#39;)asdasd asd</description>
+      <description>OPENCV#二级目录#四级#print(&amp;#39;&amp;#39;)asdasd asd</description>
     </item>
     
     <item>
@@ -266,7 +266,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 22:44:11 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/web/flask/</guid>
-      <description>FLASK </description>
+      <description>FLASK#</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 22:44:05 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/</guid>
-      <description>SCRAPY WORKFLOW scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py # Scrapy settings for mySpider project ... BOT_NAME = &amp;#39;mySpider&amp;#39; # scrapy项目名 SPIDER_MODULES = [&amp;#39;mySpider.spiders&amp;#39;] NEWSPIDER_MODULE = &amp;#39;mySpider.</description>
+      <description>SCRAPY#WORKFLOW#scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES#projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py## Scrapy settings for mySpider project ... BOT_NAME = &amp;#39;mySpider&amp;#39; # scrapy项目名 SPIDER_MODULES = [&amp;#39;mySpider.</description>
     </item>
     
     <item>
@@ -284,7 +284,7 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/lua/standard/</guid>
-      <description>LUA BASIC 变量声明 -- 默认为全局变量 a = 1 b,c = 2,3 local d = 4 -- local 声明局部变量 print(e) -- 未声明变量的值为 nil 数值NUMBER a = 1 b = 0x11 --17 c = 2e3 --2000.00 运算 a,b = 1,2 a+b --3 b^2 -- 4 1&amp;lt;&amp;lt;3 -- 8 1左移3位为 1000(二进制) = 8 十进制 a~=b -- 不等于 字符串STRING a = &amp;#39;abcdefg&amp;#39; b = &amp;#34;abcdefg&amp;#34; a = [[dsajkdhakw\nada saddnaskdjalkw]] -- 不转义多行文本 a..b -- a+b 字符串相加 tostring(num) -- 转字符串 tonumber(str) -- 转数字 无法转换时 返回值为 nil #a -- 字符串a的长度 类似于len(a) 函数FUNCTION function function_name(.</description>
+      <description>LUA BASIC#变量声明#-- 默认为全局变量 a = 1 b,c = 2,3 local d = 4 -- local 声明局部变量 print(e) -- 未声明变量的值为 nil 数值NUMBER#a = 1 b = 0x11 --17 c = 2e3 --2000.00 运算#a,b = 1,2 a+b --3 b^2 -- 4 1&amp;lt;&amp;lt;3 -- 8 1左移3位为 1000(二进制) = 8 十进制 a~=b -- 不等于 字符串STRING#a = &amp;#39;abcdefg&amp;#39; b = &amp;#34;abcdefg&amp;#34; a = [[dsajkdhakw\nada saddnaskdjalkw]] -- 不转义多行文本 a.</description>
     </item>
     
     <item>
@@ -293,9 +293,9 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/httpx/</guid>
-      <description>HTTPX 3.6+ pip install httpx,httpx[http2]
-import httpx res = httpx.get(&amp;#39;url&amp;#39;,timeout=10.0) # 超时默认 5s None 可以关闭超时 HTTP/2 httpx.Client() 类似于 requests.Session()
-client = httpx.Client(http2=True, verify=False) response = client.get(url, headers) response.text SPIDER client = httpx.Client() #类似requests.Session() try: do somting finally: client.close() #关闭连接池 with httpx.Client() as client: r = client.get(url, headers=headers) # Client 和 get 里面都可以添加 headers,最后这两个地方的 headers 可以合并到请求里 headers = {&amp;#39;X-Auth&amp;#39;: &amp;#39;from-client&amp;#39;} params = {&amp;#39;client_id&amp;#39;: &amp;#39;client1&amp;#39;} with httpx.Client(headers=headers, params=params) as client: headers = {&amp;#39;X-Custom&amp;#39;: &amp;#39;from-request&amp;#39;} params = {&amp;#39;request_id&amp;#39;: &amp;#39;request1&amp;#39;} r = client.</description>
+      <description>HTTPX#3.6+ pip install httpx,httpx[http2]
+import httpx res = httpx.get(&amp;#39;url&amp;#39;,timeout=10.0) # 超时默认 5s None 可以关闭超时 HTTP/2#httpx.Client() 类似于 requests.Session()
+client = httpx.Client(http2=True, verify=False) response = client.get(url, headers) response.text SPIDER#client = httpx.Client() #类似requests.Session() try: do somting finally: client.close() #关闭连接池 with httpx.Client() as client: r = client.get(url, headers=headers) # Client 和 get 里面都可以添加 headers,最后这两个地方的 headers 可以合并到请求里 headers = {&amp;#39;X-Auth&amp;#39;: &amp;#39;from-client&amp;#39;} params = {&amp;#39;client_id&amp;#39;: &amp;#39;client1&amp;#39;} with httpx.Client(headers=headers, params=params) as client: headers = {&amp;#39;X-Custom&amp;#39;: &amp;#39;from-request&amp;#39;} params = {&amp;#39;request_id&amp;#39;: &amp;#39;request1&amp;#39;} r = client.</description>
     </item>
     
     <item>
@@ -304,7 +304,7 @@ client = httpx.Client(http2=True, verify=False) response = client.get(url, heade
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/automatic/pyautogui/</guid>
-      <description>PYAUTOGUI import pyautogui as pg # 启用防故障功能, 鼠标强制移动到屏幕左上脚(0,0), 直接抛出 failSafeException 异常 pg.FAILSAFE = True # 判断坐标是否在屏幕上 pg.onScreen(x,y) #return True Judge x,y is in screen width, height = pg.size() # 获取运行环境屏幕尺度 MOUSE X,Y = pg.position() # 获取鼠标当前坐标 # 鼠标移动 ## 绝对移动 pg.moveTo(x,y,duration=1) # duration 为移动时间 单位秒 ## 相对当前位置移动 pg.moveRel(x,y,duration=1) # 向当前位置 右移X 下移Y 像素 (可以为负数) # 拖拽 pg.dragTo(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键拖拽到x,y sec为持续时间(s) pg.dragRel(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键往右X 下Y 拖拽像素 # 点击 pg.click() # 当前位置点击 pg.</description>
+      <description>PYAUTOGUI#import pyautogui as pg # 启用防故障功能, 鼠标强制移动到屏幕左上脚(0,0), 直接抛出 failSafeException 异常 pg.FAILSAFE = True # 判断坐标是否在屏幕上 pg.onScreen(x,y) #return True Judge x,y is in screen width, height = pg.size() # 获取运行环境屏幕尺度 MOUSE#X,Y = pg.position() # 获取鼠标当前坐标 # 鼠标移动 ## 绝对移动 pg.moveTo(x,y,duration=1) # duration 为移动时间 单位秒 ## 相对当前位置移动 pg.moveRel(x,y,duration=1) # 向当前位置 右移X 下移Y 像素 (可以为负数) # 拖拽 pg.dragTo(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键拖拽到x,y sec为持续时间(s) pg.dragRel(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键往右X 下Y 拖拽像素 # 点击 pg.</description>
     </item>
     
     <item>
@@ -313,7 +313,7 @@ client = httpx.Client(http2=True, verify=False) response = client.get(url, heade
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/requests/</guid>
-      <description>REQUESTS import requests,json res = requests.get(url,headers,params,json,verify=false,cookies,timeout) # params get请求传参 a=1 # data 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 # json 提交数据，res.body的格式为 {“a”: 1, “b”: 2} res = res.text # 文本内容 res = res.content # 2进制内容 json.loads(json) # json数据 Requests requests.get() requests.post() requests.head() # 获取网页头的信息 requests.put() # 提交put请求 requests.delete() # 向HTML页码提交删除请求 requests.patch() # 向HTML网页提交局部修改请求 requests.get( url,headers,cookies,timeout, json, # 提交数据，res.body的格式为 {“a”: 1, “b”: 2} params, # get请求传参 a=1 data, # 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 auth, # 元组，支持HTTP认证功能 files, # 字典类型，传输文件 proxies, # 字典类型，设定访问代理服务器，可以增加登录认证 allow_redirects, # True/False，默认为True，重定向开关 stream, # True/False， 默认为True，获取内容立刻下载开关 verify, # True/False，默认为True，认证SSL证书开关 cert # 本地SSL证书路径 ) Response # cookie 获取处理cookie cookie = res.</description>
+      <description>REQUESTS#import requests,json res = requests.get(url,headers,params,json,verify=false,cookies,timeout) # params get请求传参 a=1 # data 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 # json 提交数据，res.body的格式为 {“a”: 1, “b”: 2} res = res.text # 文本内容 res = res.content # 2进制内容 json.loads(json) # json数据 Requests#requests.get() requests.post() requests.head() # 获取网页头的信息 requests.put() # 提交put请求 requests.delete() # 向HTML页码提交删除请求 requests.patch() # 向HTML网页提交局部修改请求 requests.get( url,headers,cookies,timeout, json, # 提交数据，res.body的格式为 {“a”: 1, “b”: 2} params, # get请求传参 a=1 data, # 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 auth, # 元组，支持HTTP认证功能 files, # 字典类型，传输文件 proxies, # 字典类型，设定访问代理服务器，可以增加登录认证 allow_redirects, # True/False，默认为True，重定向开关 stream, # True/False， 默认为True，获取内容立刻下载开关 verify, # True/False，默认为True，认证SSL证书开关 cert # 本地SSL证书路径 ) Response## cookie 获取处理cookie cookie = res.</description>
     </item>
     
     <item>
@@ -322,8 +322,8 @@ client = httpx.Client(http2=True, verify=False) response = client.get(url, heade
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/selenium/</guid>
-      <description>SELENIUM 4 驱动下载: Firefox Chrome Edge
-启动 from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService service = ChromeService(executable_path=CHROMEDRIVER_PATH) driver = webdriver.Chrome(service=service) 参数 option = webdriver.Options() options.add_argument(&amp;#39;user-agent=&amp;#34;value&amp;#34;&amp;#39;) # 添加UA options.add_argument(&amp;#39;window-size=1920x3000&amp;#39;) # 指定浏览器分辨率 options.add_argument(&amp;#39;--disable-gpu&amp;#39;) # 谷歌文档提到需要加上这个属性来规避bug options.add_argument(&amp;#39;--hide-scrollbars&amp;#39;) # 隐藏滚动条, 应对一些特殊页面 options.add_argument(&amp;#39;blink-settings=imagesEnabled=false&amp;#39;) # 不加载图片, 提升速度 options.add_argument(&amp;#39;--headless&amp;#39;) # 不提供可视化页面. linux系统不支持可视化不加这条会启动失败 options.add_argument(&amp;#39;--no-sandbox&amp;#39;) # 以最高权限运行 options.binary_location = r&amp;#34;path&amp;#34; # 手动指定使用的浏览器位置 options.add_extension(&amp;#39;crx&amp;#39;) # 添加 CRX 插件 options.add_argument(&amp;#34;--disable-javascript&amp;#34;) # 禁用JavaScript options.add_argument(&amp;#34;--proxy-server=http://XXXXX.com:80&amp;#34;) # 添加代理 # 设置开发者模式启动，该模式下webdriver属性为正常值 options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;, [&amp;#39;enable-automation&amp;#39;]) # 禁用浏览器弹窗 prefs = { &amp;#39;profile.</description>
+      <description>SELENIUM 4#驱动下载: Firefox Chrome Edge
+启动#from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService service = ChromeService(executable_path=CHROMEDRIVER_PATH) driver = webdriver.Chrome(service=service) 参数#option = webdriver.Options() options.add_argument(&amp;#39;user-agent=&amp;#34;value&amp;#34;&amp;#39;) # 添加UA options.add_argument(&amp;#39;window-size=1920x3000&amp;#39;) # 指定浏览器分辨率 options.add_argument(&amp;#39;--disable-gpu&amp;#39;) # 谷歌文档提到需要加上这个属性来规避bug options.add_argument(&amp;#39;--hide-scrollbars&amp;#39;) # 隐藏滚动条, 应对一些特殊页面 options.add_argument(&amp;#39;blink-settings=imagesEnabled=false&amp;#39;) # 不加载图片, 提升速度 options.add_argument(&amp;#39;--headless&amp;#39;) # 不提供可视化页面. linux系统不支持可视化不加这条会启动失败 options.add_argument(&amp;#39;--no-sandbox&amp;#39;) # 以最高权限运行 options.binary_location = r&amp;#34;path&amp;#34; # 手动指定使用的浏览器位置 options.add_extension(&amp;#39;crx&amp;#39;) # 添加 CRX 插件 options.add_argument(&amp;#34;--disable-javascript&amp;#34;) # 禁用JavaScript options.add_argument(&amp;#34;--proxy-server=http://XXXXX.com:80&amp;#34;) # 添加代理 # 设置开发者模式启动，该模式下webdriver属性为正常值 options.</description>
     </item>
     
   </channel>

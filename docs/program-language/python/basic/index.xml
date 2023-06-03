@@ -13,7 +13,7 @@
       <pubDate>Tue, 30 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/multiprocessing/</guid>
-      <description>MULTIPROCESSING 多进程 适合 利用计算机的多核优势 ，让cpu同时处理一些任务， 适合多进程开发(资源开销大)
+      <description>MULTIPROCESSING#多进程 适合 利用计算机的多核优势 ，让cpu同时处理一些任务， 适合多进程开发(资源开销大)
 计算密集型 大量的数据计算
 import multiprocessing def task(start,end,queue): result =0 for i in range(start,end): result += i queue.put(result) if __name__ == &amp;#39;__main__&amp;#39;: queue = multiprocessing.Queue() start_time = time.time() # 创建两个进程分别处理数据 p1 = multiprocessing.Process(target=task,args=(0,50000,queue)) p1.start() p2 = multiprocessing.Process(target=task,args=(50000,100000,queue)) p2.start() v1 = queue.get(block=True) v2 = queue.get(block=True) print(v1+v2) end_time = time.time() print(f&amp;#39;cost time : {end_time - start_time}&amp;#39;) win 下 多进程 需要写入 main 语句下 为 spawn 模式</description>
     </item>
@@ -24,7 +24,7 @@ import multiprocessing def task(start,end,queue): result =0 for i in range(start
       <pubDate>Tue, 30 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/threading/</guid>
-      <description>THREADING 多线程 不利用计算机的多核优势， 适合多线程 IO密集型 文件读写 网络数据传输
+      <description>THREADING#多线程 不利用计算机的多核优势， 适合多线程 IO密集型 文件读写 网络数据传输
 list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name3&amp;#39;,&amp;#39;url&amp;#39;)] def task(name,url): res = requests.get(url) with open(name,&amp;#39;wb&amp;#39;) as f: f.write(res.content) for name,url in list: # 创建线程，让每个线程都去执行函数 (参数不同) t = threading.Thread(target=task,args=(name,url)) t.start() # 创建新的线程 并把任务加入线程池进行任务(后台任务)， 不影响当前循环 </description>
     </item>
     
@@ -34,7 +34,7 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
       <pubDate>Tue, 23 May 2023 20:45:45 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/basic/</guid>
-      <description>BASIC REQUIREMENTS.txt pip freeze &amp;gt; requirements.txt pip install -r requirements.txt STRING s = &amp;#39;abcde&amp;#39; 切片 s[start:stop] # 裁剪 字符串 起止位置， 不包括止 # 负数从后往前数 s[1,3] # bc s[::-1] #edcba 反转字符串 Method s.strip() # 删除开头和结尾的空白字符 s.lstrip() # 删除开头空白字符 s.rstrip() # 删除结尾空白字符 s.split(&amp;#34;,&amp;#34;) # 找到分隔符的实例时将字符串拆分为子字符串 s.replace(repl,s [,count]) # 替换原字符串的特定字符 count 替换次数 默认全部 &amp;#39;a&amp;#39; in s # true e not in s # true l = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;] &amp;#39; &amp;#39;.join(l) # a b c d # 组合多列表 for x,y in zip(list1,list2): print(x,y) List l = [a, b, c, d, e] l.</description>
+      <description>BASIC#REQUIREMENTS.txt#pip freeze &amp;gt; requirements.txt pip install -r requirements.txt STRING#s = &amp;#39;abcde&amp;#39; 切片#s[start:stop] # 裁剪 字符串 起止位置， 不包括止 # 负数从后往前数 s[1,3] # bc s[::-1] #edcba 反转字符串 Method#s.strip() # 删除开头和结尾的空白字符 s.lstrip() # 删除开头空白字符 s.rstrip() # 删除结尾空白字符 s.split(&amp;#34;,&amp;#34;) # 找到分隔符的实例时将字符串拆分为子字符串 s.replace(repl,s [,count]) # 替换原字符串的特定字符 count 替换次数 默认全部 &amp;#39;a&amp;#39; in s # true e not in s # true l = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;] &amp;#39; &amp;#39;.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
       <pubDate>Tue, 23 May 2023 15:35:56 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/function/</guid>
-      <description>FUNCTION Lambda lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a + b sum(a) 1 if a &amp;gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
+      <description>FUNCTION#Lambda#lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a + b sum(a) 1 if a &amp;gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
 不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能
 # 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数 add = lambda x, y: x+y add(1, 2) # 3 # 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换 time.</description>
     </item>
@@ -54,7 +54,7 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
       <pubDate>Tue, 23 May 2023 11:50:23 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/datetime/</guid>
-      <description>DateTime Time import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&amp;#39;Sun Jun 20 23:21:05 1993&amp;#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&amp;#34;%Y-%m-%d %X&amp;#34;, time.localtime()) Datetime import datetime datetime.date.today() # 今日日期 y-m-d datetime.date() import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.month # 5 today.day # 19 today.</description>
+      <description>DateTime#Time#import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&amp;#39;Sun Jun 20 23:21:05 1993&amp;#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&amp;#34;%Y-%m-%d %X&amp;#34;, time.localtime()) Datetime#import datetime datetime.date.today() # 今日日期 y-m-d datetime.date()#import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.</description>
     </item>
     
   </channel>

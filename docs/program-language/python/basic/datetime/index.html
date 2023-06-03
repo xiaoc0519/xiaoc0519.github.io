@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DateTime#Time#import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&#39;Sun Jun 20 23:21:05 1993&#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&#34;%Y-%m-%d %X&#34;, time.localtime()) Datetime#import datetime datetime.date.today() # 今日日期 y-m-d datetime.date()#import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="DateTime" />
+<meta property="og:description" content="DateTime#Time#import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&#39;Sun Jun 20 23:21:05 1993&#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&#34;%Y-%m-%d %X&#34;, time.localtime()) Datetime#import datetime datetime.date.today() # 今日日期 y-m-d datetime.date()#import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/basic/datetime/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-05-23T11:50:23+08:00" />
+<meta property="article:modified_time" content="2023-05-23T11:50:23+08:00" />
+<title>DateTime | Xiaoc0519</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Xiaoc0519</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Program Language</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9972658730bc28f79c2e04796c313ce" class="toggle" checked />
+    <label for="section-e9972658730bc28f79c2e04796c313ce" class="flex justify-between">
+      <a href="/docs/program-language/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/features/" class="">Features</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="toggle" checked />
+    <label for="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="flex justify-between">
+      <a href="/docs/program-language/python/basic/" class="">Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/multiprocessing/" class="">Multiprocessing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/threading/" class="">Threading</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/function/" class="">Function</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/datetime/" class="active">DateTime</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36400f26551d6894809d693cbff20fb4" class="toggle"  />
+    <label for="section-36400f26551d6894809d693cbff20fb4" class="flex justify-between">
+      <a href="/docs/program-language/python/data/" class="">Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/math/" class="">Math</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/pandas/" class="">Pandas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/json/" class="">Json</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/hashlib/" class="">Hashlib</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/random/" class="">Random</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df747a85e967807ecebf24238a89e9cf" class="toggle"  />
+    <label for="section-df747a85e967807ecebf24238a89e9cf" class="flex justify-between">
+      <a href="/docs/program-language/python/database/" class="">Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/mongodb/" class="">MongoDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/redis/" class="">Redis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/sql/" class="">Sql</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-23a0b9f76474084ac11d053d9dd160ba" class="toggle"  />
+    <label for="section-23a0b9f76474084ac11d053d9dd160ba" class="flex justify-between">
+      <a href="/docs/program-language/python/ui/" class="">Ui</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/pyside6/" class="">Pyside6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/tkinter/" class="">Tkinter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/wxpython/" class="">Wxpython</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9efea77816258092630ed04ff462dba2" class="toggle"  />
+    <label for="section-9efea77816258092630ed04ff462dba2" class="flex justify-between">
+      <a href="/docs/program-language/python/system/" class="">System</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/pywin32/" class="">Pywin32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/sys/" class="">System</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
+    <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
+      <a href="/docs/program-language/python/image/" class="">Image</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pytorch/" class="">Pytorch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/opencv/" class="">Opencv</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b75cb7b048c78a06bcee3988830e6da" class="toggle"  />
+    <label for="section-2b75cb7b048c78a06bcee3988830e6da" class="flex justify-between">
+      <a href="/docs/program-language/python/web/" class="">Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/web/flask/" class="">Flask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="toggle"  />
+    <label for="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="flex justify-between">
+      <a href="/docs/program-language/python/automatic/" class="">Automatic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/automatic/pyautogui/" class="">Pyautogui</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
+    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
+      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43f0b111fdb766de7ecfb12f6cfecf03" class="toggle"  />
+    <label for="section-43f0b111fdb766de7ecfb12f6cfecf03" class="flex justify-between">
+      <a href="/docs/program-language/lua/" class="">Lua</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/lua/standard/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
+    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
+      <a href="/docs/program-language/c#/" class="">C#</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Game Engine</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
+    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
+      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
+    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
+      <a href="/docs/game-engine/unity/" class="">Unity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>DateTime</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#time"><strong>Time</strong></a></li>
+    <li><a href="#datetime-1"><strong>Datetime</strong></a>
+      <ul>
+        <li><a href="#datetimedate">datetime.date()</a></li>
+        <li><a href="#datetimetime">datetime.time()</a></li>
+        <li><a href="#datetimedatetime">datetime.datetime()</a></li>
+        <li><a href="#datetimetimedelta">datetime.timedelta()</a></li>
+      </ul>
+    </li>
+    <li><a href="#格式化"><strong>格式化</strong></a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="datetime">
+  <strong>DateTime</strong>
+  <a class="anchor" href="#datetime">#</a>
+</h1>
+<h2 id="time">
+  <strong>Time</strong>
+  <a class="anchor" href="#time">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>localtime([secs]) 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>gmtime([secs]) <span style="color:#75715e"># gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>time() <span style="color:#75715e"># 返回当前时间的时间戳</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>mktime(t) <span style="color:#75715e"># 将一个struct_time转化为时间戳</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(secs) <span style="color:#75715e"># 线程推迟指定的时间运行。单位为秒</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>asctime([t]) <span style="color:#75715e"># 把一个表示时间的元组或者struct_time表示为这种形式：&#39;Sun Jun 20 23:21:05 1993&#39;</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>ctime([secs]) <span style="color:#75715e"># 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>strftime(format[, t]) 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。</span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%X</span><span style="color:#e6db74">&#34;</span>, time<span style="color:#f92672">.</span>localtime())
+</span></span></code></pre></div><h2 id="datetime-1">
+  <strong>Datetime</strong>
+  <a class="anchor" href="#datetime-1">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>today() <span style="color:#75715e"># 今日日期 y-m-d</span>
+</span></span></code></pre></div><h3 id="datetimedate">
+  datetime.date()
+  <a class="anchor" href="#datetimedate">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>today <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>date(year<span style="color:#f92672">=</span><span style="color:#ae81ff">2023</span>,month<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>,day<span style="color:#f92672">=</span><span style="color:#ae81ff">19</span>)   <span style="color:#75715e">#  使用参数创建日期</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>year <span style="color:#75715e"># 2023</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>month <span style="color:#75715e"># 5</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>day <span style="color:#75715e"># 19</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>timetuple() <span style="color:#75715e">#  date对象的struct_time结构</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>toordinal() <span style="color:#75715e"># 返回当前公历日期的序数</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>weekday() <span style="color:#75715e"># 当前日期为星期0   0 = 星期一</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>isoweekday() <span style="color:#75715e"># 当前日期为星期1   1 = 星期一</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>isocalendar() <span style="color:#75715e"># 当前日期的年份、第几周、周几(其中返回为元组): (2023, 20, 5)</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>isoformat() <span style="color:#75715e"># 以ISO 8601格式‘YYYY-MM-DD’返回date的字符串</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>ctime() <span style="color:#75715e"># 返回一个表示日期的字符串 Mon May 19 00:00:00 2023</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">2019</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">29</span>) <span style="color:#75715e"># 替换后的日期</span>
+</span></span><span style="display:flex;"><span>today<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y/%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e"># 指定格式</span>
+</span></span></code></pre></div><h3 id="datetimetime">
+  datetime.time()
+  <a class="anchor" href="#datetimetime">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ctime <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>time(hour<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>,minute<span style="color:#f92672">=</span><span style="color:#ae81ff">18</span>,second<span style="color:#f92672">=</span><span style="color:#ae81ff">31</span>)
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>hour <span style="color:#75715e"># 时 11</span>
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>minute <span style="color:#75715e"># 分 18 </span>
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>second <span style="color:#75715e"># 秒 31</span>
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>isoformat() <span style="color:#75715e"># 字符串形式 11:18:31</span>
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%H/%M/%S&#34;</span>) <span style="color:#75715e"># 指定格式 11/18/31</span>
+</span></span><span style="display:flex;"><span>ctime<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">29</span>) <span style="color:#75715e"># 替换后的时间 20:09:29</span>
+</span></span></code></pre></div><h3 id="datetimedatetime">
+  datetime.datetime()
+  <a class="anchor" href="#datetimedatetime">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>today() <span style="color:#75715e"># 现在的时间 2020-08-31 11:32:10.438292</span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now() <span style="color:#75715e"># 更高精度 2020-08-31 11:32:10.439289</span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>utcnow() <span style="color:#75715e"># 当前UTC日期和时间是： 2020-08-31 03:32:10.439289</span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>fromtimestamp(<span style="color:#ae81ff">1234567896</span>) <span style="color:#75715e"># 对应时间戳的日期和时间是： 2009-02-14 07:31:36</span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>utcfromtimestamp(<span style="color:#ae81ff">1234567896</span>) <span style="color:#75715e"># 对应UTC时间戳的日期和时间是： 2009-02-13 23:31:36 </span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>fromordinal(<span style="color:#ae81ff">1</span>) <span style="color:#75715e"># 公历序列对应的日期和时间是： 0001-01-01 00:00:00</span>
+</span></span><span style="display:flex;"><span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>combine(datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">31</span>), datetime<span style="color:#f92672">.</span>time(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">12</span>)) <span style="color:#75715e"># 日期和时间的合体为： 2020-08-31 12:12:12</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">2020</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>now<span style="color:#f92672">.</span>date()  <span style="color:#75715e"># 当前日期为 2020-08-31</span>
+</span></span><span style="display:flex;"><span>now<span style="color:#f92672">.</span>time()  <span style="color:#75715e"># 当前时间 12:10:10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... 其他和 date time 一样</span>
+</span></span></code></pre></div><h3 id="datetimetimedelta">
+  datetime.timedelta()
+  <a class="anchor" href="#datetimetimedelta">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>today() <span style="color:#75715e"># 表示现在的日期</span>
+</span></span><span style="display:flex;"><span>before_5_date <span style="color:#f92672">=</span> now <span style="color:#f92672">+</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=-</span><span style="color:#ae81ff">5</span> [,minutes<span style="color:#f92672">=-</span><span style="color:#ae81ff">10</span>]) <span style="color:#75715e"># 表示五天[10分前]前的日期</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>now <span style="color:#75715e"># 表示现在的日期</span>
+</span></span></code></pre></div><blockquote>
+<p><code>timedelta</code>类代表两个<code>datetime</code>对象之间的时间差，即两个日期或者日期时间之差。<br>
+支持参数:<code>weeks</code> <code>days</code> <code>hours</code> <code>minutes</code> <code>seconds</code>  <code>milliseconds</code> <code>microseconds</code></p>
+</blockquote>
+<h2 id="格式化">
+  <strong>格式化</strong>
+  <a class="anchor" href="#%e6%a0%bc%e5%bc%8f%e5%8c%96">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">%</span>a	<span style="color:#75715e"># 本地（locale）简化星期名称	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>A	<span style="color:#75715e"># 本地完整星期名称	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>b	<span style="color:#75715e"># 本地简化月份名称	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>B	<span style="color:#75715e"># 本地完整月份名称	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>c	<span style="color:#75715e"># 本地相应的日期和时间表示	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>d	<span style="color:#75715e"># 一个月中的第几天（01 - 31）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>H	<span style="color:#75715e"># 一天中的第几个小时（24小时制，00 - 23）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>I	<span style="color:#75715e"># 第几个小时（12小时制，01 - 12）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>j  <span style="color:#75715e">#  一年中的第几天（001 - 366）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>m	<span style="color:#75715e"># 月份（01 - 12）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>M	<span style="color:#75715e"># 分钟数（00 - 59）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>p	<span style="color:#75715e"># 本地am或者pm的相应符	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>S	<span style="color:#75715e"># 秒（01 - 61）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>U	<span style="color:#75715e"># 一年中的星期数。（00 - 53星期天是一个星期的开始。）第一个星期天之前的所有天数都放在第0周。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>w	<span style="color:#75715e"># 一个星期中的第几天（0 - 6，0是星期天）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>W	<span style="color:#75715e"># 和%U基本相同，不同的是%W以星期一为一个星期的开始。	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>x	<span style="color:#75715e"># 本地相应日期	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>X	<span style="color:#75715e"># 本地相应时间	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>y	<span style="color:#75715e"># 去掉世纪的年份（00 - 99）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>Y	<span style="color:#75715e"># 完整的年份	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>Z	<span style="color:#75715e"># 时区的名字（如果不存在为空字符）	</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%%</span>	<span style="color:#75715e"># ‘%’字符</span>
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#time"><strong>Time</strong></a></li>
+    <li><a href="#datetime-1"><strong>Datetime</strong></a>
+      <ul>
+        <li><a href="#datetimedate">datetime.date()</a></li>
+        <li><a href="#datetimetime">datetime.time()</a></li>
+        <li><a href="#datetimedatetime">datetime.datetime()</a></li>
+        <li><a href="#datetimetimedelta">datetime.timedelta()</a></li>
+      </ul>
+    </li>
+    <li><a href="#格式化"><strong>格式化</strong></a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

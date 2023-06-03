@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SCRAPY#WORKFLOW#scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES#projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py## Scrapy settings for mySpider project ... BOT_NAME = &#39;mySpider&#39; # scrapy项目名 SPIDER_MODULES = [&#39;mySpider.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Scrapy" />
+<meta property="og:description" content="SCRAPY#WORKFLOW#scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES#projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py## Scrapy settings for mySpider project ... BOT_NAME = &#39;mySpider&#39; # scrapy项目名 SPIDER_MODULES = [&#39;mySpider." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-05-22T22:44:05+08:00" />
+<meta property="article:modified_time" content="2023-05-22T22:44:05+08:00" />
+<title>Scrapy | Xiaoc0519</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Xiaoc0519</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Program Language</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9972658730bc28f79c2e04796c313ce" class="toggle" checked />
+    <label for="section-e9972658730bc28f79c2e04796c313ce" class="flex justify-between">
+      <a href="/docs/program-language/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/features/" class="">Features</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="toggle"  />
+    <label for="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="flex justify-between">
+      <a href="/docs/program-language/python/basic/" class="">Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/multiprocessing/" class="">Multiprocessing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/threading/" class="">Threading</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/function/" class="">Function</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/datetime/" class="">DateTime</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36400f26551d6894809d693cbff20fb4" class="toggle"  />
+    <label for="section-36400f26551d6894809d693cbff20fb4" class="flex justify-between">
+      <a href="/docs/program-language/python/data/" class="">Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/math/" class="">Math</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/pandas/" class="">Pandas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/json/" class="">Json</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/hashlib/" class="">Hashlib</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/random/" class="">Random</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df747a85e967807ecebf24238a89e9cf" class="toggle"  />
+    <label for="section-df747a85e967807ecebf24238a89e9cf" class="flex justify-between">
+      <a href="/docs/program-language/python/database/" class="">Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/mongodb/" class="">MongoDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/redis/" class="">Redis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/sql/" class="">Sql</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-23a0b9f76474084ac11d053d9dd160ba" class="toggle"  />
+    <label for="section-23a0b9f76474084ac11d053d9dd160ba" class="flex justify-between">
+      <a href="/docs/program-language/python/ui/" class="">Ui</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/pyside6/" class="">Pyside6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/tkinter/" class="">Tkinter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/wxpython/" class="">Wxpython</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9efea77816258092630ed04ff462dba2" class="toggle"  />
+    <label for="section-9efea77816258092630ed04ff462dba2" class="flex justify-between">
+      <a href="/docs/program-language/python/system/" class="">System</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/pywin32/" class="">Pywin32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/sys/" class="">System</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle" checked />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="active">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
+    <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
+      <a href="/docs/program-language/python/image/" class="">Image</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pytorch/" class="">Pytorch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/opencv/" class="">Opencv</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b75cb7b048c78a06bcee3988830e6da" class="toggle"  />
+    <label for="section-2b75cb7b048c78a06bcee3988830e6da" class="flex justify-between">
+      <a href="/docs/program-language/python/web/" class="">Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/web/flask/" class="">Flask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="toggle"  />
+    <label for="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="flex justify-between">
+      <a href="/docs/program-language/python/automatic/" class="">Automatic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/automatic/pyautogui/" class="">Pyautogui</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
+    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
+      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43f0b111fdb766de7ecfb12f6cfecf03" class="toggle"  />
+    <label for="section-43f0b111fdb766de7ecfb12f6cfecf03" class="flex justify-between">
+      <a href="/docs/program-language/lua/" class="">Lua</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/lua/standard/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
+    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
+      <a href="/docs/program-language/c#/" class="">C#</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Game Engine</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
+    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
+      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
+    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
+      <a href="/docs/game-engine/unity/" class="">Unity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Scrapy</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#workflow"><strong>WORKFLOW</strong></a></li>
+    <li><a href="#files"><strong>FILES</strong></a></li>
+    <li><a href="#settingspy"><strong>SETTINGS.py</strong></a></li>
+    <li><a href="#itempy"><strong>ITEM.py</strong></a></li>
+    <li><a href="#spiderpy"><strong>SPIDER.py</strong></a></li>
+    <li><a href="#pipelinespy"><strong>PIPELINES.py</strong></a></li>
+    <li><a href="#middlerwarespy"><strong>MIDDLERWARES.py</strong></a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="scrapy">
+  <strong>SCRAPY</strong>
+  <a class="anchor" href="#scrapy">#</a>
+</h1>
+<h2 id="workflow">
+  <strong>WORKFLOW</strong>
+  <a class="anchor" href="#workflow">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scrapy startproject projectname <span style="color:#75715e"># 创建项目文件</span>
+</span></span><span style="display:flex;"><span>cd projectname 
+</span></span><span style="display:flex;"><span>scrapy genspider spidername spiderwebsite <span style="color:#75715e"># 创建项目爬虫网页</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># scrapy genspider douban movie.douban.com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scrapy crawl spidername <span style="color:#f92672">[</span>-o name.csv<span style="color:#f92672">]</span> <span style="color:#75715e"># 运行爬虫 指定输出格式</span>
+</span></span></code></pre></div><h2 id="files">
+  <strong>FILES</strong>
+  <a class="anchor" href="#files">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>projectname/
+</span></span><span style="display:flex;"><span>    scrapy.cfg  <span style="color:#75715e"># 项目的配置文件。</span>
+</span></span><span style="display:flex;"><span>    projectname/ <span style="color:#75715e"># 项目的Python模块，将会从这里引用代码</span>
+</span></span><span style="display:flex;"><span>        __init__.py
+</span></span><span style="display:flex;"><span>        items.py <span style="color:#75715e"># 项目的目标文件</span>
+</span></span><span style="display:flex;"><span>        pipelines.py <span style="color:#75715e"># 项目的管道文件</span>
+</span></span><span style="display:flex;"><span>        settings.py <span style="color:#75715e"># 项目的设置文件</span>
+</span></span><span style="display:flex;"><span>        spiders/ <span style="color:#75715e"># 存储爬虫代码目录</span>
+</span></span><span style="display:flex;"><span>            __init__.py
+</span></span><span style="display:flex;"><span>            spidername.py
+</span></span><span style="display:flex;"><span>            ...
+</span></span></code></pre></div><h2 id="settingspy">
+  <strong>SETTINGS.py</strong>
+  <a class="anchor" href="#settingspy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Scrapy settings for mySpider project</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>BOT_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mySpider&#39;</span> <span style="color:#75715e"># scrapy项目名</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SPIDER_MODULES <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;mySpider.spiders&#39;</span>]
+</span></span><span style="display:flex;"><span>NEWSPIDER_MODULE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mySpider.spiders&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.......</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Obey robots.txt rules</span>
+</span></span><span style="display:flex;"><span>ROBOTSTXT_OBEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span> <span style="color:#75715e"># 是否遵守协议,一般给位false,但是创建完项目是是True,我们把它改为False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configure maximum concurrent requests performed by Scrapy (default: 16)</span>
+</span></span><span style="display:flex;"><span>CONCURRENT_REQUESTS <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span> <span style="color:#75715e"># 最大并发量 默认16</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">......</span>
+</span></span><span style="display:flex;"><span>DOWNLOAD_DELAY <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e"># 下载延迟 3秒</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Override the default request headers: # 请求报头,我们打开</span>
+</span></span><span style="display:flex;"><span>DEFAULT_REQUEST_HEADERS <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;Accept&#39;</span>: <span style="color:#e6db74">&#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;Accept-Language&#39;</span>: <span style="color:#e6db74">&#39;en&#39;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 爬虫中间件</span>
+</span></span><span style="display:flex;"><span>SPIDER_MIDDLEWARES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;mySpider.middlewares.MyspiderSpiderMiddleware&#39;</span>: <span style="color:#ae81ff">543</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 下载中间件</span>
+</span></span><span style="display:flex;"><span>DOWNLOADER_MIDDLEWARES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;mySpider.middlewares.MyspiderDownloaderMiddleware&#39;</span>: <span style="color:#ae81ff">543</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">......</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configure item pipelines</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># See https://docs.scrapy.org/en/latest/topics/item-pipeline.html</span>
+</span></span><span style="display:flex;"><span>ITEM_PIPELINES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;mySpider.pipelines.MyspiderPipeline&#39;</span>: <span style="color:#ae81ff">300</span>, <span style="color:#75715e"># 管道</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">......</span>
+</span></span></code></pre></div><h2 id="itempy">
+  <strong>ITEM.py</strong>
+  <a class="anchor" href="#itempy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ZcoolItem</span>(scrapy<span style="color:#f92672">.</span>Item):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># define the fields for your item here like:</span>
+</span></span><span style="display:flex;"><span>    imgLink <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 封面图片链接</span>
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 标题</span>
+</span></span><span style="display:flex;"><span>    types <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 类型</span>
+</span></span><span style="display:flex;"><span>    vistor <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 人气</span>
+</span></span><span style="display:flex;"><span>    comment <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 评论数</span>
+</span></span><span style="display:flex;"><span>    likes <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field() <span style="color:#75715e"># 推荐人</span>
+</span></span></code></pre></div><blockquote>
+<p>定义每个需要写入的信息</p>
+</blockquote>
+<h2 id="spiderpy">
+  <strong>SPIDER.py</strong>
+  <a class="anchor" href="#spiderpy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> projectname.items <span style="color:#f92672">import</span> ItemClassName
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从当前项目下的item 导入 item类</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># from zcool.items import ZcoolItem</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parse</span>(self, response):
+</span></span><span style="display:flex;"><span>    divList <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;//div[@class=&#34;work-list-box&#34;]/div&#39;</span>) <span style="color:#75715e"># 信息总的范围</span>
+</span></span><span style="display:flex;"><span>    divList <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>css(<span style="color:#e6db74">&#39;.div::text&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> div <span style="color:#f92672">in</span> divList:
+</span></span><span style="display:flex;"><span>        imgLink <span style="color:#f92672">=</span> div<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#34;./div[1]/a/img/@src&#34;</span>)<span style="color:#f92672">.</span>getall()[<span style="color:#ae81ff">0</span>] <span style="color:#75715e"># 1.封面图片链接 </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2.title(标题）;3 types（类型）;4vistor（人气）;5comment（评论数）  ....</span>
+</span></span><span style="display:flex;"><span>        likes <span style="color:#f92672">=</span> div<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#34;./div[2]/p[3]/span[3]/@title&#34;</span>)<span style="color:#f92672">.</span>get() <span style="color:#75715e"># 6likes（推荐人数）</span>
+</span></span><span style="display:flex;"><span>        item <span style="color:#f92672">=</span> ZcoolItem(imgLink<span style="color:#f92672">=</span>imgLink,title<span style="color:#f92672">=</span>title,types<span style="color:#f92672">=</span>types,vistor<span style="color:#f92672">=</span>vistor,comment<span style="color:#f92672">=</span>comment,likes<span style="color:#f92672">=</span>likes)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 上面可以写成</span>
+</span></span><span style="display:flex;"><span>        item <span style="color:#f92672">=</span> ZcoolItem()
+</span></span><span style="display:flex;"><span>        item[<span style="color:#e6db74">&#39;imgLink&#39;</span>] <span style="color:#f92672">=</span> imglink
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 翻页实现</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 定位下一页按钮实现</span>
+</span></span><span style="display:flex;"><span>    next_href <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#34;//a[@class=&#39;laypage_next&#39;]/@href&#34;</span>)<span style="color:#f92672">.</span>get()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> next_href: <span style="color:#75715e"># 如果获取到了下一页按钮</span>
+</span></span><span style="display:flex;"><span>        next_url <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>urljoin(next_href) <span style="color:#75715e"># 拼接url链接</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>        print(next_url)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>        request <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Request(next_url) <span style="color:#75715e"># 把下一页的url传递给Request函数,进行翻页循环数据采集。</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> request
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 翻页实现二， 循环出网页并传递</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 更换 start_urls = 为下方函数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_requests</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> scrapy<span style="color:#f92672">.</span>Request(url <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;https://...?start=</span><span style="color:#e6db74">{</span>page<span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;...&#39;</span>
+</span></span><span style="display:flex;"><span>            [,meta<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;proxy&#39;</span>:<span style="color:#e6db74">&#39;ip:port&#39;</span>}]) <span style="color:#75715e"># 代理可选</span>
+</span></span></code></pre></div><h2 id="pipelinespy">
+  <strong>PIPELINES.py</strong>
+  <a class="anchor" href="#pipelinespy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> itemadapter <span style="color:#f92672">import</span> ItemAdapter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> csv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ZcoolPipeline</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self): 
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;Zcool.csv&#39;</span>,<span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)  <span style="color:#75715e"># line1 写文件，利用第3个参数把csv写数据时产生的空行消除</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>file_name <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;name1&#39;</span>, <span style="color:#e6db74">&#39;name2&#39;</span>,<span style="color:#e6db74">&#39;name3&#39;</span>,<span style="color:#f92672">...</span>]  <span style="color:#75715e"># line2 设置文件第一行的字段名，注意要跟spider传过来的字典key名称相同</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictWriter(self<span style="color:#f92672">.</span>f, fieldnames<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>file_name) <span style="color:#75715e"># line3 指定文件的写入方式为csv字典写入，参数1为指定具体文件，参数2为指定字段名</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>writer<span style="color:#f92672">.</span>writeheader() <span style="color:#75715e"># line4 写入第一行字段名，因为只要写入一次，所以文件放在__init__里面</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">open_spider</span>(self,spider):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;Zcool.csv&#39;</span>,<span style="color:#e6db74">&#39;w&#39;</span>,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>,newline<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)  <span style="color:#75715e"># line1 写文件，利用第3个参数把csv写数据时产生的空行消除</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>file_name <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;name1&#39;</span>, <span style="color:#e6db74">&#39;name2&#39;</span>,<span style="color:#e6db74">&#39;name3&#39;</span>,<span style="color:#f92672">...</span>]  <span style="color:#75715e"># line2 设置文件第一行的字段名，注意要跟spider传过来的字典key名称相同</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictWriter(self<span style="color:#f92672">.</span>f, fieldnames<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>file_name) <span style="color:#75715e"># line3 指定文件的写入方式为csv字典写入，参数1为指定具体文件，参数2为指定字段名</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>writer<span style="color:#f92672">.</span>writeheader() <span style="color:#75715e"># line4 写入第一行字段名，因为只要写入一次，所以文件放在__init__里面</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_item</span>(self, item, spider):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>writer<span style="color:#f92672">.</span>writerow(dict(item))  <span style="color:#75715e"># line5 写入spider传过来的具体数值,注意在spider文件中yield的item,是一个由类创建的实例对象，我们写入数据时，写入的是 字典，所以这里还要转化一下。</span>
+</span></span><span style="display:flex;"><span>        print(item) 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> item  <span style="color:#75715e"># line6  写入完返回</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">close_spider</span>(self,spider):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>f<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pymysql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>conn <span style="color:#f92672">=</span> pymysql<span style="color:#f92672">.</span>connect(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>,port<span style="color:#f92672">=</span><span style="color:#ae81ff">123</span>,user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>,password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>,database<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>,charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf8mb4&#39;</span>)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>cursor <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_item</span>(self,item,spider):    
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> item<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;title&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#75715e"># 取不到值返回参数2 &#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    rank <span style="color:#f92672">=</span> item<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;rank&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>    subject <span style="color:#f92672">=</span> item<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;subject&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;insert into name (key1, key2, key3) value (</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#39;</span>,(title,rank,subject)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clpse_spider</span>(self,spider):
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h2 id="middlerwarespy">
+  <strong>MIDDLERWARES.py</strong>
+  <a class="anchor" href="#middlerwarespy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># cookie , 代理 添加</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_cookies_dict</span>():
+</span></span><span style="display:flex;"><span>    cookie_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aa=mdmkdm;bb=sakdad;&#39;</span>
+</span></span><span style="display:flex;"><span>    cookies_dict <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> cookie_str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;;&#39;</span>):
+</span></span><span style="display:flex;"><span>        key, value <span style="color:#f92672">=</span> item<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;=&#39;</span>,maxsplit<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        cookies_dict[key] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cookies_dict 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COOKIE_DICT <span style="color:#f92672">=</span> cookies_dict()    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_requests</span>(self,request,spider):
+</span></span><span style="display:flex;"><span>    request<span style="color:#f92672">.</span>cookie <span style="color:#f92672">=</span> COOKIE_DICT
+</span></span><span style="display:flex;"><span>    request<span style="color:#f92672">.</span>meta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;proxy&#39;</span>:<span style="color:#e6db74">&#39;ip:port&#39;</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#workflow"><strong>WORKFLOW</strong></a></li>
+    <li><a href="#files"><strong>FILES</strong></a></li>
+    <li><a href="#settingspy"><strong>SETTINGS.py</strong></a></li>
+    <li><a href="#itempy"><strong>ITEM.py</strong></a></li>
+    <li><a href="#spiderpy"><strong>SPIDER.py</strong></a></li>
+    <li><a href="#pipelinespy"><strong>PIPELINES.py</strong></a></li>
+    <li><a href="#middlerwarespy"><strong>MIDDLERWARES.py</strong></a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

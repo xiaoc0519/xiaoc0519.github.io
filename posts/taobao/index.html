@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="website taobao spider
+scrapy startproject projectname cd projectname scrapy genspider spidername spiderwebsite pip install -r requirements.txt 创建浏览器#from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService def creat_chrome_driver(*,headless=False): option = webdriver.Options() if headless: options.add_argument(&#39;--headless&#39;) options.add_experimental_option(&#39;excludeSwitches&#39;,[&#39;enable-automation&#39;]) options.add_experimental_option(&#39;useAutomationExtension&#39;,False) browser = webdriver.Chrome(options=options) browser.execute_cdp_cmd( &#39;Page.addScriptToEvaluateOnNewDocument&#39;, {&#39;source&#39;:&#39;Object.defineProperty(navigator,&#34;webdriver&#34;,{get: () =&gt; undefined})&#39;} ) return browser def add_cookies(browser,cookie_file): with open(cookie_file,&#39;r&#39;) as f: cookie_list = json.load(f) for cookie_dict in cookies_list: if cookie_dict[&#39;secure&#39;]: browser.add_cookie(cookie_dict) 从浏览器获取cookie#browser = creat_chrome_driver() browser.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Taobao" />
+<meta property="og:description" content="website taobao spider
+scrapy startproject projectname cd projectname scrapy genspider spidername spiderwebsite pip install -r requirements.txt 创建浏览器#from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService def creat_chrome_driver(*,headless=False): option = webdriver.Options() if headless: options.add_argument(&#39;--headless&#39;) options.add_experimental_option(&#39;excludeSwitches&#39;,[&#39;enable-automation&#39;]) options.add_experimental_option(&#39;useAutomationExtension&#39;,False) browser = webdriver.Chrome(options=options) browser.execute_cdp_cmd( &#39;Page.addScriptToEvaluateOnNewDocument&#39;, {&#39;source&#39;:&#39;Object.defineProperty(navigator,&#34;webdriver&#34;,{get: () =&gt; undefined})&#39;} ) return browser def add_cookies(browser,cookie_file): with open(cookie_file,&#39;r&#39;) as f: cookie_list = json.load(f) for cookie_dict in cookies_list: if cookie_dict[&#39;secure&#39;]: browser.add_cookie(cookie_dict) 从浏览器获取cookie#browser = creat_chrome_driver() browser." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoc0519.github.io/posts/taobao/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-30T15:48:25+08:00" />
+<meta property="article:modified_time" content="2023-05-30T15:48:25+08:00" />
+<title>Taobao | Xiaoc0519</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Xiaoc0519</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Program Language</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9972658730bc28f79c2e04796c313ce" class="toggle"  />
+    <label for="section-e9972658730bc28f79c2e04796c313ce" class="flex justify-between">
+      <a href="/docs/program-language/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/features/" class="">Features</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="toggle"  />
+    <label for="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="flex justify-between">
+      <a href="/docs/program-language/python/basic/" class="">Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/multiprocessing/" class="">Multiprocessing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/threading/" class="">Threading</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/function/" class="">Function</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/datetime/" class="">DateTime</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36400f26551d6894809d693cbff20fb4" class="toggle"  />
+    <label for="section-36400f26551d6894809d693cbff20fb4" class="flex justify-between">
+      <a href="/docs/program-language/python/data/" class="">Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/math/" class="">Math</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/pandas/" class="">Pandas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/json/" class="">Json</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/hashlib/" class="">Hashlib</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/random/" class="">Random</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df747a85e967807ecebf24238a89e9cf" class="toggle"  />
+    <label for="section-df747a85e967807ecebf24238a89e9cf" class="flex justify-between">
+      <a href="/docs/program-language/python/database/" class="">Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/mongodb/" class="">MongoDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/redis/" class="">Redis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/sql/" class="">Sql</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-23a0b9f76474084ac11d053d9dd160ba" class="toggle"  />
+    <label for="section-23a0b9f76474084ac11d053d9dd160ba" class="flex justify-between">
+      <a href="/docs/program-language/python/ui/" class="">Ui</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/pyside6/" class="">Pyside6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/tkinter/" class="">Tkinter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/wxpython/" class="">Wxpython</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9efea77816258092630ed04ff462dba2" class="toggle"  />
+    <label for="section-9efea77816258092630ed04ff462dba2" class="flex justify-between">
+      <a href="/docs/program-language/python/system/" class="">System</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/pywin32/" class="">Pywin32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/sys/" class="">System</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
+    <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
+      <a href="/docs/program-language/python/image/" class="">Image</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pytorch/" class="">Pytorch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/opencv/" class="">Opencv</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b75cb7b048c78a06bcee3988830e6da" class="toggle"  />
+    <label for="section-2b75cb7b048c78a06bcee3988830e6da" class="flex justify-between">
+      <a href="/docs/program-language/python/web/" class="">Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/web/flask/" class="">Flask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="toggle"  />
+    <label for="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="flex justify-between">
+      <a href="/docs/program-language/python/automatic/" class="">Automatic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/automatic/pyautogui/" class="">Pyautogui</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
+    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
+      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43f0b111fdb766de7ecfb12f6cfecf03" class="toggle"  />
+    <label for="section-43f0b111fdb766de7ecfb12f6cfecf03" class="flex justify-between">
+      <a href="/docs/program-language/lua/" class="">Lua</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/lua/standard/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
+    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
+      <a href="/docs/program-language/c#/" class="">C#</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Game Engine</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
+    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
+      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
+    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
+      <a href="/docs/game-engine/unity/" class="">Unity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Taobao</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建浏览器">创建浏览器</a></li>
+    <li><a href="#从浏览器获取cookie">从浏览器获取cookie</a></li>
+    <li><a href="#访问淘宝页面-并设置cookie">访问淘宝页面 并设置cookie</a></li>
+    <li><a href="#itemspy">Items.py</a></li>
+    <li><a href="#spiderpy">Spider.py</a></li>
+    <li><a href="#middlewarespy">Middlewares.py</a></li>
+    <li><a href="#settingpy">Setting.py</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/taobao/">Taobao</a>
+  </h1>
+  
+  <h5>May 30, 2023</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/tags/python/">python</a>
+  </div>
+  
+
+
+
+<p>website taobao spider</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scrapy startproject projectname
+</span></span><span style="display:flex;"><span>cd projectname 
+</span></span><span style="display:flex;"><span>scrapy genspider spidername spiderwebsite
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span></code></pre></div><h2 id="创建浏览器">
+  创建浏览器
+  <a class="anchor" href="#%e5%88%9b%e5%bb%ba%e6%b5%8f%e8%a7%88%e5%99%a8">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium.webdriver.chrome.service <span style="color:#f92672">import</span> Service <span style="color:#66d9ef">as</span> ChromeService
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">creat_chrome_driver</span>(<span style="color:#f92672">*</span>,headless<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>):
+</span></span><span style="display:flex;"><span>    option <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Options()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> headless:
+</span></span><span style="display:flex;"><span>        options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--headless&#39;</span>)
+</span></span><span style="display:flex;"><span>    options<span style="color:#f92672">.</span>add_experimental_option(<span style="color:#e6db74">&#39;excludeSwitches&#39;</span>,[<span style="color:#e6db74">&#39;enable-automation&#39;</span>])
+</span></span><span style="display:flex;"><span>    options<span style="color:#f92672">.</span>add_experimental_option(<span style="color:#e6db74">&#39;useAutomationExtension&#39;</span>,<span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Chrome(options<span style="color:#f92672">=</span>options)
+</span></span><span style="display:flex;"><span>    browser<span style="color:#f92672">.</span>execute_cdp_cmd(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Page.addScriptToEvaluateOnNewDocument&#39;</span>,
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#39;source&#39;</span>:<span style="color:#e6db74">&#39;Object.defineProperty(navigator,&#34;webdriver&#34;,{get: () =&gt; undefined})&#39;</span>}
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> browser
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_cookies</span>(browser,cookie_file):
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">with</span> open(cookie_file,<span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    	cookie_list <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(f)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> cookie_dict <span style="color:#f92672">in</span> cookies_list:
+</span></span><span style="display:flex;"><span>        	<span style="color:#66d9ef">if</span> cookie_dict[<span style="color:#e6db74">&#39;secure&#39;</span>]:
+</span></span><span style="display:flex;"><span>            	browser<span style="color:#f92672">.</span>add_cookie(cookie_dict)
+</span></span></code></pre></div><h2 id="从浏览器获取cookie">
+  从浏览器获取cookie
+  <a class="anchor" href="#%e4%bb%8e%e6%b5%8f%e8%a7%88%e5%99%a8%e8%8e%b7%e5%8f%96cookie">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> creat_chrome_driver()
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://login.taobao.com&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 隐式等待</span>
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>user_input <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>CSS_SELECTOR,<span style="color:#e6db74">&#39;#&#39;</span>)
+</span></span><span style="display:flex;"><span>user_input<span style="color:#f92672">.</span>send_keys(<span style="color:#e6db74">&#39;name&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>login_button<span style="color:#f92672">.</span>click()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;taobao.json&#39;</span>,<span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>dump(browser<span style="color:#f92672">.</span>get_cookies(),f)
+</span></span></code></pre></div><h2 id="访问淘宝页面-并设置cookie">
+  访问淘宝页面 并设置cookie
+  <a class="anchor" href="#%e8%ae%bf%e9%97%ae%e6%b7%98%e5%ae%9d%e9%a1%b5%e9%9d%a2-%e5%b9%b6%e8%ae%be%e7%bd%aecookie">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> creat_chrome_driver()
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https:www/taobao.com&#39;</span>)
+</span></span><span style="display:flex;"><span>add_cookies(browser,<span style="color:#e6db74">&#39;taobao.json&#39;</span>)
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://s.taobao.com/search?q&#39;</span>)
+</span></span></code></pre></div><h2 id="itemspy">
+  Items.py
+  <a class="anchor" href="#itemspy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">a</span>:
+</span></span><span style="display:flex;"><span>	title <span style="color:#f92672">=</span> scrapy<span style="color:#f92672">.</span>Field()
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.....</span>
+</span></span></code></pre></div><h2 id="spiderpy">
+  Spider.py
+  <a class="anchor" href="#spiderpy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_requests</span>(self):
+</span></span><span style="display:flex;"><span>	keywords <span style="color:#f92672">=</span> [key1, key2]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> keywords:
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>        	url <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;https://s.taobao.com/search?q</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;s=</span><span style="color:#e6db74">{</span>page <span style="color:#f92672">*</span> <span style="color:#ae81ff">48</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e"># 一页48数据</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> scrapy<span style="color:#f92672">.</span>Request(url <span style="color:#f92672">=</span> url)
+</span></span></code></pre></div><h2 id="middlewarespy">
+  Middlewares.py
+  <a class="anchor" href="#middlewarespy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__inti__</span>(self):
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>browser <span style="color:#f92672">=</span> creat_chrome_driver(headless<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>browser<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://www.taobao.com&#39;</span>)
+</span></span><span style="display:flex;"><span>    add_cookies(self<span style="color:#f92672">.</span>browser,<span style="color:#e6db74">&#39;taobao.json&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> __del__(self)   :
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>browser<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_request</span>(self,request,spider):
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>browser<span style="color:#f92672">.</span>get(requests<span style="color:#f92672">.</span>url)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HtmlResponse(url<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>url,body<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>browser<span style="color:#f92672">.</span>page_source,request<span style="color:#f92672">=</span>request,encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#75715e"># 拿到动态加载的网页代码，返回响应体</span>
+</span></span></code></pre></div><h2 id="settingpy">
+  Setting.py
+  <a class="anchor" href="#settingpy">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DOWNLOADER_MIDDLEWARES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;mySpider.middlewares.MyspiderDownloaderMiddleware&#39;</span>: <span style="color:#ae81ff">543</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建浏览器">创建浏览器</a></li>
+    <li><a href="#从浏览器获取cookie">从浏览器获取cookie</a></li>
+    <li><a href="#访问淘宝页面-并设置cookie">访问淘宝页面 并设置cookie</a></li>
+    <li><a href="#itemspy">Items.py</a></li>
+    <li><a href="#spiderpy">Spider.py</a></li>
+    <li><a href="#middlewarespy">Middlewares.py</a></li>
+    <li><a href="#settingpy">Setting.py</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

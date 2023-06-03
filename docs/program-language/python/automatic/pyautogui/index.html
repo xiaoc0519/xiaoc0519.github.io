@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="pyautogui">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Pyautogui" />
+<meta property="og:description" content="pyautogui" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/automatic/pyautogui/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-05-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-22T00:00:00+00:00" />
+<title>Pyautogui | Xiaoc0519</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Xiaoc0519</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Program Language</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9972658730bc28f79c2e04796c313ce" class="toggle" checked />
+    <label for="section-e9972658730bc28f79c2e04796c313ce" class="flex justify-between">
+      <a href="/docs/program-language/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/features/" class="">Features</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="toggle"  />
+    <label for="section-f8401cc378f18f59eb2fa4fa6bb8d827" class="flex justify-between">
+      <a href="/docs/program-language/python/basic/" class="">Basic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/multiprocessing/" class="">Multiprocessing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/threading/" class="">Threading</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/function/" class="">Function</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/datetime/" class="">DateTime</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36400f26551d6894809d693cbff20fb4" class="toggle"  />
+    <label for="section-36400f26551d6894809d693cbff20fb4" class="flex justify-between">
+      <a href="/docs/program-language/python/data/" class="">Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/math/" class="">Math</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/pandas/" class="">Pandas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/json/" class="">Json</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/hashlib/" class="">Hashlib</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/data/random/" class="">Random</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df747a85e967807ecebf24238a89e9cf" class="toggle"  />
+    <label for="section-df747a85e967807ecebf24238a89e9cf" class="flex justify-between">
+      <a href="/docs/program-language/python/database/" class="">Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/mongodb/" class="">MongoDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/redis/" class="">Redis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/database/sql/" class="">Sql</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-23a0b9f76474084ac11d053d9dd160ba" class="toggle"  />
+    <label for="section-23a0b9f76474084ac11d053d9dd160ba" class="flex justify-between">
+      <a href="/docs/program-language/python/ui/" class="">Ui</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/pyside6/" class="">Pyside6</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/tkinter/" class="">Tkinter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/ui/wxpython/" class="">Wxpython</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9efea77816258092630ed04ff462dba2" class="toggle"  />
+    <label for="section-9efea77816258092630ed04ff462dba2" class="flex justify-between">
+      <a href="/docs/program-language/python/system/" class="">System</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/pywin32/" class="">Pywin32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/system/sys/" class="">System</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
+    <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
+      <a href="/docs/program-language/python/image/" class="">Image</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pytorch/" class="">Pytorch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/image/opencv/" class="">Opencv</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b75cb7b048c78a06bcee3988830e6da" class="toggle"  />
+    <label for="section-2b75cb7b048c78a06bcee3988830e6da" class="flex justify-between">
+      <a href="/docs/program-language/python/web/" class="">Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/web/flask/" class="">Flask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="toggle" checked />
+    <label for="section-fb7c6dc9d540d8df70e3f7cbac4de729" class="flex justify-between">
+      <a href="/docs/program-language/python/automatic/" class="">Automatic</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/automatic/pyautogui/" class="active">Pyautogui</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
+    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
+      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43f0b111fdb766de7ecfb12f6cfecf03" class="toggle"  />
+    <label for="section-43f0b111fdb766de7ecfb12f6cfecf03" class="flex justify-between">
+      <a href="/docs/program-language/lua/" class="">Lua</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/lua/standard/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
+    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
+      <a href="/docs/program-language/c#/" class="">C#</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Game Engine</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
+    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
+      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
+    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
+      <a href="/docs/game-engine/unity/" class="">Unity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Pyautogui</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mouse"><strong>MOUSE</strong></a></li>
+    <li><a href="#keyboard"><strong>KEYBOARD</strong></a></li>
+    <li><a href="#pop-ups"><strong>POP-UPS</strong></a></li>
+    <li><a href="#image"><strong>IMAGE</strong></a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="pyautogui">
+  <strong>PYAUTOGUI</strong>
+  <a class="anchor" href="#pyautogui">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pyautogui <span style="color:#66d9ef">as</span> pg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 启用防故障功能, 鼠标强制移动到屏幕左上脚(0,0), 直接抛出 failSafeException 异常</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>FAILSAFE <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 判断坐标是否在屏幕上</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>onScreen(x,y)  <span style="color:#75715e">#return True   Judge x,y is in screen</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>width, height <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>size() <span style="color:#75715e"># 获取运行环境屏幕尺度</span>
+</span></span></code></pre></div><h2 id="mouse">
+  <strong>MOUSE</strong>
+  <a class="anchor" href="#mouse">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>X,Y <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>position() <span style="color:#75715e"># 获取鼠标当前坐标</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 鼠标移动</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 绝对移动</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(x,y,duration<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># duration 为移动时间 单位秒</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 相对当前位置移动</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveRel(x,y,duration<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e"># 向当前位置 右移X 下移Y 像素 (可以为负数)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 拖拽</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>dragTo(x,y(,sec),button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>) <span style="color:#75715e"># 按住左键拖拽到x,y  sec为持续时间(s)</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>dragRel(x,y(,sec),button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>) <span style="color:#75715e"># 按住左键往右X 下Y 拖拽像素</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 点击</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>click()  <span style="color:#75715e"># 当前位置点击</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>click(x,y)  <span style="color:#75715e"># 在 x,y 位置点击</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>click(x,y,duration<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e"># 1秒时间移动到x,y并点击</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>doubleClick() <span style="color:#75715e"># 当前位置双击 和click 一样可以设置参数</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>tripleClick() <span style="color:#75715e"># 三击 同上</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>mouseDown() <span style="color:#75715e"># 鼠标左键按下</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>mouseUp()  <span style="color:#75715e"># 左键松开</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>mouseDown(button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>) <span style="color:#75715e"># 按下鼠标右键</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>mouseUp(button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>, x<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, y<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>) <span style="color:#75715e"># 移动到(100, 200)位置，然后松开鼠标右键</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 滑轮</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## scroll函数控制鼠标滚轮的滚动，amount_to_scroll参数表示滚动的格数。正数则页面向上滚动，负数则向下滚动</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## pg.scroll(clicks=amount_to_scroll, x=moveToX, y=moveToY)</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>scroll(<span style="color:#ae81ff">10</span>) <span style="color:#75715e"># 向上滚动10格</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>scroll(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>) <span style="color:#75715e"># 向下滚动10格</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>scroll(<span style="color:#ae81ff">10</span>, x<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, y<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>) <span style="color:#75715e"># 移动到(100, 100)位置再向上滚动10格</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 渐变函数 可以用于moveTo()，moveRel()，dragTo()和dragRel()函数</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  开始很慢，不断加速</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>, pg<span style="color:#f92672">.</span>easeInQuad)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  开始很快，不断减速</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>, pg<span style="color:#f92672">.</span>easeOutQuad)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  开始和结束都快，中间比较慢</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>, pg<span style="color:#f92672">.</span>easeInOutQuad)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  一步一徘徊前进</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>, pg<span style="color:#f92672">.</span>easeInBounce)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  徘徊幅度更大，甚至超过起点和终点</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>moveTo(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>, pg<span style="color:#f92672">.</span>easeInElastic)
+</span></span></code></pre></div><h2 id="keyboard">
+  <strong>KEYBOARD</strong>
+  <a class="anchor" href="#keyboard">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>typewrite(<span style="color:#e6db74">&#39;type here&#39;</span>(,interval<span style="color:#f92672">=</span><span style="color:#ae81ff">0.25</span>)) <span style="color:#75715e"># 输入字符串 interval使每次键入间隔秒数</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>press(<span style="color:#e6db74">&#39;enter&#39;</span>) <span style="color:#75715e"># 按一次enter</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>press([<span style="color:#e6db74">&#39;right&#39;</span>,<span style="color:#e6db74">&#39;left&#39;</span>,<span style="color:#e6db74">&#39;left&#39;</span>])  <span style="color:#75715e"># 顺序完成每一个键位的敲击</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>keyDown(<span style="color:#e6db74">&#39;shift&#39;</span>) <span style="color:#75715e"># 按下 shift 键</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>keyUp(<span style="color:#e6db74">&#39;shift&#39;</span>)  <span style="color:#75715e"># 松开 shift 键</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>keyDown(<span style="color:#e6db74">&#39;shift&#39;</span>)
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>press(<span style="color:#e6db74">&#39;4&#39;</span>)
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>keyUp(<span style="color:#e6db74">&#39;shift&#39;</span>) <span style="color:#75715e"># 输出 $ 符号的按键</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>hotkey(<span style="color:#e6db74">&#39;ctrl&#39;</span>, <span style="color:#e6db74">&#39;v&#39;</span>) <span style="color:#75715e"># 组合按键（Ctrl+V）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>KEYBOARD_KEYS <span style="color:#75715e"># 显示press()，keyDown()，keyUp()和hotkey()函数可以输入的按键名称</span>
+</span></span></code></pre></div><h2 id="pop-ups">
+  <strong>POP-UPS</strong>
+  <a class="anchor" href="#pop-ups">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 显示一个简单的带文字和OK按钮的消息弹窗。用户点击后返回button的文字。</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>alert(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;OK&#39;</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>alert(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;要开始程序么？&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;请求框&#39;</span>, button<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;OK&#39;</span>)
+</span></span><span style="display:flex;"><span>print(b) <span style="color:#75715e"># 输出结果为OK</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 显示一个简单的带文字、OK和Cancel按钮的消息弹窗，用户点击后返回被点击button的文字，支持自定义数字、文字的列表。</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>confirm(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, buttons<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;OK&#39;</span>, <span style="color:#e6db74">&#39;Cancel&#39;</span>]) <span style="color:#75715e"># OK和Cancel按钮的消息弹窗</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>confirm(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, buttons<span style="color:#f92672">=</span>range(<span style="color:#ae81ff">10</span>)) <span style="color:#75715e"># 10个按键0-9的消息弹窗</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>confirm(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, buttons<span style="color:#f92672">=</span>range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(a) <span style="color:#75715e"># 输出结果为你选的数字</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 可以输入的消息弹窗，带OK和Cancel按钮。用户点击OK按钮返回输入的文字，点击Cancel按钮返回None。</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>prompt(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 样式同prompt()，用于输入密码，消息用*表示。带OK和Cancel按钮。用户点击OK按钮返回输入的文字，点击Cancel按钮返回None。</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>password(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, mask<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>)
+</span></span></code></pre></div><h2 id="image">
+  <strong>IMAGE</strong>
+  <a class="anchor" href="#image">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>im <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>screenshot(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;path&#39;</span>) <span style="color:#75715e"># 截全屏并设置保存图片的位置和名称</span>
+</span></span><span style="display:flex;"><span>print(im) <span style="color:#75715e"># 打印图片的属性</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 不截全屏，截取区域图片。截取区域region参数为：左上角XY坐标值、宽度和高度</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>screenshot(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;path&#39;</span>, region<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">400</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pix <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>screenshot()<span style="color:#f92672">.</span>getpixel((<span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">200</span>)) <span style="color:#75715e"># 获取坐标(220,200)所在屏幕点的RGB颜色</span>
+</span></span><span style="display:flex;"><span>positionStr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; RGB:(&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">1</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">2</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;)&#39;</span>
+</span></span><span style="display:flex;"><span>print(positionStr) <span style="color:#75715e"># 打印结果为RGB:( 60, 63, 65)</span>
+</span></span><span style="display:flex;"><span>pix <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>pixel(<span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">200</span>) <span style="color:#75715e"># 获取坐标(220,200)所在屏幕点的RGB颜色与上面三行代码作用一样</span>
+</span></span><span style="display:flex;"><span>positionStr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; RGB:(&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">1</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">+</span> str(pix[<span style="color:#ae81ff">2</span>])<span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;)&#39;</span>
+</span></span><span style="display:flex;"><span>print(positionStr) <span style="color:#75715e"># 打印结果为RGB:( 60, 63, 65)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果你只是要检验一下指定位置的像素值，可以用pixelMatchesColor(x,y,RGB)函数，把X、Y和RGB元组值穿入即可</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果所在屏幕中(x,y)点的实际RGB三色与函数中的RGB一样就会返回True，否则返回False</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tolerance参数可以指定红、绿、蓝3种颜色误差范围</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>pixelMatchesColor(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, (<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>))
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>pixelMatchesColor(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, (<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">245</span>), tolerance<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 获得传入文件图片在现在的屏幕上面的坐标，返回的是一个元组(top, left, width, height)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果截图没找到，pg.locateOnScreen()函数返回None</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>locateOnScreen(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file&#39;</span>)
+</span></span><span style="display:flex;"><span>print(a) <span style="color:#75715e"># 打印结果为Box(left=0, top=0, width=300, height=400)</span>
+</span></span><span style="display:flex;"><span>x, y <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>center(a) <span style="color:#75715e"># 获得文件图片在现在的屏幕上面的中心坐标</span>
+</span></span><span style="display:flex;"><span>print(x, y) <span style="color:#75715e"># 打印结果为150 200</span>
+</span></span><span style="display:flex;"><span>x, y <span style="color:#f92672">=</span> pg<span style="color:#f92672">.</span>locateCenterOnScreen(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file&#39;</span>) <span style="color:#75715e"># 这步与上面的四行代码作用一样</span>
+</span></span><span style="display:flex;"><span>print(x, y) <span style="color:#75715e"># 打印结果为150 200</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配屏幕所有与目标图片的对象，可以用for循环和list()输出</span>
+</span></span><span style="display:flex;"><span>pg<span style="color:#f92672">.</span>locateAllOnScreen(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> pos <span style="color:#f92672">in</span> pg<span style="color:#f92672">.</span>locateAllOnScreen(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file&#39;</span>):
+</span></span><span style="display:flex;"><span>  print(pos)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 打印结果为Box(left=0, top=0, width=300, height=400)</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> list(pg<span style="color:#f92672">.</span>locateAllOnScreen(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file&#39;</span>))
+</span></span><span style="display:flex;"><span>print(a) <span style="color:#75715e"># 打印结果为[Box(left=0, top=0, width=300, height=400)]</span>
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mouse"><strong>MOUSE</strong></a></li>
+    <li><a href="#keyboard"><strong>KEYBOARD</strong></a></li>
+    <li><a href="#pop-ups"><strong>POP-UPS</strong></a></li>
+    <li><a href="#image"><strong>IMAGE</strong></a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
