@@ -1,6 +1,0 @@
----
-bookCollapseSection: true
----
-
-# **COCOS CREATER**
-
