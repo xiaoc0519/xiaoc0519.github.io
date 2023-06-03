@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>https://xiaoc0519.github.io/docs/program-language/python/system/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 May 2023 21:40:50 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pywin32</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/system/pywin32/</link>
+      <pubDate>Tue, 23 May 2023 21:40:50 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/system/pywin32/</guid>
+      <description>PYWIN32 import win32api, win32api win32api.MessageBox(None,&amp;#34;Hello,pywin32!&amp;#34;,&amp;#34;pywin32&amp;#34;,win32con.MB_OK) </description>
+    </item>
+    
+    <item>
+      <title>System</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/system/sys/</link>
+      <pubDate>Tue, 23 May 2023 08:55:23 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/system/sys/</guid>
+      <description>SYSTEM SYS import sys # python name.py [arg1,[arg2]] # 命令行调用 Python 脚本时提供的“命令行参数” sys.argv # [&amp;#39;name.py&amp;#39;[,&amp;#39;arg1&amp;#39;[,&amp;#39;arg2&amp;#39;]]] sys.platform # linux / win32 # 当前运行的 Python 解释器的可执行程序的绝对路径 sys.executable sys.path # 调用 Python 解释器的脚本所在的绝对路径 sys.path.append(path) # 添加 path模块 到解释器路径 OS import os os.name # posix(Linux/Mac) nt(Win) java(Java) os.listdir() # 列出（当前）目录下的全部路径（及文件）默认为 ./ def get_filelists(file_dir=&amp;#39;.&amp;#39;): list_directory = os.listdir(file_dir) filelists = [] for directory in list_directory: if(os.path.isfile(directory)): filelists.append(directory) return filelists os.mkdir(dir) # 新建一级路径 多级创建报错 FileNotFoundError 已有创建报错 FileExistsError os.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,109 +2,171 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/docs/langs/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/features/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/</loc>
+    <lastmod>2023-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/posts/</loc>
+    <lastmod>2023-05-30T15:48:25+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/tags/python/</loc>
+    <lastmod>2023-05-30T15:48:25+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/tags/</loc>
+    <lastmod>2023-05-30T15:48:25+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/posts/taobao/</loc>
+    <lastmod>2023-05-30T15:48:25+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/</loc>
+    <lastmod>2023-05-30T15:35:56+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/multiprocessing/</loc>
+    <lastmod>2023-05-30T15:35:56+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/threading/</loc>
+    <lastmod>2023-05-30T15:35:56+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/</loc>
+    <lastmod>2023-05-30T10:14:59+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/math/</loc>
+    <lastmod>2023-05-30T10:14:59+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/pandas/</loc>
+    <lastmod>2023-05-29T17:14:59+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/database/</loc>
+    <lastmod>2023-05-29T17:05:52+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/database/mongodb/</loc>
+    <lastmod>2023-05-29T17:05:52+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/database/redis/</loc>
+    <lastmod>2023-05-29T17:05:52+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/database/sql/</loc>
+    <lastmod>2023-05-29T17:05:52+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/typescript/</loc>
+    <lastmod>2023-05-24T12:02:40+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/typescript/basic/</loc>
+    <lastmod>2023-05-24T12:02:40+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/ui/</loc>
     <lastmod>2023-05-23T21:48:45+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/ui/pyside6/</loc>
     <lastmod>2023-05-23T21:48:45+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/</loc>
-    <lastmod>2023-05-23T21:48:45+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/docs/</loc>
-    <lastmod>2023-05-23T21:48:45+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2023-05-23T21:48:45+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/pyside6/</loc>
-    <lastmod>2023-05-23T21:48:45+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/pywin32/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/system/</loc>
     <lastmod>2023-05-23T21:40:50+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/system/pywin32/</loc>
+    <lastmod>2023-05-23T21:40:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/basic/</loc>
     <lastmod>2023-05-23T20:45:45+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/basic/</loc>
-    <lastmod>2023-05-23T20:45:45+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/docs/langs/python/standard/function/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/function/</loc>
     <lastmod>2023-05-23T15:35:56+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/bs4/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/</loc>
     <lastmod>2023-05-23T15:01:01+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/wxpython/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/bs4/</loc>
+    <lastmod>2023-05-23T15:01:01+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/ui/tkinter/</loc>
     <lastmod>2023-05-23T13:58:44+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/json/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/ui/wxpython/</loc>
+    <lastmod>2023-05-23T13:58:44+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/json/</loc>
     <lastmod>2023-05-23T11:50:58+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/datetime/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/basic/datetime/</loc>
     <lastmod>2023-05-23T11:50:23+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/hashlib/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/hashlib/</loc>
     <lastmod>2023-05-23T11:49:19+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/random/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/data/random/</loc>
     <lastmod>2023-05-23T11:48:35+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/re/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/re/</loc>
     <lastmod>2023-05-23T08:56:23+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/standard/system/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/system/sys/</loc>
     <lastmod>2023-05-23T08:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/pytorch/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/image/</loc>
     <lastmod>2023-05-22T22:44:44+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/tornado/</loc>
-    <lastmod>2023-05-22T22:44:52+08:00</lastmod>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/image/pytorch/</loc>
+    <lastmod>2023-05-22T22:44:44+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/pillow/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/image/pillow/</loc>
     <lastmod>2023-05-22T22:44:37+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/opencv/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/image/opencv/</loc>
     <lastmod>2023-05-22T22:44:32+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/flask/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/web/</loc>
     <lastmod>2023-05-22T22:44:11+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/scrapy/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/web/flask/</loc>
+    <lastmod>2023-05-22T22:44:11+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/</loc>
     <lastmod>2023-05-22T22:44:05+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/lua/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/lua/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/lua/standard/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/automatic/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/django/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/lua/standard/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/httpx/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/httpx/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/pyautogui/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/automatic/pyautogui/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/requests/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/requests/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/python/third_part/selenium/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/python/spider/selenium/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/docs/langs/javascript/</loc>
+    <loc>https://xiaoc0519.github.io/docs/game-engine/</loc>
   </url><url>
-    <loc>http://example.org/docs/langs/javascript/autojs/</loc>
+    <loc>https://xiaoc0519.github.io/docs/game-engine/cocos-creater/</loc>
   </url><url>
-    <loc>http://example.org/docs/langs/typescript/</loc>
+    <loc>https://xiaoc0519.github.io/docs/game-engine/unity/</loc>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/c#/</loc>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/javascript/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://xiaoc0519.github.io/docs/program-language/javascript/autojs/</loc>
+  </url><url>
+    <loc>https://xiaoc0519.github.io/categories/</loc>
   </url>
 </urlset>

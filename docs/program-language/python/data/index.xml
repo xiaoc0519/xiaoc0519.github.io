@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>https://xiaoc0519.github.io/docs/program-language/python/data/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 10:14:59 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/data/math/</link>
+      <pubDate>Tue, 30 May 2023 10:14:59 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/data/math/</guid>
+      <description>MATH import math 常量 math.e # 返回欧拉数 (2.7182...) math.inf # 返回正无穷大浮点数 math.nan # 返回一个浮点值 NaN (not a number) math.pi # π 一般指圆周率。 圆周率 PI (3.1415...) math.tau # 数学常数 τ = 6.283185...，精确到可用精度。Tau 是一个圆周常数，等于 2π，圆的周长与半径之比。 FUNCTION math.acos(x) # 返回 x 的反余弦，结果范围在 0 到 pi 之间。 math.acosh(x) # 返回 x 的反双曲余弦值。 math.asin(x) # 返回 x 的反正弦值，结果范围在 -pi/2 到 pi/2 之间。 math.asinh(x) # 返回 x 的反双曲正弦值。 math.atan(x) # 返回 x 的反正切值，结果范围在 -pi/2 到 pi/2 之间。 math.</description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/data/pandas/</link>
+      <pubDate>Mon, 29 May 2023 17:14:59 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/data/pandas/</guid>
+      <description>PANDAS import pandas as pd mydataset = { &amp;#39;sites&amp;#39;: [&amp;#34;Google&amp;#34;, &amp;#34;Runoob&amp;#34;, &amp;#34;Wiki&amp;#34;], &amp;#39;number&amp;#39;: [1, 2, 3] } myvar = pd.DataFrame(mydataset) SERIES Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。
+Series 由索引（index）和列组成
+pandas.Series( data, index, dtype, name, copy) # data：一组数据(ndarray 类型)。 # index：数据索引标签，如果不指定，默认从 0 开始。 # dtype：数据类型，默认会自己判断。 # name：设置名称。 # copy：拷贝数据，默认为 False。 a = [1, 2, 3] mva = pd.Series(a) # ********** # 索引 数据 # 0 1 # 1 2 # 2 3 # dtype: int64 数据类型 # ********** mva[1] # 2 # 可以指定索引值 a = [&amp;#34;Google&amp;#34;, &amp;#34;Edge&amp;#34;, &amp;#34;Firefox&amp;#34;] mva = pd.</description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/data/json/</link>
+      <pubDate>Tue, 23 May 2023 11:50:58 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/data/json/</guid>
+      <description>Json import json # 数据类型（obj）转化为 JSON 字符串 json.dumps(obj) # 把数据写入文件中 with open(file,&amp;#34;w&amp;#34;) as f: date = json.dump(dic,f) # 将已编码的 JSON 字符串解码为 Python 对象 json.loads(jsondata) # 把数据文件读出 with open(file, &amp;#39;r&amp;#39;)as f: data = json.load(f) data = { &amp;#34;name&amp;#34;:&amp;#34;name1&amp;#34; , &amp;#34;url&amp;#34;:&amp;#34;url1&amp;#34; ,&amp;#39;data&amp;#39;:{&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;}} data[&amp;#39;name&amp;#39;] # name1 data.get(&amp;#39;data&amp;#39;) # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;] # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;][&amp;#39;pic&amp;#39;] # pic1 </description>
+    </item>
+    
+    <item>
+      <title>Hashlib</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/data/hashlib/</link>
+      <pubDate>Tue, 23 May 2023 11:49:19 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/data/hashlib/</guid>
+      <description>Hashlib import hashlib 支持 blake2b, sha1, sha3_224, sha256, md4, sha3_384, sm3, shake_128, sha384, sha512_224, shake_256, sha3_512, whirlpool, blake2s, ripemd160, sha3_256, sha512, md5, md5-sha1, mdc2, sha224, sha512_256
+MD5 MD5是最常见的摘要算法，速度很快
+生成结果是固定的128 bit字节，通常用一个32位的16进制字符串表示。
+m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到MD5对象中 m.update(password.encode(encoding=&amp;#39;utf-8&amp;#39;)) # hexdigest()将加密字符串 生成十六进制数据字符串值 password_md5 = m.hexdigest() # &amp;#39;4dec5d6a773de446285d2ac3b540dade&amp;#39; # 在构建对象直接插入加密字符串 md = hashlib.md5(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 通过update方法 往MD5对象中增加字符串参数 md = hashlib.md5() md.update(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 当数据量过大时，可以分块摘要 md = hashlib.</description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/data/random/</link>
+      <pubDate>Tue, 23 May 2023 11:48:35 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/data/random/</guid>
+      <description>RANDOM import random # 0-1的随机浮点数 0&amp;lt;=n&amp;lt;1.0 random.random() # 指定范围内的随机浮点数 if a&amp;lt;b,则生成的随机数n：a&amp;lt;=n&amp;lt;b；else 同理 random.uniform(a,b) # 指定范围内的整数 n：a&amp;lt;=n&amp;lt;=b。 random.randint(a,b) # 从序列中获取一个随机元素 list,tuple,字符串 random.choice(sequence) # 参数必须为整数 random.randrange([start],stop,[step]) # 将一个列表中的元素打乱，即将列表中的元素随机排列 random.shuffle(x,[random]) # 指定序列中随机获取指定长度k的片段。sample函数不会修改原有的序列。 random.sample(sequence,k) </description>
+    </item>
+    
+  </channel>
+</rss>

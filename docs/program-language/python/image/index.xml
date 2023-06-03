@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>https://xiaoc0519.github.io/docs/program-language/python/image/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 May 2023 22:44:44 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pytorch</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/image/pytorch/</link>
+      <pubDate>Mon, 22 May 2023 22:44:44 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/image/pytorch/</guid>
+      <description>PYTORCH </description>
+    </item>
+    
+    <item>
+      <title>Pillow</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/image/pillow/</link>
+      <pubDate>Mon, 22 May 2023 22:44:37 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/image/pillow/</guid>
+      <description>PILLOW </description>
+    </item>
+    
+    <item>
+      <title>Opencv</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/image/opencv/</link>
+      <pubDate>Mon, 22 May 2023 22:44:32 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/image/opencv/</guid>
+      <description>OPENCV 二级目录 四级 print(&amp;#39;&amp;#39;)asdasd asd</description>
+    </item>
+    
+  </channel>
+</rss>

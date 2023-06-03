@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>https://xiaoc0519.github.io/docs/program-language/python/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Features</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/features/</link>
+      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/features/</guid>
+      <description>FEATURES F-string f&#39;{expr=}&#39; 的 f-字符串将扩展表示为表达式文本，加一个等于号，再加表达式的求值结果
+指定了转换符，表达式的求值结果会先转换再格式化
+des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a string f&amp;#39;{des = }&amp;#39; # des = string # &amp;#39;!r&amp;#39; 为调用 repr() name = &amp;#34;Fred&amp;#34; f&amp;#34;He said his name is {name!r}.&amp;#34; # &amp;#34;He said his name is &amp;#39;Fred&amp;#39;.&amp;#34; # &amp;#39;!s&amp;#39; 即对结果调用 str() # &amp;#39;!a&amp;#39; 为调用 ascii() width = 10 precision = 4 value = decimal.Decimal(&amp;#34;12.34567&amp;#34;) f&amp;#34;result: {value:{width}.{precision}}&amp;#34; # nested fields &amp;#39;result: 12.35&amp;#39; today = datetime(year=2017, month=1, day=27) f&amp;#34;{today:%B %d, %Y}&amp;#34; # using date format specifier &amp;#39;January 27, 2017&amp;#39; f&amp;#34;{today=:%B %d, %Y}&amp;#34; # using date format specifier and debugging &amp;#39;today=January 27, 2017&amp;#39; number = 1024 f&amp;#34;{number:#0x}&amp;#34; # using integer format specifier &amp;#39;0x400&amp;#39; foo = &amp;#34;bar&amp;#34; f&amp;#34;{ foo = }&amp;#34; # preserves whitespace &amp;#34; foo = &amp;#39;bar&amp;#39;&amp;#34; line = &amp;#34;The mill&amp;#39;s closed&amp;#34; f&amp;#34;{line = :20}&amp;#34; # &amp;#34;line = The mill&amp;#39;s closed &amp;#34; f&amp;#34;{line = !</description>
+    </item>
+    
+  </channel>
+</rss>

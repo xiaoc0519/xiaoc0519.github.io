@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>https://xiaoc0519.github.io/docs/program-language/python/spider/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 May 2023 15:01:01 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/spider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bs4</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/bs4/</link>
+      <pubDate>Tue, 23 May 2023 15:01:01 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/bs4/</guid>
+      <description>BeautifulSoup LXML # pip install bs4 # pip install lxml from bs4 import BeautifulSoup req=requests.get(url,headers=headers) html=req.text soup = BeautifulSoup(html, &amp;#39;lxml&amp;#39;) # 创建beautifulsoup解析对象 soup.prettify() # 格式化输出 html / xml 文档 Beautiful Soup 是一个HTML/XML 的解析器，主要用于解析和提取 HTML/XML 数据。
+Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,
+所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment .
+取值 # Tag有很多方法和属性，tag中最重要的属性: `name` 和 `attributes`。 soup=BeautifulSoup(html,&amp;#39;lxml&amp;#39;) soup.h1 # 网页匹配的第一个标签 soup.div.attrs # 获取标签div所有属性,返回字典 soup.ol[&amp;#39;class&amp;#39;] # 获取标签ol属性为class的值 # NavigableString ## ** 标签内非属性字符串,格式：soup.&amp;lt;tag&amp;gt;.string ## ** NavigableString 可以跨越多个层次 soup.</description>
+    </item>
+    
+    <item>
+      <title>Re</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/re/</link>
+      <pubDate>Tue, 23 May 2023 08:56:23 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/re/</guid>
+      <description>RE import re result = re.match(pattern, string, re.I) result.group() # ab 返回整体结果 result.group(1) # b 返回第一个()匹配部分 Flags re.I # 忽略大小写 re.L # 表示特殊字符集 \w, \W, \b, \B, \s, \S 依赖于当前环境 re.M # 多行模式 re.S # 即为 . 并且包括换行符在内的任意字符（. 不包括换行符） re.U # 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库 re.X # 为了增加可读性，忽略空格和 # 后面的注释 Pattern 单字符 . # 匹配任意1个字符（除了\n） [ ] # 匹配[ ]中列举的字符 \d # 数字，即0-9 可以写在字符集[.</description>
+    </item>
+    
+    <item>
+      <title>Scrapy</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/</link>
+      <pubDate>Mon, 22 May 2023 22:44:05 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/</guid>
+      <description>SCRAPY WORKFLOW scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py # Scrapy settings for mySpider project ... BOT_NAME = &amp;#39;mySpider&amp;#39; # scrapy项目名 SPIDER_MODULES = [&amp;#39;mySpider.spiders&amp;#39;] NEWSPIDER_MODULE = &amp;#39;mySpider.</description>
+    </item>
+    
+    <item>
+      <title>Httpx</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/httpx/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/httpx/</guid>
+      <description>HTTPX 3.6+ pip install httpx,httpx[http2]
+import httpx res = httpx.get(&amp;#39;url&amp;#39;,timeout=10.0) # 超时默认 5s None 可以关闭超时 HTTP/2 httpx.Client() 类似于 requests.Session()
+client = httpx.Client(http2=True, verify=False) response = client.get(url, headers) response.text SPIDER client = httpx.Client() #类似requests.Session() try: do somting finally: client.close() #关闭连接池 with httpx.Client() as client: r = client.get(url, headers=headers) # Client 和 get 里面都可以添加 headers,最后这两个地方的 headers 可以合并到请求里 headers = {&amp;#39;X-Auth&amp;#39;: &amp;#39;from-client&amp;#39;} params = {&amp;#39;client_id&amp;#39;: &amp;#39;client1&amp;#39;} with httpx.Client(headers=headers, params=params) as client: headers = {&amp;#39;X-Custom&amp;#39;: &amp;#39;from-request&amp;#39;} params = {&amp;#39;request_id&amp;#39;: &amp;#39;request1&amp;#39;} r = client.</description>
+    </item>
+    
+    <item>
+      <title>Requests</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/requests/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/requests/</guid>
+      <description>REQUESTS import requests,json res = requests.get(url,headers,params,json,verify=false,cookies,timeout) # params get请求传参 a=1 # data 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 # json 提交数据，res.body的格式为 {“a”: 1, “b”: 2} res = res.text # 文本内容 res = res.content # 2进制内容 json.loads(json) # json数据 Requests requests.get() requests.post() requests.head() # 获取网页头的信息 requests.put() # 提交put请求 requests.delete() # 向HTML页码提交删除请求 requests.patch() # 向HTML网页提交局部修改请求 requests.get( url,headers,cookies,timeout, json, # 提交数据，res.body的格式为 {“a”: 1, “b”: 2} params, # get请求传参 a=1 data, # 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 auth, # 元组，支持HTTP认证功能 files, # 字典类型，传输文件 proxies, # 字典类型，设定访问代理服务器，可以增加登录认证 allow_redirects, # True/False，默认为True，重定向开关 stream, # True/False， 默认为True，获取内容立刻下载开关 verify, # True/False，默认为True，认证SSL证书开关 cert # 本地SSL证书路径 ) Response # cookie 获取处理cookie cookie = res.</description>
+    </item>
+    
+    <item>
+      <title>Selenium</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/selenium/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/selenium/</guid>
+      <description>SELENIUM 4 驱动下载: Firefox Chrome Edge
+启动 from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService service = ChromeService(executable_path=CHROMEDRIVER_PATH) driver = webdriver.Chrome(service=service) 参数 option = webdriver.Options() options.add_argument(&amp;#39;user-agent=&amp;#34;value&amp;#34;&amp;#39;) # 添加UA options.add_argument(&amp;#39;window-size=1920x3000&amp;#39;) # 指定浏览器分辨率 options.add_argument(&amp;#39;--disable-gpu&amp;#39;) # 谷歌文档提到需要加上这个属性来规避bug options.add_argument(&amp;#39;--hide-scrollbars&amp;#39;) # 隐藏滚动条, 应对一些特殊页面 options.add_argument(&amp;#39;blink-settings=imagesEnabled=false&amp;#39;) # 不加载图片, 提升速度 options.add_argument(&amp;#39;--headless&amp;#39;) # 不提供可视化页面. linux系统不支持可视化不加这条会启动失败 options.add_argument(&amp;#39;--no-sandbox&amp;#39;) # 以最高权限运行 options.binary_location = r&amp;#34;path&amp;#34; # 手动指定使用的浏览器位置 options.add_extension(&amp;#39;crx&amp;#39;) # 添加 CRX 插件 options.add_argument(&amp;#34;--disable-javascript&amp;#34;) # 禁用JavaScript options.add_argument(&amp;#34;--proxy-server=http://XXXXX.com:80&amp;#34;) # 添加代理 # 设置开发者模式启动，该模式下webdriver属性为正常值 options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;, [&amp;#39;enable-automation&amp;#39;]) # 禁用浏览器弹窗 prefs = { &amp;#39;profile.</description>
+    </item>
+    
+  </channel>
+</rss>
