@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>http://example.org/docs/langs/lua/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/docs/langs/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic</title>
+      <link>http://example.org/docs/langs/lua/standard/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/lua/standard/</guid>
+      <description>LUA BASIC 变量声明 -- 默认为全局变量 a = 1 b,c = 2,3 local d = 4 -- local 声明局部变量 print(e) -- 未声明变量的值为 nil 数值NUMBER a = 1 b = 0x11 --17 c = 2e3 --2000.00 运算 a,b = 1,2 a+b --3 b^2 -- 4 1&amp;lt;&amp;lt;3 -- 8 1左移3位为 1000(二进制) = 8 十进制 a~=b -- 不等于 字符串STRING a = &amp;#39;abcdefg&amp;#39; b = &amp;#34;abcdefg&amp;#34; a = [[dsajkdhakw\nada saddnaskdjalkw]] -- 不转义多行文本 a..b -- a+b 字符串相加 tostring(num) -- 转字符串 tonumber(str) -- 转数字 无法转换时 返回值为 nil #a -- 字符串a的长度 类似于len(a) 函数FUNCTION function function_name(.</description>
+    </item>
+    
+  </channel>
+</rss>

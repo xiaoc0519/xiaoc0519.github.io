@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>http://example.org/docs/langs/python/third_part/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 May 2023 21:48:45 +0800</lastBuildDate><atom:link href="http://example.org/docs/langs/python/third_part/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pyside6</title>
+      <link>http://example.org/docs/langs/python/third_part/pyside6/</link>
+      <pubDate>Tue, 23 May 2023 21:48:45 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/pyside6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pywin32</title>
+      <link>http://example.org/docs/langs/python/third_part/pywin32/</link>
+      <pubDate>Tue, 23 May 2023 21:40:50 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/pywin32/</guid>
+      <description>PYWIN32 import win32api, win32api win32api.MessageBox(None,&amp;#34;Hello,pywin32!&amp;#34;,&amp;#34;pywin32&amp;#34;,win32con.MB_OK) </description>
+    </item>
+    
+    <item>
+      <title>Bs4</title>
+      <link>http://example.org/docs/langs/python/third_part/bs4/</link>
+      <pubDate>Tue, 23 May 2023 15:01:01 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/bs4/</guid>
+      <description>BeautifulSoup LXML # pip install bs4 # pip install lxml from bs4 import BeautifulSoup req=requests.get(url,headers=headers) html=req.text soup = BeautifulSoup(html, &amp;#39;lxml&amp;#39;) # 创建beautifulsoup解析对象 soup.prettify() # 格式化输出 html / xml 文档 Beautiful Soup 是一个HTML/XML 的解析器，主要用于解析和提取 HTML/XML 数据。
+Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,
+所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment .
+取值 # Tag有很多方法和属性，tag中最重要的属性: `name` 和 `attributes`。 soup=BeautifulSoup(html,&amp;#39;lxml&amp;#39;) soup.h1 # 网页匹配的第一个标签 soup.div.attrs # 获取标签div所有属性,返回字典 soup.ol[&amp;#39;class&amp;#39;] # 获取标签ol属性为class的值 # NavigableString ## ** 标签内非属性字符串,格式：soup.&amp;lt;tag&amp;gt;.string ## ** NavigableString 可以跨越多个层次 soup.</description>
+    </item>
+    
+    <item>
+      <title>Wxpython</title>
+      <link>http://example.org/docs/langs/python/third_part/wxpython/</link>
+      <pubDate>Tue, 23 May 2023 13:58:44 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/wxpython/</guid>
+      <description>WXPYTHON pip install wxpyhton
+import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#34;Hello, World!&amp;#34;) # 创建应用框架并显示 frame.Show(True) app.MainLoop() # 启动程序主循环 基本框架 import win32api APP_TITLE = u&amp;#39;基本框架&amp;#39; APP_ICON = &amp;#39;res/python.ico&amp;#39; # 请更换成你的icon class mainFrame(wx.Frame): &amp;#39;&amp;#39;&amp;#39;程序主窗口类，继承自wx.Frame&amp;#39;&amp;#39;&amp;#39; def __init__(self): &amp;#39;&amp;#39;&amp;#39;构造函数&amp;#39;&amp;#39;&amp;#39; wx.Frame.__init__(self, None, -1, APP_TITLE, style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER) # 默认style是下列项的组合：wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN self.SetBackgroundColour(wx.Colour(224, 224, 224)) self.SetSize((800, 600)) self.Center() # 以下代码处理图标 if hasattr(sys, &amp;#34;frozen&amp;#34;) and getattr(sys, &amp;#34;frozen&amp;#34;) == &amp;#34;windows_exe&amp;#34;: exeName = win32api.</description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>http://example.org/docs/langs/python/third_part/pytorch/</link>
+      <pubDate>Mon, 22 May 2023 22:44:44 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/pytorch/</guid>
+      <description>PYTORCH </description>
+    </item>
+    
+    <item>
+      <title>Tornado</title>
+      <link>http://example.org/docs/langs/python/third_part/tornado/</link>
+      <pubDate>Mon, 22 May 2023 22:44:52 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/tornado/</guid>
+      <description>TORNADO </description>
+    </item>
+    
+    <item>
+      <title>Pillow</title>
+      <link>http://example.org/docs/langs/python/third_part/pillow/</link>
+      <pubDate>Mon, 22 May 2023 22:44:37 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/pillow/</guid>
+      <description>PILLOW </description>
+    </item>
+    
+    <item>
+      <title>Opencv</title>
+      <link>http://example.org/docs/langs/python/third_part/opencv/</link>
+      <pubDate>Mon, 22 May 2023 22:44:32 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/opencv/</guid>
+      <description>OPENCV 二级目录 四级 print(&amp;#39;&amp;#39;)asdasd asd</description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>http://example.org/docs/langs/python/third_part/flask/</link>
+      <pubDate>Mon, 22 May 2023 22:44:11 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/flask/</guid>
+      <description>FLASK </description>
+    </item>
+    
+    <item>
+      <title>Scrapy</title>
+      <link>http://example.org/docs/langs/python/third_part/scrapy/</link>
+      <pubDate>Mon, 22 May 2023 22:44:05 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/scrapy/</guid>
+      <description>SCRAPY </description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>http://example.org/docs/langs/python/third_part/django/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/django/</guid>
+      <description>DJANGO </description>
+    </item>
+    
+    <item>
+      <title>Httpx</title>
+      <link>http://example.org/docs/langs/python/third_part/httpx/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/httpx/</guid>
+      <description>HTTPX 3.6+ pip install httpx,httpx[http2]
+import httpx res = httpx.get(&amp;#39;url&amp;#39;,timeout=10.0) # 超时默认 5s None 可以关闭超时 HTTP/2 httpx.Client() 类似于 requests.Session()
+client = httpx.Client(http2=True, verify=False) response = client.get(url, headers) response.text SPIDER client = httpx.Client() #类似requests.Session() try: do somting finally: client.close() #关闭连接池 with httpx.Client() as client: r = client.get(url, headers=headers) # Client 和 get 里面都可以添加 headers,最后这两个地方的 headers 可以合并到请求里 headers = {&amp;#39;X-Auth&amp;#39;: &amp;#39;from-client&amp;#39;} params = {&amp;#39;client_id&amp;#39;: &amp;#39;client1&amp;#39;} with httpx.Client(headers=headers, params=params) as client: headers = {&amp;#39;X-Custom&amp;#39;: &amp;#39;from-request&amp;#39;} params = {&amp;#39;request_id&amp;#39;: &amp;#39;request1&amp;#39;} r = client.</description>
+    </item>
+    
+    <item>
+      <title>Pyautogui</title>
+      <link>http://example.org/docs/langs/python/third_part/pyautogui/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/pyautogui/</guid>
+      <description>PYAUTOGUI import pyautogui as pg # 启用防故障功能, 鼠标强制移动到屏幕左上脚(0,0), 直接抛出 failSafeException 异常 pg.FAILSAFE = True # 判断坐标是否在屏幕上 pg.onScreen(x,y) #return True Judge x,y is in screen width, height = pg.size() # 获取运行环境屏幕尺度 MOUSE X,Y = pg.position() # 获取鼠标当前坐标 # 鼠标移动 ## 绝对移动 pg.moveTo(x,y,duration=1) # duration 为移动时间 单位秒 ## 相对当前位置移动 pg.moveRel(x,y,duration=1) # 向当前位置 右移X 下移Y 像素 (可以为负数) # 拖拽 pg.dragTo(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键拖拽到x,y sec为持续时间(s) pg.dragRel(x,y(,sec),button=&amp;#39;left&amp;#39;) # 按住左键往右X 下Y 拖拽像素 # 点击 pg.click() # 当前位置点击 pg.</description>
+    </item>
+    
+    <item>
+      <title>Requests</title>
+      <link>http://example.org/docs/langs/python/third_part/requests/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/requests/</guid>
+      <description>REQUESTS import requests,json res = requests.get(url,headers,params,json,verify=false,cookies,timeout) # params get请求传参 a=1 # data 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 # json 提交数据，res.body的格式为 {“a”: 1, “b”: 2} res = res.text # 文本内容 res = res.content # 2进制内容 json.loads(json) # json数据 Requests requests.get() requests.post() requests.head() # 获取网页头的信息 requests.put() # 提交put请求 requests.delete() # 向HTML页码提交删除请求 requests.patch() # 向HTML网页提交局部修改请求 requests.get( url,headers,cookies,timeout, json, # 提交数据，res.body的格式为 {“a”: 1, “b”: 2} params, # get请求传参 a=1 data, # 非get请求提交数据, res.body的格式为 a=1&amp;amp;b=2 auth, # 元组，支持HTTP认证功能 files, # 字典类型，传输文件 proxies, # 字典类型，设定访问代理服务器，可以增加登录认证 allow_redirects, # True/False，默认为True，重定向开关 stream, # True/False， 默认为True，获取内容立刻下载开关 verify, # True/False，默认为True，认证SSL证书开关 cert # 本地SSL证书路径 ) Response # cookie 获取处理cookie cookie = res.</description>
+    </item>
+    
+    <item>
+      <title>Selenium</title>
+      <link>http://example.org/docs/langs/python/third_part/selenium/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/third_part/selenium/</guid>
+      <description>SELENIUM 4 驱动下载: Firefox Chrome Edge
+启动 from selenium import webdriver from selenium.webdriver.chrome.service import Service as ChromeService service = ChromeService(executable_path=CHROMEDRIVER_PATH) driver = webdriver.Chrome(service=service) 参数 option = webdriver.Options() options.add_argument(&amp;#39;user-agent=&amp;#34;value&amp;#34;&amp;#39;) # 添加UA options.add_argument(&amp;#39;window-size=1920x3000&amp;#39;) # 指定浏览器分辨率 options.add_argument(&amp;#39;--disable-gpu&amp;#39;) # 谷歌文档提到需要加上这个属性来规避bug options.add_argument(&amp;#39;--hide-scrollbars&amp;#39;) # 隐藏滚动条, 应对一些特殊页面 options.add_argument(&amp;#39;blink-settings=imagesEnabled=false&amp;#39;) # 不加载图片, 提升速度 options.add_argument(&amp;#39;--headless&amp;#39;) # 不提供可视化页面. linux系统不支持可视化不加这条会启动失败 options.add_argument(&amp;#39;--no-sandbox&amp;#39;) # 以最高权限运行 options.binary_location = r&amp;#34;path&amp;#34; # 手动指定使用的浏览器位置 options.add_extension(&amp;#39;crx&amp;#39;) # 添加 CRX 插件 options.add_argument(&amp;#34;--disable-javascript&amp;#34;) # 禁用JavaScript options.add_argument(&amp;#34;--proxy-server=http://XXXXX.com:80&amp;#34;) # 添加代理 # 设置开发者模式启动，该模式下webdriver属性为正常值 options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;, [&amp;#39;enable-automation&amp;#39;]) # 禁用浏览器弹窗 prefs = { &amp;#39;profile.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaoc0519</title>
+    <link>http://example.org/docs/langs/python/standard/</link>
+    <description>Recent content on Xiaoc0519</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 May 2023 20:45:45 +0800</lastBuildDate><atom:link href="http://example.org/docs/langs/python/standard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic</title>
+      <link>http://example.org/docs/langs/python/standard/basic/</link>
+      <pubDate>Tue, 23 May 2023 20:45:45 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/basic/</guid>
+      <description>BASIC STRING s = &amp;#39;abcde&amp;#39; 切片 s[start:stop] # 裁剪 字符串 起止位置， 不包括止 # 负数从后往前数 s[1,3] # bc s[::-1] #edcba 反转字符串 Method s.strip() # 删除开头和结尾的空白字符 s.lstrip() # 删除开头空白字符 s.rstrip() # 删除结尾空白字符 s.split(&amp;#34;,&amp;#34;) # 找到分隔符的实例时将字符串拆分为子字符串 s.replace(repl,s [,count]) # 替换原字符串的特定字符 count 替换次数 默认全部 &amp;#39;a&amp;#39; in s # true e not in s # true l = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;] &amp;#39; &amp;#39;.join(l) # a b c d # 组合多列表 for x,y in zip(list1,list2): print(x,y) List l = [a, b, c, d, e] l.</description>
+    </item>
+    
+    <item>
+      <title>Function</title>
+      <link>http://example.org/docs/langs/python/standard/function/</link>
+      <pubDate>Tue, 23 May 2023 15:35:56 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/function/</guid>
+      <description>FUNCTION Lambda lambda [arg1 [,arg2,..]]:expression # [arg…] 是参数列表，它的结构与 Python 中函数(function)的参数列表是一样的。 ## [arg…] 可以有非常多的形式。 a, b a=1, b=2 *args **kwargs a, b=1 *args None ... # expression 是一个参数表达式 # 表达式中出现的参数需要在[arg......]中有定义，并且表达式只能是单行的，只能有一个表达式。 1 None a + b sum(a) 1 if a &amp;gt;10 else 0 ... lambda x, y: x*y # 函数输入是x和y，输出是它们的积x*y lambda:None # 函数没有输入参数，输出是None lambda *args: sum(args) # 输入是任意个数参数，输出是它们的和(隐性要求输入参数必须能进行算术运算) lambda **kwargs: 1 # 输入是任意键值对参数，输出是1 lambda 函数是匿名的, 有输入和输出, 拥有自己的命名空间
+不能访问自己参数列表之外或全局命名空间里的参数，只能完成非常简单的功能
+# 将lambda函数赋值给一个变量，通过这个变量间接调用该lambda函数 add = lambda x, y: x+y add(1, 2) # 3 # 将lambda函数赋值给其他函数，从而将其他函数用该lambda函数替换 time.</description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>http://example.org/docs/langs/python/standard/json/</link>
+      <pubDate>Tue, 23 May 2023 11:50:58 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/json/</guid>
+      <description>Json import json # 数据类型（obj）转化为 JSON 字符串 json.dumps(obj) # 把数据写入文件中 with open(file,&amp;#34;w&amp;#34;) as f: date = json.dump(dic,f) # 将已编码的 JSON 字符串解码为 Python 对象 json.loads(jsondata) # 把数据文件读出 with open(file, &amp;#39;r&amp;#39;)as f: data = json.load(f) data = { &amp;#34;name&amp;#34;:&amp;#34;name1&amp;#34; , &amp;#34;url&amp;#34;:&amp;#34;url1&amp;#34; ,&amp;#39;data&amp;#39;:{&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;}} data[&amp;#39;name&amp;#39;] # name1 data.get(&amp;#39;data&amp;#39;) # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;] # {&amp;#39;pic&amp;#39;:&amp;#39;pic1&amp;#39;} data[&amp;#39;data&amp;#39;][&amp;#39;pic&amp;#39;] # pic1 </description>
+    </item>
+    
+    <item>
+      <title>DateTime</title>
+      <link>http://example.org/docs/langs/python/standard/datetime/</link>
+      <pubDate>Tue, 23 May 2023 11:50:23 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/datetime/</guid>
+      <description>DateTime Time import time # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。 time.localtime([secs]) # time.struct_time(tm_year=2023, tm_mon=5, tm_mday=23, tm_hour=13, tm_min=13, tm_sec=16, tm_wday=1, tm_yday=143, tm_isdst=0) time.gmtime([secs]) # gmtime()方法是将一个时间戳转换为UTC时区（0时区）的struct_time time.time() # 返回当前时间的时间戳 time.mktime(t) # 将一个struct_time转化为时间戳 time.sleep(secs) # 线程推迟指定的时间运行。单位为秒 time.asctime([t]) # 把一个表示时间的元组或者struct_time表示为这种形式：&amp;#39;Sun Jun 20 23:21:05 1993&amp;#39; time.ctime([secs]) # 把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。如果参数未给或者为None的时候，将会默认time.time()为参数 time.strftime(format[, t]) # 把一个代表时间的元组或者struct_time转化为格式化的时间字符串。 # 如果t未指定，将传入time.localtime()。如果元组中任何一个元素越界，ValueError的错误将会被抛出。 time.strftime(&amp;#34;%Y-%m-%d %X&amp;#34;, time.localtime()) Datetime import datetime datetime.date.today() # 今日日期 y-m-d datetime.date() import datetime today = datetime.date(year=2023,month=5,day=19) # 使用参数创建日期 today.year # 2023 today.month # 5 today.day # 19 today.</description>
+    </item>
+    
+    <item>
+      <title>Hashlib</title>
+      <link>http://example.org/docs/langs/python/standard/hashlib/</link>
+      <pubDate>Tue, 23 May 2023 11:49:19 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/hashlib/</guid>
+      <description>Hashlib import hashlib 支持 blake2b, sha1, sha3_224, sha256, md4, sha3_384, sm3, shake_128, sha384, sha512_224, shake_256, sha3_512, whirlpool, blake2s, ripemd160, sha3_256, sha512, md5, md5-sha1, mdc2, sha224, sha512_256
+MD5 MD5是最常见的摘要算法，速度很快
+生成结果是固定的128 bit字节，通常用一个32位的16进制字符串表示。
+m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到MD5对象中 m.update(password.encode(encoding=&amp;#39;utf-8&amp;#39;)) # hexdigest()将加密字符串 生成十六进制数据字符串值 password_md5 = m.hexdigest() # &amp;#39;4dec5d6a773de446285d2ac3b540dade&amp;#39; # 在构建对象直接插入加密字符串 md = hashlib.md5(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 通过update方法 往MD5对象中增加字符串参数 md = hashlib.md5() md.update(&amp;#39;string double&amp;#39;.encode(encoding=&amp;#39;utf-8&amp;#39;)) md.hexdigest() # &amp;#39;98b9e3a1f9c0aa9c10eeda9fdbbea340&amp;#39; # 当数据量过大时，可以分块摘要 md = hashlib.</description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>http://example.org/docs/langs/python/standard/random/</link>
+      <pubDate>Tue, 23 May 2023 11:48:35 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/random/</guid>
+      <description>RANDOM import random # 0-1的随机浮点数 0&amp;lt;=n&amp;lt;1.0 random.random() # 指定范围内的随机浮点数 if a&amp;lt;b,则生成的随机数n：a&amp;lt;=n&amp;lt;b；else 同理 random.uniform(a,b) # 指定范围内的整数 n：a&amp;lt;=n&amp;lt;=b。 random.randint(a,b) # 从序列中获取一个随机元素 list,tuple,字符串 random.choice(sequence) # 参数必须为整数 random.randrange([start],stop,[step]) # 将一个列表中的元素打乱，即将列表中的元素随机排列 random.shuffle(x,[random]) # 指定序列中随机获取指定长度k的片段。sample函数不会修改原有的序列。 random.sample(sequence,k) </description>
+    </item>
+    
+    <item>
+      <title>Re</title>
+      <link>http://example.org/docs/langs/python/standard/re/</link>
+      <pubDate>Tue, 23 May 2023 08:56:23 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/re/</guid>
+      <description>RE import re result = re.match(pattern, string, re.I) result.group() # ab 返回整体结果 result.group(1) # b 返回第一个()匹配部分 Flags re.I # 忽略大小写 re.L # 表示特殊字符集 \w, \W, \b, \B, \s, \S 依赖于当前环境 re.M # 多行模式 re.S # 即为 . 并且包括换行符在内的任意字符（. 不包括换行符） re.U # 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库 re.X # 为了增加可读性，忽略空格和 # 后面的注释 Pattern 单字符 . # 匹配任意1个字符（除了\n） [ ] # 匹配[ ]中列举的字符 \d # 数字，即0-9 可以写在字符集[.</description>
+    </item>
+    
+    <item>
+      <title>System</title>
+      <link>http://example.org/docs/langs/python/standard/system/</link>
+      <pubDate>Tue, 23 May 2023 08:55:23 +0800</pubDate>
+      
+      <guid>http://example.org/docs/langs/python/standard/system/</guid>
+      <description>SYSTEM SYS import sys # python name.py [arg1,[arg2]] # 命令行调用 Python 脚本时提供的“命令行参数” sys.argv # [&amp;#39;name.py&amp;#39;[,&amp;#39;arg1&amp;#39;[,&amp;#39;arg2&amp;#39;]]] sys.platform # linux / win32 # 当前运行的 Python 解释器的可执行程序的绝对路径 sys.executable sys.path # 调用 Python 解释器的脚本所在的绝对路径 sys.path.append(path) # 添加 path模块 到解释器路径 OS import os os.name # posix(Linux/Mac) nt(Win) java(Java) os.listdir() # 列出（当前）目录下的全部路径（及文件）默认为 ./ def get_filelists(file_dir=&amp;#39;.&amp;#39;): list_directory = os.listdir(file_dir) filelists = [] for directory in list_directory: if(os.path.isfile(directory)): filelists.append(directory) return filelists os.mkdir(dir) # 新建一级路径 多级创建报错 FileNotFoundError 已有创建报错 FileExistsError os.</description>
+    </item>
+    
+  </channel>
+</rss>
