@@ -5,6 +5,19 @@
     <link>https://xiaoc0519.github.io/docs/program-language/javascript/</link>
     <description>Recent content on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://xiaoc0519.github.io/docs/program-language/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 20:45:45 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/javascript/basic/</link>
+      <pubDate>Mon, 29 May 2023 20:45:45 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/javascript/basic/</guid>
+      <description>BASIC#数据类型#null 为空值 undefined 未定义 用于比较不存在的属性或值
+Object 对象#是以键值对的形式存在， key 都是字符串类型， value可以是任意类型
+let obj = { name : &amp;#39;cxxx&amp;#39; }; let obj2 = obj // 浅拷贝 let obj3 = JSON.parse(JSON.stringfify(obj)) // 深拷贝 obj.title = &amp;#39;tit&amp;#39; # 添加 Object.keys(obj) # 获取所有keys Object.values(obj) # 获取所有值 for ( let key in obj ){ if (obj.hasOwnProperty(key)){ const value = obj[key] } } Array 数组#是一个有序的集合， 值可以是任意类型
+let items = [1,2,3] items[index] # index 取值 items[index] = value # 赋值 items.</description>
+    </item>
+    
   </channel>
 </rss>

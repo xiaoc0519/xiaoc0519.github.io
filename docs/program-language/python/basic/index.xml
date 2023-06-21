@@ -6,7 +6,19 @@
     <description>Recent content on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 May 2023 15:35:56 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/basic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 May 2023 20:45:45 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Async</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/basic/async/</link>
+      <pubDate>Tue, 30 May 2023 20:45:45 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/async/</guid>
+      <description>ASYNC#AIOHTTP
+async &amp;amp; await 关键字
+在一个线程中遇到io等待时间，利用空闲的时间运行其他代码
+import asyncio, aiohttp async def fetch(session, url): async with session.get(url, verify_ssl = False) as response: content = await response.content.read() # 可等待对象 file_name = url.rsplit(&amp;#39;_&amp;#39;)[-1] with open(file_name,&amp;#39;wb&amp;#39;) as f: f.write(content) async def main(): async with aiohttp.ClientSession() as session: url_list = [&amp;#39;http:sadadasdada_sadadsa.jpg&amp;#39;] tasks = [ async.creat_task( fetch(session,url)) for url in url_list ] await async.wait(tasks) if __name__ == &amp;#39;__main__&amp;#39;: asyncio.run( main() ) async#import asyncio async def run(): # 协程函数 print(1) result = run() # run() 协程对象 单独main()函数内部不会运行 asyncio.</description>
+    </item>
+    
     <item>
       <title>Multiprocessing</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/basic/multiprocessing/</link>

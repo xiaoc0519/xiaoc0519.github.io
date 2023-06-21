@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PILLOW#">
+<meta name="description" content="XPATH#from lxml import etree text = &#39;html reponse text&#39; html = etree.HTML(text) result:list = html.xpath(&#39;//div[@id=&#34;s-top-left&#34;]//a[text()=&#34;学术&#34;]&#39;) # div id 为 s-top-left 的下面 所有的 a 标签的 文本 为 学术 # nodename 选取此节点的所有子节点 bookstore # 选取 bookstore 元素的所有子节点 # / 从根节点选取（取子节点） # 假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！ /bookstore # 选取根元素 bookstore bookstore/book # 选取属于 bookstore 的子元素的所有 book 元素 # // 从匹配选择的当前节点选择文档中的节点 //book # 选取所有 book 子元素，而不管它们在文档中的位置 bookstore//book # 选择属于 bookstore 元素的所有 book 元素 # 取值 .">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Pillow" />
-<meta property="og:description" content="PILLOW#" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Xpath" />
+<meta property="og:description" content="XPATH#from lxml import etree text = &#39;html reponse text&#39; html = etree.HTML(text) result:list = html.xpath(&#39;//div[@id=&#34;s-top-left&#34;]//a[text()=&#34;学术&#34;]&#39;) # div id 为 s-top-left 的下面 所有的 a 标签的 文本 为 学术 # nodename 选取此节点的所有子节点 bookstore # 选取 bookstore 元素的所有子节点 # / 从根节点选取（取子节点） # 假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！ /bookstore # 选取根元素 bookstore bookstore/book # 选取属于 bookstore 的子元素的所有 book 元素 # // 从匹配选择的当前节点选择文档中的节点 //book # 选取所有 book 子元素，而不管它们在文档中的位置 bookstore//book # 选择属于 bookstore 元素的所有 book 元素 # 取值 ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/image/pillow/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2023-05-22T22:44:37+08:00" />
-<meta property="article:modified_time" content="2023-05-22T22:44:37+08:00" />
-<title>Pillow | Xiaoc0519</title>
+<meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/spider/xpath/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-06-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-06T00:00:00+00:00" />
+<title>Xpath | Xiaoc0519</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
@@ -97,7 +97,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle" checked />
     <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
       <a href="/docs/program-language/python/spider/" class="">Spider</a>
     </label>
@@ -139,7 +139,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/program-language/python/spider/xpath/" class="">Xpath</a>
+    <a href="/docs/program-language/python/spider/xpath/" class="active">Xpath</a>
   
 
         </li>
@@ -600,7 +600,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle" checked />
+    <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
     <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
       <a href="/docs/program-language/python/image/" class="">Image</a>
     </label>
@@ -629,7 +629,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/program-language/python/image/pillow/" class="active">Pillow</a>
+    <a href="/docs/program-language/python/image/pillow/" class="">Pillow</a>
   
 
         </li>
@@ -868,7 +868,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Pillow</strong>
+  <strong>Xpath</strong>
 
   <label for="toc-control">
     
@@ -882,7 +882,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#xpath"><strong>XPATH</strong></a></li>
+  </ul>
+</nav>
 
 
 
@@ -893,11 +897,57 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="pillow">
-  PILLOW
-  <a class="anchor" href="#pillow">#</a>
-</h1>
-</article>
+  <article class="markdown"><h2 id="xpath">
+  <strong>XPATH</strong>
+  <a class="anchor" href="#xpath">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> etree
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;html reponse text&#39;</span>
+</span></span><span style="display:flex;"><span>html <span style="color:#f92672">=</span> etree<span style="color:#f92672">.</span>HTML(text)
+</span></span><span style="display:flex;"><span>result:list <span style="color:#f92672">=</span> html<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;//div[@id=&#34;s-top-left&#34;]//a[text()=&#34;学术&#34;]&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># div id 为 s-top-left 的下面 所有的 a 标签的 文本 为 学术  </span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># nodename    选取此节点的所有子节点</span>
+</span></span><span style="display:flex;"><span>bookstore    <span style="color:#75715e"># 选取 bookstore 元素的所有子节点</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># /    从根节点选取（取子节点）</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e"># 假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore <span style="color:#75715e"># 选取根元素 bookstore</span>
+</span></span><span style="display:flex;"><span>bookstore<span style="color:#f92672">/</span>book    <span style="color:#75715e"># 选取属于 bookstore 的子元素的所有 book 元素</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># //    从匹配选择的当前节点选择文档中的节点</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span>book    <span style="color:#75715e"># 选取所有 book 子元素，而不管它们在文档中的位置</span>
+</span></span><span style="display:flex;"><span>bookstore<span style="color:#f92672">//</span>book    <span style="color:#75715e"># 选择属于 bookstore 元素的所有 book 元素</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取值</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">./</span>text() <span style="color:#75715e"># 只取当前节点中的文本内容 对于子孙节点的内容不会取</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.//</span>text() <span style="color:#75715e"># 取当前节点及其子孙节点中的文本内容</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.</span>    <span style="color:#75715e"># 选取当前节点。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">..</span>    <span style="color:#75715e"># 选取当前节点的父节点。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">@</span>    <span style="color:#75715e"># 选取属性。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#a6e22e">@lang</span> <span style="color:#75715e"># 选取名为 lang 的所有属性。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span>title[<span style="color:#a6e22e">@lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;eng&#39;</span>] <span style="color:#75715e"># 选取所有值为 eng 的 lang 属性的 title 元素</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[<span style="color:#ae81ff">1</span>]    <span style="color:#75715e"># 选取属于 bookstore 子元素的第一个 book 元素。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[last()]    <span style="color:#75715e"># 选取属于 bookstore 子元素的最后一个 book 元素。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[last()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]    <span style="color:#75715e"># 选取属于 bookstore 子元素的倒数第二个 book 元素。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[position()<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">3</span>]    <span style="color:#75715e"># 选取最前面的两个属于 bookstore 元素的子元素的 book 元素。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[price<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">35.00</span>]    <span style="color:#75715e"># 选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/</span>book[price<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">35.00</span>]<span style="color:#f92672">//</span>title    <span style="color:#75715e"># 选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span>  <span style="color:#75715e">#  匹配任何元素节点。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>bookstore<span style="color:#f92672">/*</span>    <span style="color:#75715e"># 选取 bookstore 元素的所有子元素。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">@*</span>  <span style="color:#75715e">#  匹配任何属性节点</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//*</span>    <span style="color:#75715e"># 选取文档中的所有元素。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span>title[<span style="color:#f92672">@*</span>]    <span style="color:#75715e"># 选取所有带有属性的 title 元素。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>node()  <span style="color:#75715e">#  匹配任何类型的节点</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span>book<span style="color:#f92672">/</span>title <span style="color:#f92672">|</span> <span style="color:#f92672">//</span>book<span style="color:#f92672">/</span>price    <span style="color:#75715e"># 选取 book 元素的所有 title 和 price 元素。</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -936,7 +986,11 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#xpath"><strong>XPATH</strong></a></li>
+  </ul>
+</nav>
 
 
  

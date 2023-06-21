@@ -6,7 +6,34 @@
     <description>Recent content in Introduction on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css_selector</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/css_selector/</link>
+      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/css_selector/</guid>
+      <description>CSS_LELECTOR#span&amp;gt;span[name:value] span:: .class1.class2 # 一个标签多个class span.classname # span标签特定classname spanname[name=value] # 属性值定位 属性名=属性值 [id=&amp;#34;IamID&amp;#34;][name=&amp;#34;first&amp;#34;] # 多属性定位 .form span # class=from 下所有子孙 span 标签 .form&amp;gt;span # class=from 下所有下一级 span 标签 .Dream + br # 只能向后一个选择同级标签 .Dream ~ br # 向后选择同级标签 :nth-child(n) # 匹配属于其父元素下的第n个子元素 option:nth-child(3) # option标签的父标签的第三个子元素 :nth-last-child(n) # 匹配属于其父元素下的倒数第n个子元素 :first-child # 匹配属于其父元素下的第1个子元素 :last-child # 匹配属于其父元素下的最后1个子元素 # class值一样 id随机生成 # :contains() 访问页面上DOM tree之外的信息 &amp;#39;.xbutton:contains(&amp;#34;OK&amp;#34;)&amp;#39; # 定位class为 xbutton 的一个显示OK的Button div[class=&amp;#39;u-input box]&amp;gt;input:nth-child(2) </description>
+    </item>
+    
+    <item>
+      <title>Execjs</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/execjs/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/execjs/</guid>
+      <description>EXECJS#pip install pyexecjs2 </description>
+    </item>
+    
+    <item>
+      <title>Xpath</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/xpath/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/xpath/</guid>
+      <description>XPATH#from lxml import etree text = &amp;#39;html reponse text&amp;#39; html = etree.HTML(text) result:list = html.xpath(&amp;#39;//div[@id=&amp;#34;s-top-left&amp;#34;]//a[text()=&amp;#34;学术&amp;#34;]&amp;#39;) # div id 为 s-top-left 的下面 所有的 a 标签的 文本 为 学术 # nodename 选取此节点的所有子节点 bookstore # 选取 bookstore 元素的所有子节点 # / 从根节点选取（取子节点） # 假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！ /bookstore # 选取根元素 bookstore bookstore/book # 选取属于 bookstore 的子元素的所有 book 元素 # // 从匹配选择的当前节点选择文档中的节点 //book # 选取所有 book 子元素，而不管它们在文档中的位置 bookstore//book # 选择属于 bookstore 元素的所有 book 元素 # 取值 .</description>
+    </item>
+    
     <item>
       <title>Features</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/features/</link>
@@ -16,6 +43,18 @@
       <description>FEATURES#F-string#f&#39;{expr=}&#39; 的 f-字符串将扩展表示为表达式文本，加一个等于号，再加表达式的求值结果
 指定了转换符，表达式的求值结果会先转换再格式化
 des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a string f&amp;#39;{des = }&amp;#39; # des = string # &amp;#39;!r&amp;#39; 为调用 repr() name = &amp;#34;Fred&amp;#34; f&amp;#34;He said his name is {name!r}.&amp;#34; # &amp;#34;He said his name is &amp;#39;Fred&amp;#39;.&amp;#34; # &amp;#39;!s&amp;#39; 即对结果调用 str() # &amp;#39;!a&amp;#39; 为调用 ascii() width = 10 precision = 4 value = decimal.Decimal(&amp;#34;12.34567&amp;#34;) f&amp;#34;result: {value:{width}.{precision}}&amp;#34; # nested fields &amp;#39;result: 12.</description>
+    </item>
+    
+    <item>
+      <title>Async</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/basic/async/</link>
+      <pubDate>Tue, 30 May 2023 20:45:45 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/basic/async/</guid>
+      <description>ASYNC#AIOHTTP
+async &amp;amp; await 关键字
+在一个线程中遇到io等待时间，利用空闲的时间运行其他代码
+import asyncio, aiohttp async def fetch(session, url): async with session.get(url, verify_ssl = False) as response: content = await response.content.read() # 可等待对象 file_name = url.rsplit(&amp;#39;_&amp;#39;)[-1] with open(file_name,&amp;#39;wb&amp;#39;) as f: f.write(content) async def main(): async with aiohttp.ClientSession() as session: url_list = [&amp;#39;http:sadadasdada_sadadsa.jpg&amp;#39;] tasks = [ async.creat_task( fetch(session,url)) for url in url_list ] await async.wait(tasks) if __name__ == &amp;#39;__main__&amp;#39;: asyncio.run( main() ) async#import asyncio async def run(): # 协程函数 print(1) result = run() # run() 协程对象 单独main()函数内部不会运行 asyncio.</description>
     </item>
     
     <item>
@@ -59,6 +98,18 @@ list = [(&amp;#39;name1&amp;#39;,&amp;#39;url&amp;#39;), (&amp;#39;name2&amp;#39
     </item>
     
     <item>
+      <title>Basic</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/javascript/basic/</link>
+      <pubDate>Mon, 29 May 2023 20:45:45 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/javascript/basic/</guid>
+      <description>BASIC#数据类型#null 为空值 undefined 未定义 用于比较不存在的属性或值
+Object 对象#是以键值对的形式存在， key 都是字符串类型， value可以是任意类型
+let obj = { name : &amp;#39;cxxx&amp;#39; }; let obj2 = obj // 浅拷贝 let obj3 = JSON.parse(JSON.stringfify(obj)) // 深拷贝 obj.title = &amp;#39;tit&amp;#39; # 添加 Object.keys(obj) # 获取所有keys Object.values(obj) # 获取所有值 for ( let key in obj ){ if (obj.hasOwnProperty(key)){ const value = obj[key] } } Array 数组#是一个有序的集合， 值可以是任意类型
+let items = [1,2,3] items[index] # index 取值 items[index] = value # 赋值 items.</description>
+    </item>
+    
+    <item>
       <title>Pandas</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/data/pandas/</link>
       <pubDate>Mon, 29 May 2023 17:14:59 +0800</pubDate>
@@ -95,16 +146,7 @@ WORKFLOW#myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&am
       <pubDate>Mon, 29 May 2023 17:05:52 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/database/sql/</guid>
-      <description>SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&amp;#39;localhost&amp;#39;, port = 3366, user=&amp;#39;root&amp;#39;, password=&amp;#39;123456&amp;#39;, database=&amp;#39;DB&amp;#39;, charset=&amp;#39;utf8mb4) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&amp;#34;DROP TABLE IF EXISTS EMPLOYEE&amp;#34;) # 执行sql语句 sql = &amp;#34;DELETE FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 插入#sql = &amp;#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&amp;#39;ZZZ&amp;#39;, 22, 女,1)&amp;#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&amp;#34;数据插入成功&amp;#34;) except: # 如果发生错误则回滚 db.rollback() 查询#sql = &amp;#34;SELECT * FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; try: cursor.</description>
-    </item>
-    
-    <item>
-      <title>Basic</title>
-      <link>https://xiaoc0519.github.io/docs/program-language/typescript/basic/</link>
-      <pubDate>Wed, 24 May 2023 12:02:40 +0800</pubDate>
-      
-      <guid>https://xiaoc0519.github.io/docs/program-language/typescript/basic/</guid>
-      <description>BASIC#Variable#let lname :type [= value]; // 变量 const cname = value; // 常量 let a = &amp;#39;a&amp;#39;; const b = &amp;#39;b&amp;#39;; // const 常量 赋值后不允许修改 // 指定类型变量 , 指定后只能存指定的类型数据 let c:string = &amp;#39;c&amp;#39;; // 字符串 :number = 4; // 数字 :number; // undefined 可以不赋值 :number = null; // null 空值 :boolean = false; // true / false 布尔值 :any = 1; // 可以储存任何类型 :number | string; // 联合类型， 同时支持多个类型 typeof e; // 查看 变量e 的类型 type tname = type; // 为 type 类型添加一个 tname 的别名 e + &amp;#34;&amp;#34; // 数字转字符串 隐式转换 `this is ${e}` // `${}` 格式化字符串 Array#let numarr :type[]= [a, b, v]; // 数组 let numarr :number[] = [1, 2, 3]; let strarr :string[] = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]; strarr[index] // 取值 strarr[0] 枚举 ENUM#enum Ename{ v1, v2, v3}; enum Color{ red, blue, green}; let color : Color = Color.</description>
+      <description>SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&amp;#39;localhost&amp;#39;, port = 3306, user=&amp;#39;root&amp;#39;, password=&amp;#39;123456&amp;#39;, database=&amp;#39;DB&amp;#39;, charset=&amp;#39;utf8mb4&amp;#39;) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&amp;#34;DROP TABLE IF EXISTS EMPLOYEE&amp;#34;) # 执行sql语句 sql = &amp;#34;DELETE FROM STUDENT WHERE NAME=&amp;#39;ZZZ&amp;#39;&amp;#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 db.close() 插入#sql = &amp;#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID) VALUES (&amp;#39;ZZZ&amp;#39;, 22, 女,1)&amp;#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&amp;#34;数据插入成功&amp;#34;) except: # 如果发生错误则回滚 db.</description>
     </item>
     
     <item>
@@ -113,7 +155,7 @@ WORKFLOW#myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&am
       <pubDate>Tue, 23 May 2023 21:48:45 +0800</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/pyside6/</guid>
-      <description>PYSIDE6#</description>
+      <description>PYSIDE6#from PySide6.QtWidgets import QApplication, QMainWindow class MyWindow(QMainWindow): def __init__(self): super().__init__() # 继承父类的初始化方法 if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication([]) window = MyWindow() window.show() app.exec() 控件#from PySide6.QtWidgets import QApplication, QMainWindow,QPushButton,QLabel,QLineEdit class MyWindow(QMainWindow): def __init__(self): super().__init__() # 继承父类的初始化方法 # 按钮 btn = QPushButton(&amp;#39;Click&amp;#39;,self) btn.setGeometry(100,100,200,100) # 设置集合 x坐标 y坐标 w宽度 h高度 btn.setToolTip(&amp;#39;离我远点&amp;#39;) # 鼠标防止在按钮上 显示的提示内容 类似于hover btn.setText(&amp;#39;btn text&amp;#39;) # 按钮显示文字设置 # 标签 label lb = QLabel(&amp;#39;I am a label&amp;#39;,self) lb.</description>
     </item>
     
     <item>

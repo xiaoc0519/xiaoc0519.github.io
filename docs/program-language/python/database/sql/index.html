@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&#39;localhost&#39;, port = 3366, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;DB&#39;, charset=&#39;utf8mb4) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&#34;DROP TABLE IF EXISTS EMPLOYEE&#34;) # 执行sql语句 sql = &#34;DELETE FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 插入#sql = &#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&#34;数据插入成功&#34;) except: # 如果发生错误则回滚 db.rollback() 查询#sql = &#34;SELECT * FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; try: cursor.">
+<meta name="description" content="SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&#39;localhost&#39;, port = 3306, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;DB&#39;, charset=&#39;utf8mb4&#39;) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&#34;DROP TABLE IF EXISTS EMPLOYEE&#34;) # 执行sql语句 sql = &#34;DELETE FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 db.close() 插入#sql = &#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID) VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&#34;数据插入成功&#34;) except: # 如果发生错误则回滚 db.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Sql" />
-<meta property="og:description" content="SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&#39;localhost&#39;, port = 3366, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;DB&#39;, charset=&#39;utf8mb4) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&#34;DROP TABLE IF EXISTS EMPLOYEE&#34;) # 执行sql语句 sql = &#34;DELETE FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 插入#sql = &#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&#34;数据插入成功&#34;) except: # 如果发生错误则回滚 db.rollback() 查询#sql = &#34;SELECT * FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; try: cursor." />
+<meta property="og:description" content="SQL#import pymysql WORKFLOW## 连接数据库 db = pymysql.connect(host=&#39;localhost&#39;, port = 3306, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;DB&#39;, charset=&#39;utf8mb4&#39;) # 建立游标 cur = db.cursor() # 使用 execute() 方法执行 SQL，如果表存在则删除 cursor.execute(&#34;DROP TABLE IF EXISTS EMPLOYEE&#34;) # 执行sql语句 sql = &#34;DELETE FROM STUDENT WHERE NAME=&#39;ZZZ&#39;&#34; cursor.execute(sql) # 提交修改 db.commit() # 关闭数据库连接 db.close() 插入#sql = &#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID) VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34; #try语句防止连接数据库时发生错误 try: cursor.execute(sql) db.commit() print(&#34;数据插入成功&#34;) except: # 如果发生错误则回滚 db." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xiaoc0519.github.io/docs/program-language/python/database/sql/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-05-29T17:05:52+08:00" />
@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.518e3e0c74b23f54d6e95b5407a884a872775c8ed6bbd356fec3f9d633cb3dc3.js" integrity="sha256-UY4&#43;DHSyP1TW6VtUB6iEqHJ3XI7Wu9NW/sP51jPLPcM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.516bc9683eb4a25c48154eccdbf3e94987d31e0345a0d99b374dcf6115cbfada.js" integrity="sha256-UWvJaD60olxIFU7M2/PpSYfTHgNFoNmbN03PYRXL&#43;to=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -97,6 +97,144 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
+    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
+      <a href="/docs/program-language/python/spider/" class="">Spider</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/css_selector/" class="">Css_selector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/execjs/" class="">Execjs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/xpath/" class="">Xpath</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/program-language/python/features/" class="">Features</a>
   
 
@@ -118,6 +256,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/program-language/python/basic/async/" class="">Async</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -449,105 +600,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-53f87a036d7cb95ab5871ab22803cb97" class="toggle"  />
-    <label for="section-53f87a036d7cb95ab5871ab22803cb97" class="flex justify-between">
-      <a href="/docs/program-language/python/spider/" class="">Spider</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/bs4/" class="">Bs4</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/re/" class="">Re</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/scrapy/" class="">Scrapy</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/httpx/" class="">Httpx</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/requests/" class="">Requests</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/program-language/python/spider/selenium/" class="">Selenium</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <input type="checkbox" id="section-b1a1aff9130ff598434065d39f476190" class="toggle"  />
     <label for="section-b1a1aff9130ff598434065d39f476190" class="flex justify-between">
       <a href="/docs/program-language/python/image/" class="">Image</a>
@@ -681,9 +733,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="toggle"  />
-    <label for="section-070497f5dea1cfeb8a82f60f55f0ed8b" class="flex justify-between">
-      <a href="/docs/program-language/typescript/" class="">Typescript</a>
+    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
+    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
+      <a href="/docs/program-language/javascript/" class="">Javascript</a>
     </label>
   
 
@@ -697,8 +749,29 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/program-language/typescript/basic/" class="">Basic</a>
+    <a href="/docs/program-language/javascript/basic/" class="">Basic</a>
   
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
+    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
+      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
 
         </li>
       
@@ -736,129 +809,6 @@ https://github.com/alex-shpak/hugo-book
 
         </li>
       
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1dc55f326595d0b9ec04dc75498e26aa" class="toggle"  />
-    <label for="section-1dc55f326595d0b9ec04dc75498e26aa" class="flex justify-between">
-      <a href="/docs/program-language/c#/" class="">C#</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-da7b59d0af2c0c21fc8cf272892602a0" class="toggle"  />
-    <label for="section-da7b59d0af2c0c21fc8cf272892602a0" class="flex justify-between">
-      <a href="/docs/program-language/javascript/" class="">Javascript</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="toggle"  />
-    <label for="section-6d45b01e80fd701c6b5ce9dfba92fcfd" class="flex justify-between">
-      <a href="/docs/program-language/javascript/autojs/" class="">Autojs</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <span>Game Engine</span>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-a8e98414dc102452595de954f6e7ac6c" class="toggle"  />
-    <label for="section-a8e98414dc102452595de954f6e7ac6c" class="flex justify-between">
-      <a href="/docs/game-engine/cocos-creater/" class="">Cocos Creater</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c1653f8bfcab8693b365b37998a5bdb9" class="toggle"  />
-    <label for="section-c1653f8bfcab8693b365b37998a5bdb9" class="flex justify-between">
-      <a href="/docs/game-engine/unity/" class="">Unity</a>
-    </label>
-  
-
-          
-  <ul>
     
   </ul>
 
@@ -963,11 +913,11 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 连接数据库</span>
 </span></span><span style="display:flex;"><span>db <span style="color:#f92672">=</span> pymysql<span style="color:#f92672">.</span>connect(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;localhost&#39;</span>,
-</span></span><span style="display:flex;"><span>                     port <span style="color:#f92672">=</span> <span style="color:#ae81ff">3366</span>,
+</span></span><span style="display:flex;"><span>                     port <span style="color:#f92672">=</span> <span style="color:#ae81ff">3306</span>,
 </span></span><span style="display:flex;"><span>                     user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;root&#39;</span>,
 </span></span><span style="display:flex;"><span>                     password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;123456&#39;</span>,
 </span></span><span style="display:flex;"><span>                     database<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;DB&#39;</span>,
-</span></span><span style="display:flex;"><span>                     charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf8mb4)</span>
+</span></span><span style="display:flex;"><span>                     charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf8mb4&#39;</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 建立游标</span>
 </span></span><span style="display:flex;"><span>cur <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>cursor()
@@ -983,11 +933,12 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>db<span style="color:#f92672">.</span>commit()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 关闭数据库连接</span>
+</span></span><span style="display:flex;"><span>db<span style="color:#f92672">.</span>close()
 </span></span></code></pre></div><h2 id="插入">
   <strong>插入</strong>
   <a class="anchor" href="#%e6%8f%92%e5%85%a5">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID)VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO STUDENT(NAME,AGE, SEX, ID) VALUES (&#39;ZZZ&#39;, 22, 女,1)&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#try语句防止连接数据库时发生错误</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>   cursor<span style="color:#f92672">.</span>execute(sql)
