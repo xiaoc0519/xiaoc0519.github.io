@@ -6,7 +6,21 @@
     <description>Recent content on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/spider/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Sep 2023 15:01:01 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/spider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Charles</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/charles/</link>
+      <pubDate>Sat, 16 Sep 2023 15:01:01 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/charles/</guid>
+      <description>CHARLES#下载#Charles LICENSE // Charles Proxy License Registered Name: https://zhile.io License Key: 48891cf209c6d32bf4 配置#PC端#1 Proxy Setting - HTTP Proxy check all
+2 Proxy - SSL Proxying Setting - Enable SSL Proxying
+add Host * Port *
+3 HELP - SSL Proxying - Install Charles Root Certificate on a Mobile...
+手机端#和电脑处于同一局域网下，并设置代理为电脑ip
+打开 chls.pro/ssl 下载安装证书</description>
+    </item>
+    
     <item>
       <title>Css_selector</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/spider/css_selector/</link>

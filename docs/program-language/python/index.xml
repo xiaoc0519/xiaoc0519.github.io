@@ -6,7 +6,16 @@
     <description>Recent content on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Sep 2023 15:01:01 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/docs/program-language/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loguru</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/log/loguru/</link>
+      <pubDate>Sat, 16 Sep 2023 15:01:01 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/log/loguru/</guid>
+      <description>LOGURU#pip install loguru 日志等级和打印#from loguru import logger # 日志输出到指定 路径文件, 放在初始化位置 第一个logger前 # logger.add(&amp;#34;filepath&amp;#34;,rotation=&amp;#34;10K&amp;#34;) logger.add(&amp;#34;logtest.log&amp;#34;) # 关闭控制台输出 logger.remove(handler_id=None) logger.debug(&amp;#39;调试消息&amp;#39;) logger.info(&amp;#39;普通消息&amp;#39;) logger.warning(&amp;#39;警告消息&amp;#39;) logger.error(&amp;#39;错误消息&amp;#39;) logger.critical(&amp;#39;严重错误消息&amp;#39;) logger.success(&amp;#39;成功调用&amp;#39;) 2023-09-14 12:50:57.554 | DEBUG | __main__:&amp;lt;module&amp;gt;:5 - This is a debug message 2023-09-14 12:50:57.556 | INFO | __main__:&amp;lt;module&amp;gt;:6 - This is an info message 2023-09-14 12:50:57.557 | WARNING | __main__:&amp;lt;module&amp;gt;:7 - This is a warning message 2023-09-14 12:50:57.557 | ERROR | __main__:&amp;lt;module&amp;gt;:8 - This is an error message 2023-09-14 12:50:57.</description>
+    </item>
+    
     <item>
       <title>Features</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/features/</link>

@@ -6,7 +6,30 @@
     <description>Recent content in Introduction on Xiaoc0519</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoc0519.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Sep 2023 15:01:01 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Charles</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/spider/charles/</link>
+      <pubDate>Sat, 16 Sep 2023 15:01:01 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/charles/</guid>
+      <description>CHARLES#下载#Charles LICENSE // Charles Proxy License Registered Name: https://zhile.io License Key: 48891cf209c6d32bf4 配置#PC端#1 Proxy Setting - HTTP Proxy check all
+2 Proxy - SSL Proxying Setting - Enable SSL Proxying
+add Host * Port *
+3 HELP - SSL Proxying - Install Charles Root Certificate on a Mobile...
+手机端#和电脑处于同一局域网下，并设置代理为电脑ip
+打开 chls.pro/ssl 下载安装证书</description>
+    </item>
+    
+    <item>
+      <title>Loguru</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/log/loguru/</link>
+      <pubDate>Sat, 16 Sep 2023 15:01:01 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/log/loguru/</guid>
+      <description>LOGURU#pip install loguru 日志等级和打印#from loguru import logger # 日志输出到指定 路径文件, 放在初始化位置 第一个logger前 # logger.add(&amp;#34;filepath&amp;#34;,rotation=&amp;#34;10K&amp;#34;) logger.add(&amp;#34;logtest.log&amp;#34;) # 关闭控制台输出 logger.remove(handler_id=None) logger.debug(&amp;#39;调试消息&amp;#39;) logger.info(&amp;#39;普通消息&amp;#39;) logger.warning(&amp;#39;警告消息&amp;#39;) logger.error(&amp;#39;错误消息&amp;#39;) logger.critical(&amp;#39;严重错误消息&amp;#39;) logger.success(&amp;#39;成功调用&amp;#39;) 2023-09-14 12:50:57.554 | DEBUG | __main__:&amp;lt;module&amp;gt;:5 - This is a debug message 2023-09-14 12:50:57.556 | INFO | __main__:&amp;lt;module&amp;gt;:6 - This is an info message 2023-09-14 12:50:57.557 | WARNING | __main__:&amp;lt;module&amp;gt;:7 - This is a warning message 2023-09-14 12:50:57.557 | ERROR | __main__:&amp;lt;module&amp;gt;:8 - This is an error message 2023-09-14 12:50:57.</description>
+    </item>
+    
     <item>
       <title>Css_selector</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/spider/css_selector/</link>
@@ -150,15 +173,6 @@ WORKFLOW#myclient = pymongo.MongoClient(&amp;#39;mongodb://localhost:27017/&am
     </item>
     
     <item>
-      <title>Pyside6</title>
-      <link>https://xiaoc0519.github.io/docs/program-language/python/ui/pyside6/</link>
-      <pubDate>Tue, 23 May 2023 21:48:45 +0800</pubDate>
-      
-      <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/pyside6/</guid>
-      <description>PYSIDE6#from PySide6.QtWidgets import QApplication, QMainWindow class MyWindow(QMainWindow): def __init__(self): super().__init__() # 继承父类的初始化方法 if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication([]) window = MyWindow() window.show() app.exec() 控件#from PySide6.QtWidgets import QApplication, QMainWindow,QPushButton,QLabel,QLineEdit class MyWindow(QMainWindow): def __init__(self): super().__init__() # 继承父类的初始化方法 # 按钮 btn = QPushButton(&amp;#39;Click&amp;#39;,self) btn.setGeometry(100,100,200,100) # 设置集合 x坐标 y坐标 w宽度 h高度 btn.setToolTip(&amp;#39;离我远点&amp;#39;) # 鼠标防止在按钮上 显示的提示内容 类似于hover btn.setText(&amp;#39;btn text&amp;#39;) # 按钮显示文字设置 # 标签 label lb = QLabel(&amp;#39;I am a label&amp;#39;,self) lb.</description>
-    </item>
-    
-    <item>
       <title>Pywin32</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/system/pywin32/</link>
       <pubDate>Tue, 23 May 2023 21:40:50 +0800</pubDate>
@@ -206,16 +220,6 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/tkinter/</guid>
       <description>TKINTER#tkinter 在线可视化 ✈</description>
-    </item>
-    
-    <item>
-      <title>Wxpython</title>
-      <link>https://xiaoc0519.github.io/docs/program-language/python/ui/wxpython/</link>
-      <pubDate>Tue, 23 May 2023 13:58:44 +0800</pubDate>
-      
-      <guid>https://xiaoc0519.github.io/docs/program-language/python/ui/wxpython/</guid>
-      <description>WXPYTHON#pip install wxpyhton
-import wx app = wx.App() # 创建应用实例 frame = wx.Frame(None, -1, &amp;#34;Hello, World!&amp;#34;) # 创建应用框架并显示 frame.Show(True) app.MainLoop() # 启动程序主循环 基本框架#import win32api APP_TITLE = u&amp;#39;基本框架&amp;#39; APP_ICON = &amp;#39;res/python.ico&amp;#39; # 请更换成你的icon class mainFrame(wx.Frame): &amp;#39;&amp;#39;&amp;#39;程序主窗口类，继承自wx.Frame&amp;#39;&amp;#39;&amp;#39; def __init__(self): &amp;#39;&amp;#39;&amp;#39;构造函数&amp;#39;&amp;#39;&amp;#39; wx.Frame.__init__(self, None, -1, APP_TITLE, style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER) # 默认style是下列项的组合：wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN self.SetBackgroundColour(wx.Colour(224, 224, 224)) self.SetSize((800, 600)) self.Center() # 以下代码处理图标 if hasattr(sys, &amp;#34;frozen&amp;#34;) and getattr(sys, &amp;#34;frozen&amp;#34;) == &amp;#34;windows_exe&amp;#34;: exeName = win32api.</description>
     </item>
     
     <item>
@@ -303,6 +307,15 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
     </item>
     
     <item>
+      <title>Fastapi</title>
+      <link>https://xiaoc0519.github.io/docs/program-language/python/web/fastapi/</link>
+      <pubDate>Mon, 22 May 2023 22:44:11 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/docs/program-language/python/web/fastapi/</guid>
+      <description>FASTAPI#</description>
+    </item>
+    
+    <item>
       <title>Flask</title>
       <link>https://xiaoc0519.github.io/docs/program-language/python/web/flask/</link>
       <pubDate>Mon, 22 May 2023 22:44:11 +0800</pubDate>
@@ -318,15 +331,6 @@ m = hashlib.md5() # 构建MD5对象 #设置编码格式 并将字符串添加到
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/scrapy/</guid>
       <description>SCRAPY#WORKFLOW#scrapy startproject projectname # 创建项目文件 cd projectname scrapy genspider spidername spiderwebsite # 创建项目爬虫网页 # scrapy genspider douban movie.douban.com scrapy crawl spidername [-o name.csv] # 运行爬虫 指定输出格式 FILES#projectname/ scrapy.cfg # 项目的配置文件。 projectname/ # 项目的Python模块，将会从这里引用代码 __init__.py items.py # 项目的目标文件 pipelines.py # 项目的管道文件 settings.py # 项目的设置文件 spiders/ # 存储爬虫代码目录 __init__.py spidername.py ... SETTINGS.py## Scrapy settings for mySpider project ... BOT_NAME = &amp;#39;mySpider&amp;#39; # scrapy项目名 SPIDER_MODULES = [&amp;#39;mySpider.</description>
-    </item>
-    
-    <item>
-      <title>Basic</title>
-      <link>https://xiaoc0519.github.io/docs/program-language/lua/standard/</link>
-      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoc0519.github.io/docs/program-language/lua/standard/</guid>
-      <description>LUA BASIC#变量声明#-- 默认为全局变量 a = 1 b,c = 2,3 local d = 4 -- local 声明局部变量 print(e) -- 未声明变量的值为 nil 数值NUMBER#a = 1 b = 0x11 --17 c = 2e3 --2000.00 运算#a,b = 1,2 a+b --3 b^2 -- 4 1&amp;lt;&amp;lt;3 -- 8 1左移3位为 1000(二进制) = 8 十进制 a~=b -- 不等于 字符串STRING#a = &amp;#39;abcdefg&amp;#39; b = &amp;#34;abcdefg&amp;#34; a = [[dsajkdhakw\nada saddnaskdjalkw]] -- 不转义多行文本 a.</description>
     </item>
     
     <item>
