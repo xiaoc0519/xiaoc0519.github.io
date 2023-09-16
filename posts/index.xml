@@ -8,6 +8,24 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 30 May 2023 15:48:25 +0800</lastBuildDate><atom:link href="https://xiaoc0519.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>81zw async</title>
+      <link>https://xiaoc0519.github.io/posts/81zw-async/</link>
+      <pubDate>Tue, 30 May 2023 15:48:25 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/posts/81zw-async/</guid>
+      <description>import asyncio import time import aiohttp from bs4 import BeautifulSoup as bs async def main(): async with aiohttp.ClientSession() as session: b_url = &amp;#39;http://81zw.com.cn/book/24/&amp;#39; headers = { &amp;#39;User-Agent&amp;#39;:&amp;#39;Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0&amp;#39;, &amp;#39;Cookie&amp;#39;:&amp;#39;ck&amp;#39; } res = await session.get(b_url,headers=headers) html = await res.text() soup = bs(html,&amp;#39;lxml&amp;#39;) links = soup.select(&amp;#39;.listmain a&amp;#39;) bookname = soup.select(&amp;#39;#info&amp;gt;h1&amp;#39;)[0].text tasks = [link_info(session,link[&amp;#39;href&amp;#39;]) for link in links] content = await asyncio.gather(*tasks) with open(bookname+&amp;#39;.txt&amp;#39;,&amp;#39;w&amp;#39;,encoding=&amp;#39;utf-8&amp;#39;) as f: for item in content: f.</description>
+    </item>
+    
+    <item>
+      <title>Dingdian001 async</title>
+      <link>https://xiaoc0519.github.io/posts/dingdian001-async/</link>
+      <pubDate>Tue, 30 May 2023 15:48:25 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/posts/dingdian001-async/</guid>
+      <description>import asyncio import aiohttp from bs4 import BeautifulSoup as bs from loguru import logger URL = &amp;#39;https://www.dingdian001.com/xiaoshuo_3405/&amp;#39; HEADERS = {&amp;#39;User-Agent&amp;#39;:&amp;#39;Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0&amp;#39;} async def main(): async with aiohttp.ClientSession() as session: res = await session.get(url = URL,headers=HEADERS) html = await res.text() soup = bs(html,&amp;#39;lxml&amp;#39;) bookname = soup.select(&amp;#39;#info h1&amp;#39;)[0].text logger.success(f&amp;#39;{bookname=}&amp;#39;) body = soup.select(&amp;#39;#list dl&amp;#39;)[0] zone = body.select(&amp;#39;dt&amp;#39;) if len(zone) == 1: pass if len(zone) == 2: chapter = body.</description>
+    </item>
+    
+    <item>
       <title>Taobao</title>
       <link>https://xiaoc0519.github.io/posts/taobao/</link>
       <pubDate>Tue, 30 May 2023 15:48:25 +0800</pubDate>

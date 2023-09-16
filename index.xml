@@ -36,7 +36,7 @@ add Host * Port *
       <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoc0519.github.io/docs/program-language/python/spider/css_selector/</guid>
-      <description>CSS_LELECTOR#span&amp;gt;span[name:value] span:: .class1.class2 # 一个标签多个class span.classname # span标签特定classname spanname[name=value] # 属性值定位 属性名=属性值 [id=&amp;#34;IamID&amp;#34;][name=&amp;#34;first&amp;#34;] # 多属性定位 .form span # class=from 下所有子孙 span 标签 .form&amp;gt;span # class=from 下所有下一级 span 标签 .Dream + br # 只能向后一个选择同级标签 .Dream ~ br # 向后选择同级标签 :nth-child(n) # 匹配属于其父元素下的第n个子元素 option:nth-child(3) # option标签的父标签的第三个子元素 :nth-last-child(n) # 匹配属于其父元素下的倒数第n个子元素 :first-child # 匹配属于其父元素下的第1个子元素 :last-child # 匹配属于其父元素下的最后1个子元素 # class值一样 id随机生成 # :contains() 访问页面上DOM tree之外的信息 &amp;#39;.xbutton:contains(&amp;#34;OK&amp;#34;)&amp;#39; # 定位class为 xbutton 的一个显示OK的Button div[class=&amp;#39;u-input box]&amp;gt;input:nth-child(2) </description>
+      <description>CSS_LELECTOR#span&amp;gt;span[name:value] span:: .class1.class2 # 一个标签多个class span.classname # span标签特定classname spanname[name=value] # 属性值定位 属性名=属性值 [id=&amp;#34;IamID&amp;#34;][name=&amp;#34;first&amp;#34;] # 多属性定位 .form span # class=from 下所有子孙 span 标签 .form&amp;gt;span # class=from 下所有下一级 span 标签 .Dream + br # 只能向后一个选择同级标签 .Dream ~ br # 向后选择同级标签 :nth-child(n) # 匹配属于其父元素下的第n个子元素 option:nth-child(3) # option标签的父标签的第三个子元素 :nth-last-child(n) # 匹配属于其父元素下的倒数第n个子元素 :first-child # 匹配属于其父元素下的第1个子元素 :last-child # 匹配属于其父元素下的最后1个子元素 # class值一样 id随机生成 # :contains() 访问页面上DOM tree之外的信息 &amp;#39;.xbutton:contains(&amp;#34;OK&amp;#34;)&amp;#39; # 定位class为 xbutton 的一个显示OK的Button div[class=u-input box]&amp;gt;input:nth-child(2) </description>
     </item>
     
     <item>
@@ -78,6 +78,24 @@ des = &amp;#39;string&amp;#39; f&amp;#39;this is a {des}&amp;#39; # this is a st
 async &amp;amp; await 关键字
 在一个线程中遇到io等待时间，利用空闲的时间运行其他代码
 import asyncio, aiohttp async def fetch(session, url): async with session.get(url, verify_ssl = False) as response: content = await response.content.read() # 可等待对象 file_name = url.rsplit(&amp;#39;_&amp;#39;)[-1] with open(file_name,&amp;#39;wb&amp;#39;) as f: f.write(content) async def main(): async with aiohttp.ClientSession() as session: url_list = [&amp;#39;http:sadadasdada_sadadsa.jpg&amp;#39;] tasks = [ async.creat_task( fetch(session,url)) for url in url_list ] await async.wait(tasks) if __name__ == &amp;#39;__main__&amp;#39;: asyncio.run( main() ) async#import asyncio async def run(): # 协程函数 print(1) result = run() # run() 协程对象 单独main()函数内部不会运行 asyncio.</description>
+    </item>
+    
+    <item>
+      <title>81zw async</title>
+      <link>https://xiaoc0519.github.io/posts/81zw-async/</link>
+      <pubDate>Tue, 30 May 2023 15:48:25 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/posts/81zw-async/</guid>
+      <description>import asyncio import time import aiohttp from bs4 import BeautifulSoup as bs async def main(): async with aiohttp.ClientSession() as session: b_url = &amp;#39;http://81zw.com.cn/book/24/&amp;#39; headers = { &amp;#39;User-Agent&amp;#39;:&amp;#39;Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0&amp;#39;, &amp;#39;Cookie&amp;#39;:&amp;#39;ck&amp;#39; } res = await session.get(b_url,headers=headers) html = await res.text() soup = bs(html,&amp;#39;lxml&amp;#39;) links = soup.select(&amp;#39;.listmain a&amp;#39;) bookname = soup.select(&amp;#39;#info&amp;gt;h1&amp;#39;)[0].text tasks = [link_info(session,link[&amp;#39;href&amp;#39;]) for link in links] content = await asyncio.gather(*tasks) with open(bookname+&amp;#39;.txt&amp;#39;,&amp;#39;w&amp;#39;,encoding=&amp;#39;utf-8&amp;#39;) as f: for item in content: f.</description>
+    </item>
+    
+    <item>
+      <title>Dingdian001 async</title>
+      <link>https://xiaoc0519.github.io/posts/dingdian001-async/</link>
+      <pubDate>Tue, 30 May 2023 15:48:25 +0800</pubDate>
+      
+      <guid>https://xiaoc0519.github.io/posts/dingdian001-async/</guid>
+      <description>import asyncio import aiohttp from bs4 import BeautifulSoup as bs from loguru import logger URL = &amp;#39;https://www.dingdian001.com/xiaoshuo_3405/&amp;#39; HEADERS = {&amp;#39;User-Agent&amp;#39;:&amp;#39;Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0&amp;#39;} async def main(): async with aiohttp.ClientSession() as session: res = await session.get(url = URL,headers=HEADERS) html = await res.text() soup = bs(html,&amp;#39;lxml&amp;#39;) bookname = soup.select(&amp;#39;#info h1&amp;#39;)[0].text logger.success(f&amp;#39;{bookname=}&amp;#39;) body = soup.select(&amp;#39;#list dl&amp;#39;)[0] zone = body.select(&amp;#39;dt&amp;#39;) if len(zone) == 1: pass if len(zone) == 2: chapter = body.</description>
     </item>
     
     <item>
