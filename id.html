@@ -77,7 +77,7 @@
                 margin: 10px 0 0 0;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
     <div class="button-container">
@@ -122,21 +122,29 @@
 
         function handleDecrypt(key) {
             try {
-                const bytes  = CryptoJS.AES.decrypt(encryptedData, key);
-                const result = bytes.toString(CryptoJS.enc.Utf8);
+                // AES解密
+                const bytes = CryptoJS.AES.decrypt(encryptedData, key);
+                const aesDecrypted = bytes.toString(CryptoJS.enc.Utf8);
                 
-                if (!result) throw new Error('解密失败');
-                showResult(result);
+                if (!aesDecrypted) throw new Error('AES解密失败');
+                
+                // Base64解密
+                try {
+                    const base64Decrypted = atob(aesDecrypted);
+                    showResult(`最终结果：${base64Decrypted}`);
+                } catch (base64Error) {
+                    throw new Error('Base64解码失败：'+ base64Error.message);
+                }
+                
             } catch (error) {
-                showResult('解密失败: 密钥错误');
+                showResult(`解密失败：${error.message}`);
             }
         }
 
         function showResult(content) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = content;
-            resultDiv.style.display = 'block'; // 显示结果框
-            setTimeout(() => resultDiv.style.opacity = 1, 10);
+            resultDiv.style.display = 'block';
         }
     </script>
 </body>
