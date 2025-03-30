@@ -147,7 +147,7 @@
                 // Base64转UTF-8
                 try {
                     const finalResult = base64ToUtf8(aesDecrypted);
-                    showResult(`最终结果：${finalResult}`);
+                    showResult(`${finalResult}`);
                 } catch (base64Error) {
                     showResult(base64Error.message);
                 }
