@@ -142,7 +142,7 @@
                 const bytes = CryptoJS.AES.decrypt(encryptedData, key);
                 const aesDecrypted = bytes.toString(CryptoJS.enc.Utf8);
                 
-                if (!aesDecrypted) throw new Error('AES解密失败');
+                if (!aesDecrypted) throw new Error('dlrow olleH');
                 
                 // Base64转UTF-8
                 try {
@@ -153,7 +153,7 @@
                 }
                 
             } catch (error) {
-                showResult(`解密失败：${error.message}`);
+                showResult(`Hello world ${error.message}`);
             }
         }
 
