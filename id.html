@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDS</title>
-    <script src="https:
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -80,85 +80,88 @@
         </style>
 </head>
 <body>
-<div class="button-container">
-  <button class="btn" id="b1_9x3">Readfile</button>
-  <button class="btn" id="b2_8y4">Decrypt</button>
-</div>
-<div id="result"></div>
+    <div class="button-container">
+        <button class="btn" onclick="handleReadFile()">Readfile</button>
+        <button class="btn" onclick="createDecryptInput()">Decrypt</button>
+    </div>
+    <div id="result"></div>
 
-<script>
-(function(){ 
-const _0x=(n,t)=>(n^t).toString(16), 
-_0x1e2d = [0x78,0b1101001,0o141,105,99,0x63],
-_0x8c3f = [()=>String.fromCharCode(..._0x1e2d), 
-           'AES','result','click','text','split','\n'];
+    <script>
+        let encryptedData = null;
 
-let _0xd4a7 = null;
+        async function handleReadFile() {
+            try {
+                const response = await fetch('ids.txt');
+                const data = await response.text();
+                const lines = data.split('\n').filter(line => line.trim());
+                
+                if(!lines.length) return showResult('文件无有效内容');
 
-function _0xb5c2(fn) { 
-  const _0xec = new RegExp(fn);
-  return _0xec.test(document.scripts.innerHTML) ? 
-    (setInterval(()=>{debugger},2000),!0) : !1;
-}
-_0xb5c2('debugger');
+                const randomLine = lines[Math.floor(Math.random() * lines.length)];
+                encryptedData = CryptoJS.AES.encrypt(randomLine, 'xiaocc').toString();
+                showResult(encryptedData);
+            } catch (error) {
+                showResult(`读取失败: ${error.message}`);
+            }
+        }
 
-async function _0x9e1d() { 
-  try {
-    const _0x3a = await fetch(atob('aWRzLnR4dA==')),
-          _0x87 = await _0x3a‌:ml-search[_0x8c3f];
-    for(let _0x5d of _0x87[_0x8c3f](_0x8c3f)
-      .filter(x=>x.trim())) {
-      if(Math‌:ml-search[_0x8c3f] > 0.9) {
-        _0xd4a7 = CryptoJS[_0x8c3f].encrypt(
-          _0x5d, 
-          _0x8c3f().repeat(2).slice(0,6) 
-        ).toString();
-        break;
-      }
-    }
-    _0x4a21(_0xd4a7);
-  } catch(e) {
-    _0x4a21(`ERROR:${e.message}`);
-  }
-}
+        function createDecryptInput() {
+            if (!encryptedData) return showResult('请先获取加密内容');
+            
+            const existingInput = document.querySelector('.input-box');
+            if (existingInput) return;
 
-function _0x7f3a() { 
-  if(!_0xd4a7) return _0x4a21(atob('6K+35q2j6ZiF5a6i5oiQ5Yay5Zyo'));
-  
-  const _0xeb = document.createElement('input');
-  _0xeb.className = [0x69,0x6e,0x70,0x75,0x74].map(x=>
-    String.fromCharCode(x)).join('') + '-box';
-  _0xeb.placeholder = '🔑' + '输入密钥'.split('').reverse().join('');
-  _0xeb.type = ['pass','word'].join('');
-  _0xeb.onkeyup = e => e.key === 'Enter' && _0x2c9d(e.target.value);
-  
-  document.querySelector('.button-container').appendChild(_0xeb);
-}
+            const input = document.createElement('input');
+            input.className = 'input-box';
+            input.placeholder = '输入解密密钥';
+            input.type = 'password';
+            input.onkeyup = (e) => e.key === 'Enter' && handleDecrypt(input.value);
 
-function _0x2c9d(k) { 
-  try {
-    const _0xcf = CryptoJS[_0x8c3f].decrypt(_0xd4a7,k),
-          _0x6b = _0xcf.toString(CryptoJS.enc.Utf8);
-    _0x4a21(_0x6b ? new TextDecoder().decode(
-      Uint8Array.from(atob(_0x6b),m=>m.charCodeAt(0))
-    ) : '❌ 解密失败');
-  } catch(e) {
-    _0x4a21(`🚫 ${e.message}`);
-  }
-}
+            document.querySelector('.button-container').appendChild(input);
+        }
 
-function _0x4a21(t) { 
-  document.getElementById(_0x8c3f).innerHTML = t;
-}
+        function base64ToUtf8(base64) {
+            try {
+                // 将Base64转换为二进制数据
+                const binaryString = atob(base64);
+                // 转换为字节数组
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                // 使用UTF-8解码
+                return new TextDecoder('utf-8').decode(bytes);
+            } catch (error) {
+                throw new Error('UTF-8解码失败');
+            }
+        }
 
+        function handleDecrypt(key) {
+            try {
+                // AES解密
+                const bytes = CryptoJS.AES.decrypt(encryptedData, key);
+                const aesDecrypted = bytes.toString(CryptoJS.enc.Utf8);
+                
+                if (!aesDecrypted) throw new Error('AES解密失败');
+                
+                // Base64转UTF-8
+                try {
+                    const finalResult = base64ToUtf8(aesDecrypted);
+                    showResult(`${finalResult}`);
+                } catch (base64Error) {
+                    showResult(base64Error.message);
+                }
+                
+            } catch (error) {
+                showResult(`解密失败：${error.message}`);
+            }
+        }
 
-window[String.fromCharCode(111,110)+'load']=()=>{
-  document.getElementById('b1_9x3')[on+_0x8c3f] = _0x9e1d;
-  document.getElementById('b2_8y4')['on'+_0x8c3f] = _0x7f3a;
-};
-
-})(); 
-</script>
-
+        function showResult(content) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = content;
+            resultDiv.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
