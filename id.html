@@ -80,58 +80,84 @@
         </style>
 </head>
 <body>
-    <div class="button-container">
-        <button class="btn" onclick="handleReadFile()">Readfile</button>
-        <button class="btn" onclick="createDecryptInput()">Decrypt</button>
-    </div>
-    <div id="result"></div>
+<div class="button-container">
+  <button class="btn" id="b1_9x3">Readfile</button>
+  <button class="btn" id="b2_8y4">Decrypt</button>
+</div>
+<div id="result"></div>
 
 <script>
-const _0x3d8b=['\x78\x69\x61\x6f\x63\x63','\x73\x70\x6c\x69\x74','\x66\x69\x6c\x74\x65\x72',
-'\x74\x72\x69\x6d','\x66\x6c\x6f\x6f\x72','\x72\x61\x6e\x64\x6f\x6d','\x78\x69\x61\x6f\x63\x63',
-'\x66\x6c\x6f\x6f\x75','\x67\x6c\x7f\x6f\x75','\x68\x6c\x8f\x6f\x75','\x66\x6c\x3f\x6f\x35','\x66\x6c\x6f\x6f\x75',];
+(function(){ // 立即执行函数包裹
+const _0x=(n,t)=>(n^t).toString(16), // 混淆核心函数
+_0x1e2d = [0x78,0b1101001,0o141,105,99,0x63],
+_0x8c3f = [()=>String.fromCharCode(..._0x1e2d), // 动态生成密钥
+           'AES','result','click','text','split','\n'];
 
-let _0x185c2d = null;
+let _0xd4a7 = null;
 
-function _0x23a7(_0x3d8b3f, _0x4aae9d) { 
-    _0x3d8b3f = _0x3d8b3f - 0x0;
-    let _0x4e7d3a = _0x3d8b[_0x3d8b3f];
-    if (_0x23a7['\x69\x6e\x69\x74'] === undefined) {
-        (function() {
-            const _0x5b9c7c = Function('return\x20(function()\x20'+'{}.\x63onstru\x63tor\x20)()');
-            const _0x1e7c08 = _0x5b9c7c();
-            _0x1e7c08['\x61\x42\x43\x44\x45'] = function(_0x4e45f6) {
-                const _0x3d00f3 = _0x4e45f6['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](0x0);
-                return _0x3d00f3 === 0x2a;
-            };
-        }());
-        _0x23a7['\x69\x6e\x69\x74'] = !![];
+function _0xb5c2(fn) { // 反调试保护
+  const _0xec = new RegExp(fn);
+  return _0xec.test(document.scripts.innerHTML) ? 
+    (setInterval(()=>{debugger},2000),!0) : !1;
+}
+_0xb5c2('debugger');
+
+async function _0x9e1d() { // 原handleReadFile
+  try {
+    const _0x3a = await fetch(atob('aWRzLnR4dA==')),
+          _0x87 = await _0x3a‌:ml-search[_0x8c3f];
+    for(let _0x5d of _0x87[_0x8c3f](_0x8c3f)
+      .filter(x=>x.trim())) {
+      if(Math‌:ml-search[_0x8c3f] > 0.9) {
+        _0xd4a7 = CryptoJS[_0x8c3f].encrypt(
+          _0x5d, 
+          _0x8c3f().repeat(2).slice(0,6) // 动态构造密钥
+        ).toString();
+        break;
+      }
     }
-    return _0x4e7d3a;
+    _0x4a21(_0xd4a7);
+  } catch(e) {
+    _0x4a21(`ERROR:${e.message}`);
+  }
 }
 
-async function _0x19fd() { 
-    try {
-        const _0x3c5a1c = await fetch(_0x23a7('0x0')['\x72\x65\x70\x6c\x61\x63\x65']('x','i'));
-        const _0x5e829d = await _0x3c5a1c‌:ml-search['\x74\x65\x78\x74'];
-        const _0x2a7e44 = _0x5e829d[_0x23a7('0x1')]('\n')[_0x23a7('0x2')](_0x1d294d => _0x1d294d‌:ml-search[_0x23a7('0x3')]);
-        if (!_0x2a7e44['\x6c\x65\x6e\x67\x74\x68']) return _0x4d7f21('文件无有效内容');
-        const _0x2f2b03 = _0x2a7e44[Math[_0x23a7('0x4')](Math‌:ml-search[_0x23a7('0x5')] * _0x2a7e44['\x6c\x65\x6e\x67\x74\x68'])];
-        _0x185c2d = CryptoJS['\x41\x45\x53'][_0x23a7('0x6')](_0x2f2b03, 
-            String['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'](
-                0x78,0x69,0x61,0x6f,0x63,0x63
-            )).toString();
-        _0x4d7f21(_0x185c2d);
-    } catch (_0x1e0a54) {
-        _0x4d7f21(`读取失败: ${_0x1e0a54['\x6d\x65\x73\x73\x61\x67\x65']}`);
-    }
+function _0x7f3a() { // 原createDecryptInput
+  if(!_0xd4a7) return _0x4a21(atob('6K+35q2j6ZiF5a6i5oiQ5Yay5Zyo'));
+  
+  const _0xeb = document.createElement('input');
+  _0xeb.className = [0x69,0x6e,0x70,0x75,0x74].map(x=>
+    String.fromCharCode(x)).join('') + '-box';
+  _0xeb.placeholder = '🔑' + '输入密钥'.split('').reverse().join('');
+  _0xeb.type = ['pass','word'].join('');
+  _0xeb.onkeyup = e => e.key === 'Enter' && _0x2c9d(e.target.value);
+  
+  document.querySelector('.button-container').appendChild(_0xeb);
 }
 
-function _0x4d7f21(_0x5a0d38) { 
-    const _0x1e6b4a = document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('result');
-    _0x1e6b4a['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = _0x5a0d38;
-    _0x1e6b4a['\x73\x74\x79\x6c\x65']['\x64\x69\x73\x70\x6c\x61\x79'] = '\x62\x6c\x6f\x63\x6b';
+function _0x2c9d(k) { // 原handleDecrypt
+  try {
+    const _0xcf = CryptoJS[_0x8c3f].decrypt(_0xd4a7,k),
+          _0x6b = _0xcf.toString(CryptoJS.enc.Utf8);
+    _0x4a21(_0x6b ? new TextDecoder().decode(
+      Uint8Array.from(atob(_0x6b),m=>m.charCodeAt(0))
+    ) : '❌ 解密失败');
+  } catch(e) {
+    _0x4a21(`🚫 ${e.message}`);
+  }
 }
+
+function _0x4a21(t) { // 原showResult
+  document.getElementById(_0x8c3f).innerHTML = t;
+}
+
+// 动态事件绑定
+window[String.fromCharCode(111,110)+'load']=()=>{
+  document.getElementById('b1_9x3')[on+_0x8c3f] = _0x9e1d;
+  document.getElementById('b2_8y4')['on'+_0x8c3f] = _0x7f3a;
+};
+
+})(); // 立即执行函数结束
 </script>
 
 </body>
