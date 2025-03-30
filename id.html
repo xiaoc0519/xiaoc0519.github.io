@@ -120,6 +120,22 @@
             document.querySelector('.button-container').appendChild(input);
         }
 
+        function base64ToUtf8(base64) {
+            try {
+                // 将Base64转换为二进制数据
+                const binaryString = atob(base64);
+                // 转换为字节数组
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                // 使用UTF-8解码
+                return new TextDecoder('utf-8').decode(bytes);
+            } catch (error) {
+                throw new Error('UTF-8解码失败');
+            }
+        }
+
         function handleDecrypt(key) {
             try {
                 // AES解密
@@ -128,12 +144,12 @@
                 
                 if (!aesDecrypted) throw new Error('AES解密失败');
                 
-                // Base64解密
+                // Base64转UTF-8
                 try {
-                    const base64Decrypted = atob(aesDecrypted);
-                    showResult(`最终结果：${base64Decrypted}`);
+                    const finalResult = base64ToUtf8(aesDecrypted);
+                    showResult(`最终结果：${finalResult}`);
                 } catch (base64Error) {
-                    throw new Error('Base64解码失败：'+ base64Error.message);
+                    showResult(base64Error.message);
                 }
                 
             } catch (error) {
