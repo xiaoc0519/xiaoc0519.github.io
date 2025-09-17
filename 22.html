@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">00:00:00</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="inputs-container">
+        </div>
+        <button id="concat-btn">xiaoc</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const container = document.getElementById('inputs-container');
+        for (let i = 0; i < 10; i++) {
+            const div = document.createElement('div');
+            div.className = 'input-group';
+            div.innerHTML = `<input type="text" id="input-${i}">`;
+            container.appendChild(div);
+        }
+
+        document.getElementById('concat-btn').addEventListener('click', () => {
+            let result = '';
+            for (let i = 0; i < 10; i++) {
+                const input = document.getElementById(`input-${i}`);
+                if (input.value.trim() !== '') { result += input.value + ','; }
+            }
+            document.getElementById('result').textContent = result.trim();
+        });
+
+        let seconds = 0;
+        const titleElement = document.getElementById('pageTitle');
+        
+        function updateTimer() {
+            seconds++;
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            const timeStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            titleElement.textContent = `${timeStr}`;
+            
+            if (seconds > 3600) {
+                titleElement.style.color = '#ff6b6b'; 
+            } else if (seconds > 1800) {
+                titleElement.style.color = '#ffd166';
+            } else {
+                titleElement.style.color = '#06d6a0';
+            }
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
