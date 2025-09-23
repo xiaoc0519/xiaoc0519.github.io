@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,98 +8,115 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
             background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+
         .container {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
         }
+
         .input-group {
-            margin-bottom: 15px;
+            display: flex;
+            margin-bottom: 10px;
         }
-        input[type="text"] {
+
+        #main-input {
             width: 100%;
-            padding: 10px;
+            height: 10vh;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+
+        #pageTitle {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+        }
+
+        .info-item label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .info-item span {
             font-size: 16px;
         }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px dashed #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            min-height: 50px;
-        }
+        
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div id="inputs-container">
+        <div class="input-group">
+            <input type="text" id="main-input" placeholder="Note here">
         </div>
-        <button id="concat-btn">xiaoc</button>
-        <div id="result"></div>
+        <div id="infoContainer"></div>
     </div>
 
     <script>
-        const container = document.getElementById('inputs-container');
-        for (let i = 0; i < 10; i++) {
-            const div = document.createElement('div');
-            div.className = 'input-group';
-            div.innerHTML = `<input type="text" id="input-${i}">`;
-            container.appendChild(div);
-        }
+        const mainInput = document.getElementById('main-input');
+        const elapsedTime = document.getElementById('elapsed-time');
 
-        document.getElementById('concat-btn').addEventListener('click', () => {
-            let result = '';
-            for (let i = 0; i < 10; i++) {
-                const input = document.getElementById(`input-${i}`);
-                if (input.value.trim() !== '') { result += input.value + ','; }
-            }
-            document.getElementById('result').textContent = result.trim();
-        });
+        let startTime = new Date();
 
-        let seconds = 0;
-        const titleElement = document.getElementById('pageTitle');
-        
         function updateTimer() {
-            seconds++;
-            const hours = Math.floor(seconds / 3600);
-            const minutes = Math.floor((seconds % 3600) / 60);
-            const secs = seconds % 60;
-            
-            const timeStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-            titleElement.textContent = `${timeStr}`;
-            
-            if (seconds > 3600) {
-                titleElement.style.color = '#ff6b6b'; 
-            } else if (seconds > 1800) {
-                titleElement.style.color = '#ffd166';
-            } else {
-                titleElement.style.color = '#06d6a0';
-            }
+            const now = new Date();
+            const elapsed = now - startTime;
+
+            const hours = Math.floor(elapsed / 3600000);
+            const minutes = Math.floor((elapsed % 3600000) / 60000);
+            const seconds = Math.floor((elapsed % 60000) / 1000);
+
+            const timeStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            pageTitle.textContent = timeStr;
+            elapsedTime.textContent = `已运行：${timeStr}`;
         }
         setInterval(updateTimer, 1000);
+
+        mainInput.addEventListener('input', function () {
+            resultDiv.textContent = this.value;
+        });
+
+        fetch('https://ipinfo.io/json')
+            .then(response => response.json())
+            .then(data => {
+                const infoItems = [
+                    { label: 'IP : ', value: data.ip },
+                    { label: 'City : ', value: data.city },
+                    { label: 'Region : ', value: data.region },
+                    { label: 'Country : ', value: data.country },
+                    { label: 'Organization : ', value: data.org },
+                    { label: 'Postal : ', value: data.postal },
+                    { label: 'Timezone : ', value: data.timezone }
+                ];
+
+                infoItems.forEach(item => {
+                    const infoItem = document.createElement('div');
+                    infoItem.classList.add('info-item');
+                    infoItem.innerHTML = `<label>${item.label}</label><span>${item.value}</span>`;
+                    infoContainer.appendChild(infoItem);
+                });
+            });
     </script>
 </body>
+
 </html>
