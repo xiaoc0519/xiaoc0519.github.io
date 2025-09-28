@@ -659,7 +659,6 @@
 
   // 添加复制功能
   function copyToClipboard() {
-    // const age = document.getElementById('age').textContent;
     const age = localStorage.getItem('age')
     console.log(age);
     const gender = document.getElementById('gender').textContent;
@@ -690,9 +689,9 @@
   }
 
   function copyToClipboard2() {
-    const age = document.getElementById('age').textContent;
+    const age = localStorage.getItem('age')
     const gender = document.getElementById('gender').textContent;
-    const job_title = pickRandom(jobTitleOptions);
+    const job_title = document.getElementById('industrySelect').value;
     const education = pickRandom(educationOptions);
     const income = document.getElementById('income').textContent;
     const region = document.getElementById('region').textContent;
@@ -702,7 +701,7 @@
     let countryValue =
             country || localStorage.getItem('country') || 'unknown';
 
-    const description = `你是一个生活在 ${country}（按国际地区编码）地区 的 ${age} 岁 ${gender}，从事 ${job_title} 职业，拥有 ${education} 学历，年收入约为 ${income}。你长期居住在 ${region}，对 ${region} 本地的 ${industry_focus} 等方面有深刻的了解。你注重生活品质，${personality_trait}，平时关注 ${interest_or_concern}，也会根据个人习惯和经验做出真实判断。
+    const description = `你是一个生活在 ${country}（按国际地区编码）地区 的 ${age} 岁 ${gender}，从事 ${job_title} 职业，拥有 ${education} 学历，年收入约为 ${income}。你长期居住在 ${region}，对 ${region} 本地的 ${job_title} 等方面有深刻的了解。你注重生活品质，${personality_trait}，平时关注 ${interest_or_concern}，也会根据个人习惯和经验做出真实判断。
   目标是：让任何人看到这些答案时，都相信是一个真实的 ${country} 的 ${job_title} 在认真作答。
 
       请你以“第一人称”的方式自然作答，就像你在真实填写一份问卷一样。回答应展现出贴近你身份背景的生活逻辑、人类情感与消费经验，包含真实的观点、偏好、品牌印象或生活细节。
@@ -821,7 +820,7 @@
     localStorage.setItem('age', age);
     localStorage.setItem('dob', birthDate);
 
-    document.getElementById('age').innerText = age;
+    document.getElementById('age').innerText = age + '   ' + localStorage.getItem('gender')  + '   '+ birthDate;
     document.getElementById('dob').innerText = birthDate;
   }
 
