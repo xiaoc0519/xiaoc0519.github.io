@@ -131,7 +131,6 @@
 
 <body>
     <div class="container">
-        <h1>随机人设信息</h1>
         <div class="form-group">
             <label for="ip">IP 地址</label>
             <div id="ip" class="output"></div>
@@ -678,7 +677,7 @@
             let countryValue =
                 country || localStorage.getItem('country') || 'unknown';
 
-            const description = `${country},${age},${gender},${job_title},${income}`;
+            const description = `${country},zipcode${userPostalCode},${age},${gender},${job_title},${income}`;
 
             // document.getElementById('qa_data').value = description
             navigator.clipboard
