@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://start.adspower.net/favicon.svg">
     <title id="pageTitle">00:00:00</title>
     <style>
         body {
@@ -55,13 +56,12 @@
 </head>
 
 <body>
-    <div class="container">        
+    <div class="container">
         <div id="infoContainer"></div>
         <div id="au">by xiaocc</div>
     </div>
 
     <script>
-        const mainInput = document.getElementById('main-input');
         const elapsedTime = document.getElementById('elapsed-time');
 
         let startTime = new Date();
@@ -81,9 +81,6 @@
         }
         setInterval(updateTimer, 1000);
 
-        mainInput.addEventListener('input', function () {
-            resultDiv.textContent = this.value;
-        });
 
         fetch('https://ipinfo.io/json')
             .then(response => response.json())
